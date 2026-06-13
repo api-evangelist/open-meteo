@@ -1,0 +1,107 @@
+name: Open-Meteo Rate Limits
+description: >-
+  Open-Meteo enforces rate limits on the free non-commercial public API to
+  ensure fair access across all users. Commercial subscribers on paid plans
+  use dedicated server infrastructure and are not subject to the shared
+  rate limits documented here. Exceeding free-tier limits or misusing the
+  API may result in blocking without prior notice per the terms of service.
+specificationVersion: '0.1'
+limits:
+  - tier: Free (Non-Commercial)
+    scope: global
+    limits:
+      - name: Per-minute request limit
+        description: >-
+          Maximum number of API calls allowed per minute from a single source
+          on the free public tier. Applies across all Open-Meteo API endpoints
+          combined.
+        limit: 600
+        period: minute
+        unit: requests
+        enforcement: hard
+        headers:
+          - name: X-RateLimit-Limit
+            description: Total request limit for the current window
+          - name: X-RateLimit-Remaining
+            description: Requests remaining in the current window
+        onExceeded: HTTP 429 Too Many Requests
+
+      - name: Per-hour request limit
+        description: >-
+          Maximum number of API calls allowed per hour from a single source
+          on the free public tier.
+        limit: 5000
+        period: hour
+        unit: requests
+        enforcement: hard
+        onExceeded: HTTP 429 Too Many Requests
+
+      - name: Per-day request limit
+        description: >-
+          Maximum number of API calls allowed per calendar day (UTC) from a
+          single source on the free public tier.
+        limit: 10000
+        period: day
+        unit: requests
+        enforcement: hard
+        onExceeded: HTTP 429 Too Many Requests
+
+      - name: Monthly call budget
+        description: >-
+          Soft monthly cap of 300,000 requests. Accounts approaching or
+          exceeding this threshold are expected to upgrade to a commercial plan.
+        limit: 300000
+        period: month
+        unit: requests
+        enforcement: soft
+
+  - tier: API Standard (Commercial)
+    scope: account
+    limits:
+      - name: Monthly call budget
+        description: >-
+          1 million API calls per calendar month included in the Standard
+          subscription. No per-minute or per-hour hard cap on dedicated
+          commercial servers.
+        limit: 1000000
+        period: month
+        unit: requests
+        enforcement: soft
+        notes: >-
+          Dedicated servers are not subject to shared-tier throttling.
+          Calls beyond the included budget may require plan upgrade.
+
+  - tier: API Professional (Commercial)
+    scope: account
+    limits:
+      - name: Monthly call budget
+        description: >-
+          5 million API calls per calendar month included in the Professional
+          subscription. No per-minute or per-hour hard cap on dedicated
+          commercial servers.
+        limit: 5000000
+        period: month
+        unit: requests
+        enforcement: soft
+
+  - tier: API Enterprise (Commercial)
+    scope: account
+    limits:
+      - name: Monthly call budget
+        description: >-
+          Custom monthly call budget of 50 million or more, negotiated per
+          enterprise contract. Dedicated infrastructure with no throttling.
+        limit: 50000000
+        period: month
+        unit: requests
+        enforcement: contractual
+        notes: Exact limit defined in enterprise agreement.
+
+notes:
+  - Blocked IPs or accounts that violate non-commercial terms may be
+    banned without notice per Open-Meteo's terms of service.
+  - Rate limit information for the free tier is published at
+    https://open-meteo.com/en/terms and https://open-meteo.com/en/pricing.
+  - Commercial plan limits are per subscription account, not per API key.
+  - API authentication for commercial plans uses the apikey query parameter
+    on a customer-prefixed endpoint (e.g., customer-XXX.open-meteo.com).

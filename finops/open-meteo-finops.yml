@@ -1,0 +1,152 @@
+name: Open-Meteo FinOps Framework
+description: >-
+  Financial operations guidance for teams consuming Open-Meteo APIs. Because
+  Open-Meteo uses flat-rate monthly subscriptions with no per-call overage
+  charges, cost management focuses on right-sizing the subscription tier to
+  actual monthly call volume rather than optimizing per-request spend. Teams
+  self-hosting the open-source stack replace subscription spend with
+  infrastructure costs covered separately.
+specificationVersion: '1.0'
+framework: FinOps Framework
+focusVersion: '1.0'
+
+costModel:
+  type: flat-rate-subscription
+  currency: USD
+  billingCycle: monthly
+  overagePolicy: none
+  description: >-
+    All paid plans charge a fixed monthly fee regardless of call volume
+    within the included budget. There are no per-API-call charges and no
+    surprise overage fees. Unused calls do not roll over to the next month.
+
+tiers:
+  - name: Free (Non-Commercial)
+    monthlyCost: 0.00
+    includedCalls: 300000
+    costPerCall: 0.00
+    commercialUse: false
+
+  - name: API Standard
+    monthlyCost: 29.00
+    includedCalls: 1000000
+    effectiveCostPerCall: 0.000029
+    commercialUse: true
+
+  - name: API Professional
+    monthlyCost: 99.00
+    includedCalls: 5000000
+    effectiveCostPerCall: 0.0000198
+    commercialUse: true
+
+  - name: API Enterprise
+    monthlyCost: custom
+    includedCalls: 50000000
+    effectiveCostPerCall: negotiated
+    commercialUse: true
+
+optimization:
+  strategies:
+    - name: Match tier to actual call volume
+      description: >-
+        Monitor monthly call counts via your customer portal. Upgrade only
+        when actual usage consistently approaches or exceeds 80% of the
+        included budget. Downgrade during off-peak seasons if usage drops
+        well below the included budget for two or more consecutive months.
+      impact: high
+      effort: low
+
+    - name: Cache API responses client-side
+      description: >-
+        Weather forecasts update every 1–6 hours depending on model. Cache
+        responses in your application or CDN layer for at least the model
+        update interval (typically 1 hour for forecast endpoints) to avoid
+        redundant calls for the same coordinates and variables.
+      impact: high
+      effort: medium
+
+    - name: Request only required variables
+      description: >-
+        Each API call can return dozens of weather variables. Specify only
+        the hourly, daily, and current variables your application actually
+        uses. Smaller payloads reduce bandwidth and processing time even
+        though they count as the same number of API calls.
+      impact: medium
+      effort: low
+
+    - name: Batch multi-location queries efficiently
+      description: >-
+        Each call to the forecast endpoint resolves one latitude/longitude
+        coordinate. For applications covering many locations, group requests
+        and schedule them off-peak to avoid burst rate-limit violations on
+        the free tier and to spread load on paid dedicated servers.
+      impact: medium
+      effort: medium
+
+    - name: Evaluate self-hosting for very large volumes
+      description: >-
+        The Open-Meteo server is AGPLv3 open-source and can be deployed on
+        your own cloud infrastructure using the official Docker containers.
+        At very high call volumes (hundreds of millions per month) the cloud
+        infrastructure cost of self-hosting may be lower than Enterprise
+        subscription pricing.
+      impact: high
+      effort: high
+      reference: https://github.com/open-meteo/open-meteo
+
+    - name: Use the right API for the right time range
+      description: >-
+        The forecast endpoint serves up to 16 days ahead. For historical
+        queries (past weather), use the dedicated Historical Weather API
+        (archive-api endpoint) rather than using past_days on the forecast
+        endpoint, which has different data lineage and model availability.
+        Correct endpoint use avoids unnecessary retries and data mismatches.
+      impact: low
+      effort: low
+
+allocation:
+  dimensions:
+    - name: Application
+      description: Tag API key usage by application or product line when
+        managing multiple commercial workloads under one account.
+    - name: Environment
+      description: Use separate API keys for production and development or
+        staging environments to track call consumption per environment.
+    - name: API Type
+      description: Different base URLs (api, archive-api, marine-api, etc.)
+        allow attribution of call volume to specific weather product lines.
+
+governance:
+  policies:
+    - name: Non-commercial compliance check
+      description: >-
+        Any product generating revenue (subscriptions, advertising, paid
+        services, commercial research) must use a paid plan. Using the free
+        tier for commercial workloads violates the terms of service and may
+        result in account blocking.
+      severity: critical
+      reference: https://open-meteo.com/en/terms
+
+    - name: API key security
+      description: >-
+        Commercial API keys should be stored in secrets management systems
+        (e.g., environment variables, vault). Do not embed keys in
+        client-side JavaScript or public repositories.
+      severity: high
+
+    - name: Budget threshold alerting
+      description: >-
+        Configure alerts at 70% and 90% of monthly included call budget via
+        the Open-Meteo customer portal. This provides time to upgrade the
+        plan before the budget is exhausted mid-month.
+      severity: medium
+
+references:
+  - name: Pricing Page
+    url: https://open-meteo.com/en/pricing
+  - name: Terms of Service
+    url: https://open-meteo.com/en/terms
+  - name: GitHub (Self-Hosting)
+    url: https://github.com/open-meteo/open-meteo
+  - name: Commercial API Announcement
+    url: https://openmeteo.substack.com/p/api-subscriptions-for-commercial

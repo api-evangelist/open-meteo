@@ -1,0 +1,137 @@
+name: Open-Meteo Plans and Pricing
+description: >-
+  Open-Meteo offers a free non-commercial tier with no API key required and
+  three commercial subscription tiers (Standard, Professional, Enterprise)
+  billed at fixed monthly rates with no per-call overage charges. Paid plans
+  provide dedicated server infrastructure, commercial use rights, higher
+  monthly call budgets, and access to extended APIs not available on the free
+  tier. All plans can be upgraded, downgraded, or cancelled at any time via
+  the customer portal. Billing is processed through Stripe.
+specificationVersion: '0.1'
+plans:
+  - name: Free (Non-Commercial)
+    description: >-
+      Open access for non-commercial use with no API key required, no sign-up,
+      and no credit card. Intended for personal projects, educational use,
+      open research, and non-profit websites without advertising. Commercial
+      use is strictly prohibited under this tier.
+    url: https://open-meteo.com/en/pricing
+    price: 0.00
+    currency: USD
+    billingCycle: none
+    commercialUse: false
+    rateLimits:
+      - name: Calls per minute
+        limit: 600
+        unit: requests/minute
+      - name: Calls per hour
+        limit: 5000
+        unit: requests/hour
+      - name: Calls per day
+        limit: 10000
+        unit: requests/day
+      - name: Calls per month
+        limit: 300000
+        unit: requests/month
+    apis:
+      - Weather Forecast API
+      - Marine Weather API
+      - Air Quality API
+      - Elevation API
+      - Flood API
+      - Geocoding API
+    notes: >-
+      Data licensed under CC BY 4.0. Attribution required. Rate limits are
+      shared across the public free-tier infrastructure and may vary during
+      high-demand periods.
+
+  - name: API Standard
+    description: >-
+      Commercial subscription providing access to core weather APIs on
+      dedicated server infrastructure with no daily rate limit and a 1 million
+      call monthly budget. Includes an API key and a dedicated API endpoint.
+    url: https://open-meteo.com/en/pricing
+    price: 29.00
+    currency: USD
+    billingCycle: monthly
+    commercialUse: true
+    rateLimits:
+      - name: Calls per month
+        limit: 1000000
+        unit: requests/month
+    apis:
+      - Weather Forecast API
+      - Marine Weather API
+      - Air Quality API
+      - Elevation API
+      - Flood API
+      - Geocoding API
+    features:
+      - Dedicated API nodes
+      - Commercial use licence
+      - Customer-prefixed API endpoint
+      - API key authentication
+      - 99.9% uptime target
+    notes: >-
+      Historical Weather, Ensemble Forecast, Climate Change, Seasonal Forecast,
+      and Satellite Radiation APIs are not included in this plan.
+
+  - name: API Professional
+    description: >-
+      Commercial subscription extending the Standard plan with access to
+      advanced research-grade APIs including historical reanalysis, ensemble
+      probabilistic forecasts, climate projections, seasonal outlooks, and
+      satellite-derived solar radiation data. Provides a 5 million call
+      monthly budget on dedicated servers.
+    url: https://open-meteo.com/en/pricing
+    price: 99.00
+    currency: USD
+    billingCycle: monthly
+    commercialUse: true
+    rateLimits:
+      - name: Calls per month
+        limit: 5000000
+        unit: requests/month
+    apis:
+      - Weather Forecast API
+      - Marine Weather API
+      - Air Quality API
+      - Elevation API
+      - Flood API
+      - Geocoding API
+      - Historical Weather API
+      - Ensemble API
+      - Climate Change API
+      - Seasonal Forecast API
+      - Satellite Radiation API
+    features:
+      - Dedicated API nodes
+      - Commercial use licence
+      - Customer-prefixed API endpoint
+      - API key authentication
+      - 99.9% uptime target
+      - Access to all extended APIs
+
+  - name: API Enterprise
+    description: >-
+      Custom enterprise tier for organizations requiring more than 50 million
+      API calls per month, bespoke data integrations, SLA-backed uptime, and
+      priority support. Pricing is negotiated directly with the Open-Meteo team.
+    url: https://open-meteo.com/en/pricing
+    price: custom
+    currency: USD
+    billingCycle: monthly
+    commercialUse: true
+    rateLimits:
+      - name: Calls per month
+        limit: 50000000
+        unit: requests/month
+        notes: Minimum 50M; exact limit negotiated per contract
+    apis:
+      - All APIs included in Professional plan
+    features:
+      - All Professional plan features
+      - Custom solutions and integrations
+      - Priority support
+      - Negotiated SLA
+    contact: info@open-meteo.com

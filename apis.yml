@@ -1,32 +1,215 @@
 aid: open-meteo
 name: Open-Meteo
-description: "Global weather forecast API for non-commercial use"
-url: https://open-meteo.com/
-specificationVersion: '0.20'
-created: '2026-05-28'
-modified: '2026-05-28'
-x-source: public-apis/public-apis
-x-category: "Weather"
-x-tier: 3
-x-tier-reason: bulk-registered-from-public-apis
+description: >-
+  Open-Meteo is an open-source weather API that provides free global weather
+  forecasts, historical reanalysis data, marine conditions, air quality indexes,
+  and long-range climate projections through a simple REST interface requiring
+  no API key for non-commercial use. The service aggregates data from over 30
+  weather models provided by 15+ national meteorological services including
+  ECMWF, NOAA GFS, DWD ICON, Météo-France, and JMA, delivering resolutions
+  from 1 km to 11 km updated every 1 to 6 hours. Historical data extends back
+  to 1940 via ERA5 reanalysis, giving developers and researchers access to
+  consistent long-term climate records alongside real-time forecasts. Commercial
+  users who need dedicated server capacity, higher throughput, and access to
+  extended APIs such as ensemble forecasts, seasonal outlooks, satellite
+  radiation, and climate change projections can subscribe to paid plans priced
+  at a flat monthly rate with no per-call overage charges. The entire server
+  infrastructure is open-source under the AGPLv3 license and can be
+  self-hosted, while the underlying weather data is released under CC BY 4.0.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/open-meteo/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
 tags:
   - Weather
-  - Public APIs
+  - Forecasts
+  - Historical Weather
+  - Air Quality
+  - Marine
+  - Climate
+  - Open Source
+  - Free
 apis:
-  - name: Open-Meteo
-    description: "Global weather forecast API for non-commercial use"
-    humanURL: https://open-meteo.com/
-    baseURL: https://open-meteo.com/
+  - aid: open-meteo:weather-forecast-api
+    name: Weather Forecast API
+    description: >-
+      Returns up to 16-day hourly and daily weather forecasts for any global
+      location using coordinates, blending multiple national weather models
+      automatically or allowing manual model selection, with no API key required
+      for non-commercial use.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs
+    baseURL: https://api.open-meteo.com
     tags:
       - Weather
+      - Forecast
     properties:
       - type: Documentation
-        url: https://open-meteo.com/
+        url: https://open-meteo.com/en/docs
+  - aid: open-meteo:historical-weather-api
+    name: Historical Weather API
+    description: >-
+      Provides ERA5 reanalysis weather data from 1940 to the present, enabling
+      long-term climate analysis and research across any global coordinate with
+      hourly resolution and consistent data quality across decades.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/historical-weather-api
+    baseURL: https://archive-api.open-meteo.com
+    tags:
+      - Historical
+      - ERA5
+      - Climate
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/historical-weather-api
+  - aid: open-meteo:ensemble-api
+    name: Ensemble API
+    description: >-
+      Delivers probabilistic weather forecasts using ensemble model runs with
+      up to 51 members, supporting risk assessment and uncertainty quantification
+      in weather-sensitive applications. Requires a paid commercial subscription.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/ensemble-api
+    baseURL: https://ensemble-api.open-meteo.com
+    tags:
+      - Ensemble
+      - Probabilistic
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/ensemble-api
+  - aid: open-meteo:climate-change-api
+    name: Climate Change API
+    description: >-
+      Serves CMIP6 climate model projections out to 2050, providing downscaled
+      scenarios for temperature, precipitation, and other variables to support
+      climate adaptation research and long-term planning.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/climate-api
+    baseURL: https://climate-api.open-meteo.com
+    tags:
+      - Climate
+      - CMIP6
+      - Projections
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/climate-api
+  - aid: open-meteo:marine-weather-api
+    name: Marine Weather API
+    description: >-
+      Returns ocean wave height, swell direction and period, wind wave
+      parameters, and sea surface conditions for any oceanic coordinate to
+      support maritime navigation and coastal planning applications.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/marine-weather-api
+    baseURL: https://marine-api.open-meteo.com
+    tags:
+      - Marine
+      - Ocean
+      - Waves
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/marine-weather-api
+  - aid: open-meteo:air-quality-api
+    name: Air Quality API
+    description: >-
+      Provides 5-day hourly forecasts for particulate matter, ozone, nitrogen
+      dioxide, carbon monoxide, pollen, and European and US Air Quality Index
+      values sourced from the Copernicus Atmosphere Monitoring Service (CAMS).
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/air-quality-api
+    baseURL: https://air-quality-api.open-meteo.com
+    tags:
+      - Air Quality
+      - Pollution
+      - Pollen
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/air-quality-api
+  - aid: open-meteo:flood-api
+    name: Flood API
+    description: >-
+      Delivers river discharge forecasts and ensemble flood risk projections for
+      any river basin globally, sourced from the GloFAS model operated by the
+      European Centre for Medium-Range Weather Forecasts (ECMWF).
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/flood-api
+    baseURL: https://flood-api.open-meteo.com
+    tags:
+      - Flood
+      - River
+      - Hydrology
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/flood-api
+  - aid: open-meteo:seasonal-forecast-api
+    name: Seasonal Forecast API
+    description: >-
+      Provides seasonal outlooks up to 9 months ahead using the ECMWF SEAS5
+      model, offering monthly aggregates of temperature and precipitation
+      anomalies for long-range planning and agricultural applications.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/seasonal-forecast-api
+    baseURL: https://seasonal-api.open-meteo.com
+    tags:
+      - Seasonal
+      - Long-Range
+      - ECMWF
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - aid: open-meteo:geocoding-api
+    name: Geocoding API
+    description: >-
+      Converts place names and city searches into geographic coordinates and
+      returns metadata such as country, timezone, population, and elevation to
+      facilitate location lookup within weather application workflows.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/geocoding-api
+    baseURL: https://geocoding-api.open-meteo.com
+    tags:
+      - Geocoding
+      - Location
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/geocoding-api
+  - aid: open-meteo:elevation-api
+    name: Elevation API
+    description: >-
+      Returns terrain elevation in meters for one or more geographic coordinates
+      using a 90-meter digital elevation model, useful for altitude-correcting
+      weather data and geographic enrichment in location-aware applications.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://open-meteo.com/en/docs/elevation-api
+    baseURL: https://api.open-meteo.com
+    tags:
+      - Elevation
+      - Terrain
+    properties:
+      - type: Documentation
+        url: https://open-meteo.com/en/docs/elevation-api
 common:
   - type: Website
-    url: https://open-meteo.com/
-  - type: PublicAPIsListing
-    url: https://github.com/public-apis/public-apis
+    url: https://open-meteo.com
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: GitHubOrg
+    url: https://github.com/open-meteo
+  - type: Blog
+    url: https://openmeteo.substack.com
+  - type: Pricing
+    url: https://open-meteo.com/en/pricing
+  - type: StatusPage
+    url: https://status.open-meteo.com
+  - type: X
+    url: https://x.com/open_meteo
+  - type: Plans
+    url: plans/open-meteo-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/open-meteo-rate-limits.yml
+  - type: FinOps
+    url: finops/open-meteo-finops.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
