@@ -1,0 +1,266 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "om": "https://open-meteo.com/vocab/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "wmo": "https://codes.wmo.int/",
+
+    "WeatherForecast": "om:WeatherForecast",
+    "HistoricalWeather": "om:HistoricalWeather",
+    "AirQualityForecast": "om:AirQualityForecast",
+    "MarineWeather": "om:MarineWeather",
+    "FloodForecast": "om:FloodForecast",
+    "EnsembleForecast": "om:EnsembleForecast",
+    "ClimateForecast": "om:ClimateForecast",
+    "SeasonalForecast": "om:SeasonalForecast",
+    "ElevationData": "om:ElevationData",
+    "GeocodingResult": "om:GeocodingResult",
+
+    "latitude": {
+      "@id": "schema:latitude",
+      "@type": "xsd:float"
+    },
+    "longitude": {
+      "@id": "schema:longitude",
+      "@type": "xsd:float"
+    },
+    "elevation": {
+      "@id": "schema:elevation",
+      "@type": "xsd:float"
+    },
+    "timezone": {
+      "@id": "schema:timezone",
+      "@type": "xsd:string"
+    },
+    "timezone_abbreviation": {
+      "@id": "om:timezoneAbbreviation",
+      "@type": "xsd:string"
+    },
+    "utc_offset_seconds": {
+      "@id": "om:utcOffsetSeconds",
+      "@type": "xsd:integer"
+    },
+    "generationtime_ms": {
+      "@id": "om:generationtimeMs",
+      "@type": "xsd:float"
+    },
+
+    "hourly": {
+      "@id": "om:hourly",
+      "@type": "@id"
+    },
+    "hourly_units": {
+      "@id": "om:hourlyUnits",
+      "@type": "@id"
+    },
+    "daily": {
+      "@id": "om:daily",
+      "@type": "@id"
+    },
+    "daily_units": {
+      "@id": "om:dailyUnits",
+      "@type": "@id"
+    },
+    "minutely_15": {
+      "@id": "om:minutely15",
+      "@type": "@id"
+    },
+    "current": {
+      "@id": "om:current",
+      "@type": "@id"
+    },
+
+    "time": {
+      "@id": "om:time",
+      "@container": "@list"
+    },
+
+    "temperature_2m": {
+      "@id": "om:temperature2m",
+      "@container": "@list"
+    },
+    "temperature_2m_max": {
+      "@id": "om:temperature2mMax",
+      "@container": "@list"
+    },
+    "temperature_2m_min": {
+      "@id": "om:temperature2mMin",
+      "@container": "@list"
+    },
+    "apparent_temperature": {
+      "@id": "om:apparentTemperature",
+      "@container": "@list"
+    },
+    "dew_point_2m": {
+      "@id": "om:dewPoint2m",
+      "@container": "@list"
+    },
+    "relative_humidity_2m": {
+      "@id": "om:relativeHumidity2m",
+      "@container": "@list"
+    },
+    "precipitation": {
+      "@id": "om:precipitation",
+      "@container": "@list"
+    },
+    "precipitation_sum": {
+      "@id": "om:precipitationSum",
+      "@container": "@list"
+    },
+    "rain": {
+      "@id": "om:rain",
+      "@container": "@list"
+    },
+    "snowfall": {
+      "@id": "om:snowfall",
+      "@container": "@list"
+    },
+    "snow_depth": {
+      "@id": "om:snowDepth",
+      "@container": "@list"
+    },
+    "weather_code": {
+      "@id": "wmo:weather_code",
+      "@container": "@list"
+    },
+    "pressure_msl": {
+      "@id": "om:pressureMsl",
+      "@container": "@list"
+    },
+    "surface_pressure": {
+      "@id": "om:surfacePressure",
+      "@container": "@list"
+    },
+    "cloud_cover": {
+      "@id": "om:cloudCover",
+      "@container": "@list"
+    },
+    "wind_speed_10m": {
+      "@id": "om:windSpeed10m",
+      "@container": "@list"
+    },
+    "wind_direction_10m": {
+      "@id": "om:windDirection10m",
+      "@container": "@list"
+    },
+    "wind_gusts_10m": {
+      "@id": "om:windGusts10m",
+      "@container": "@list"
+    },
+    "shortwave_radiation": {
+      "@id": "om:shortwaveRadiation",
+      "@container": "@list"
+    },
+    "uv_index": {
+      "@id": "om:uvIndex",
+      "@container": "@list"
+    },
+    "is_day": {
+      "@id": "om:isDay",
+      "@container": "@list"
+    },
+    "visibility": {
+      "@id": "om:visibility",
+      "@container": "@list"
+    },
+    "evapotranspiration": {
+      "@id": "om:evapotranspiration",
+      "@container": "@list"
+    },
+    "cape": {
+      "@id": "om:cape",
+      "@container": "@list"
+    },
+
+    "pm2_5": {
+      "@id": "om:pm25",
+      "@container": "@list"
+    },
+    "pm10": {
+      "@id": "om:pm10",
+      "@container": "@list"
+    },
+    "ozone": {
+      "@id": "om:ozone",
+      "@container": "@list"
+    },
+    "nitrogen_dioxide": {
+      "@id": "om:nitrogenDioxide",
+      "@container": "@list"
+    },
+    "sulphur_dioxide": {
+      "@id": "om:sulphurDioxide",
+      "@container": "@list"
+    },
+    "carbon_monoxide": {
+      "@id": "om:carbonMonoxide",
+      "@container": "@list"
+    },
+    "european_aqi": {
+      "@id": "om:europeanAqi",
+      "@container": "@list"
+    },
+    "us_aqi": {
+      "@id": "om:usAqi",
+      "@container": "@list"
+    },
+
+    "wave_height": {
+      "@id": "om:waveHeight",
+      "@container": "@list"
+    },
+    "wave_direction": {
+      "@id": "om:waveDirection",
+      "@container": "@list"
+    },
+    "wave_period": {
+      "@id": "om:wavePeriod",
+      "@container": "@list"
+    },
+
+    "river_discharge": {
+      "@id": "om:riverDischarge",
+      "@container": "@list"
+    },
+
+    "results": {
+      "@id": "om:geocodingResults",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "schema:addressCountry",
+      "@type": "xsd:string"
+    },
+    "country_code": {
+      "@id": "om:countryCode",
+      "@type": "xsd:string"
+    },
+    "population": {
+      "@id": "schema:populationCount",
+      "@type": "xsd:integer"
+    },
+    "admin1": {
+      "@id": "om:admin1",
+      "@type": "xsd:string"
+    },
+    "feature_code": {
+      "@id": "om:featureCode",
+      "@type": "xsd:string"
+    },
+
+    "error": {
+      "@id": "om:error",
+      "@type": "xsd:boolean"
+    },
+    "reason": {
+      "@id": "om:errorReason",
+      "@type": "xsd:string"
+    }
+  }
+}

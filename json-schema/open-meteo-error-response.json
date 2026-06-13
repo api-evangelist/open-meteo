@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/open-meteo/main/json-schema/open-meteo-error-response.json",
+  "title": "Open-Meteo Error Response",
+  "description": "Error response returned by all Open-Meteo APIs on bad requests",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "boolean",
+      "enum": [true],
+      "description": "Always true when an error has occurred"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Human-readable description of the error"
+    }
+  },
+  "required": ["error", "reason"]
+}

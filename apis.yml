@@ -48,6 +48,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs
+      - type: OpenAPI
+        url: openapi/open-meteo-forecast-openapi.yml
   - aid: open-meteo:historical-weather-api
     name: Historical Weather API
     description: >-
@@ -64,6 +66,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/historical-weather-api
+      - type: OpenAPI
+        url: openapi/open-meteo-historical-weather-openapi.yml
   - aid: open-meteo:ensemble-api
     name: Ensemble API
     description: >-
@@ -79,6 +83,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/ensemble-api
+      - type: OpenAPI
+        url: openapi/open-meteo-ensemble-openapi.yml
   - aid: open-meteo:climate-change-api
     name: Climate Change API
     description: >-
@@ -95,6 +101,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/climate-api
+      - type: OpenAPI
+        url: openapi/open-meteo-climate-openapi.yml
   - aid: open-meteo:marine-weather-api
     name: Marine Weather API
     description: >-
@@ -111,6 +119,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/marine-weather-api
+      - type: OpenAPI
+        url: openapi/open-meteo-marine-openapi.yml
   - aid: open-meteo:air-quality-api
     name: Air Quality API
     description: >-
@@ -127,6 +137,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/air-quality-api
+      - type: OpenAPI
+        url: openapi/open-meteo-air-quality-openapi.yml
   - aid: open-meteo:flood-api
     name: Flood API
     description: >-
@@ -143,6 +155,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/flood-api
+      - type: OpenAPI
+        url: openapi/open-meteo-flood-openapi.yml
   - aid: open-meteo:seasonal-forecast-api
     name: Seasonal Forecast API
     description: >-
@@ -159,6 +173,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/seasonal-forecast-api
+      - type: OpenAPI
+        url: openapi/open-meteo-seasonal-openapi.yml
   - aid: open-meteo:geocoding-api
     name: Geocoding API
     description: >-
@@ -189,6 +205,8 @@ apis:
     properties:
       - type: Documentation
         url: https://open-meteo.com/en/docs/elevation-api
+      - type: OpenAPI
+        url: openapi/open-meteo-elevation-openapi.yml
 common:
   - type: Website
     url: https://open-meteo.com

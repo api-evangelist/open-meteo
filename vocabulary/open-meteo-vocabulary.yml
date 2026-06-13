@@ -1,0 +1,313 @@
+vocabulary:
+  name: Open-Meteo API Vocabulary
+  description: >-
+    Domain vocabulary for Open-Meteo weather, climate, and environmental APIs
+    covering meteorological variables, geographic parameters, data models,
+    and quality index systems.
+  version: '1.0'
+  url: https://open-meteo.com/en/docs
+
+terms:
+
+  # --- Geographic / spatial ---
+
+  - term: latitude
+    definition: >-
+      WGS84 geographic latitude coordinate in decimal degrees. Positive values
+      indicate the northern hemisphere; negative values indicate the southern.
+    domain: geography
+    unit: degrees
+
+  - term: longitude
+    definition: >-
+      WGS84 geographic longitude coordinate in decimal degrees. Positive values
+      indicate east of the prime meridian; negative values indicate west.
+    domain: geography
+    unit: degrees
+
+  - term: elevation
+    definition: >-
+      Terrain height above mean sea level in metres, derived from a 90-metre
+      digital elevation model. Used to altitude-correct temperature and pressure.
+    domain: geography
+    unit: metres
+
+  # --- Atmospheric temperature ---
+
+  - term: temperature_2m
+    definition: >-
+      Air temperature measured at 2 metres above the ground surface, the standard
+      meteorological height for screen-level temperature observations.
+    domain: meteorology
+    unit: °C or °F
+
+  - term: apparent_temperature
+    definition: >-
+      Perceived temperature combining air temperature, relative humidity, wind
+      speed, and radiation to model human thermal comfort.
+    domain: meteorology
+    unit: °C or °F
+
+  - term: dew_point_2m
+    definition: >-
+      Temperature at which air must be cooled (at constant pressure) for
+      saturation to occur, indicating atmospheric moisture content.
+    domain: meteorology
+    unit: °C or °F
+
+  # --- Moisture ---
+
+  - term: relative_humidity_2m
+    definition: >-
+      Percentage of the maximum possible water vapour the air holds at 2 metres
+      relative to saturation at the same temperature.
+    domain: meteorology
+    unit: '%'
+
+  - term: precipitation
+    definition: >-
+      Total water equivalent reaching the surface from all forms: rain, showers,
+      and snowfall combined, summed over the time step.
+    domain: meteorology
+    unit: mm
+
+  - term: rain
+    definition: >-
+      Liquid precipitation component of total precipitation, not including
+      frozen forms.
+    domain: meteorology
+    unit: mm
+
+  - term: snowfall
+    definition: >-
+      Precipitation falling as snow, expressed in centimetres of snow depth
+      equivalent.
+    domain: meteorology
+    unit: cm
+
+  - term: snow_depth
+    definition: >-
+      Depth of accumulated snow on the ground, updated each hour.
+    domain: meteorology
+    unit: metres
+
+  # --- Wind ---
+
+  - term: wind_speed_10m
+    definition: >-
+      Horizontal wind speed at 10 metres above the ground, the standard
+      anemometer height for surface observations.
+    domain: meteorology
+    unit: km/h, mph, m/s, or knots
+
+  - term: wind_direction_10m
+    definition: >-
+      Compass direction the wind is blowing FROM at 10 metres, measured
+      clockwise from true north (0° = north, 90° = east).
+    domain: meteorology
+    unit: degrees
+
+  - term: wind_gusts_10m
+    definition: >-
+      Maximum instantaneous wind speed at 10 metres within the time step,
+      representing short-duration speed peaks.
+    domain: meteorology
+    unit: km/h, mph, m/s, or knots
+
+  # --- Pressure ---
+
+  - term: pressure_msl
+    definition: >-
+      Atmospheric pressure reduced to mean sea level, removing elevation
+      effects to allow geographic comparison.
+    domain: meteorology
+    unit: hPa
+
+  - term: surface_pressure
+    definition: >-
+      Actual atmospheric pressure at the surface elevation of the model grid
+      point.
+    domain: meteorology
+    unit: hPa
+
+  # --- Cloud & radiation ---
+
+  - term: cloud_cover
+    definition: >-
+      Total sky fraction covered by clouds at all altitudes combined,
+      expressed as a percentage (0 = clear, 100 = overcast).
+    domain: meteorology
+    unit: '%'
+
+  - term: shortwave_radiation
+    definition: >-
+      Total solar shortwave radiation flux reaching the surface, integrated
+      over the time step.
+    domain: meteorology
+    unit: W/m²
+
+  - term: uv_index
+    definition: >-
+      Dimensionless index of ultraviolet radiation intensity at the surface,
+      scaled so values above 3 require sun protection.
+    domain: meteorology
+    unit: dimensionless
+
+  - term: is_day
+    definition: >-
+      Binary flag (1 = daytime, 0 = night) indicating whether the sun is
+      above the horizon for the given time step.
+    domain: meteorology
+    unit: boolean flag
+
+  # --- Weather codes ---
+
+  - term: weather_code
+    definition: >-
+      WMO (World Meteorological Organization) weather interpretation code
+      classifying the dominant weather phenomenon for the time step. Values
+      include 0 (clear), 1-3 (partly to overcast), 45-48 (fog), 51-67
+      (drizzle/rain), 71-77 (snow), 80-82 (rain showers), 95-99 (thunderstorms).
+    domain: meteorology
+    unit: WMO code
+
+  # --- Air quality ---
+
+  - term: pm2_5
+    definition: >-
+      Mass concentration of particulate matter with aerodynamic diameter smaller
+      than 2.5 micrometres, a key indicator of respiratory health risk.
+    domain: air-quality
+    unit: μg/m³
+
+  - term: pm10
+    definition: >-
+      Mass concentration of particulate matter with aerodynamic diameter smaller
+      than 10 micrometres.
+    domain: air-quality
+    unit: μg/m³
+
+  - term: ozone
+    definition: >-
+      Tropospheric ozone (O₃) concentration. Elevated surface-level ozone is a
+      respiratory irritant and regulated air pollutant.
+    domain: air-quality
+    unit: μg/m³
+
+  - term: nitrogen_dioxide
+    definition: >-
+      Nitrogen dioxide (NO₂) concentration primarily from vehicle emissions
+      and combustion. A regulated pollutant and precursor to ozone.
+    domain: air-quality
+    unit: μg/m³
+
+  - term: sulphur_dioxide
+    definition: >-
+      Sulphur dioxide (SO₂) concentration from volcanic activity and fossil
+      fuel combustion. Regulated as a respiratory irritant.
+    domain: air-quality
+    unit: μg/m³
+
+  - term: european_aqi
+    definition: >-
+      European Air Quality Index computed per EAQI methodology, combining PM2.5,
+      PM10, NO₂, O₃, and SO₂ concentrations into a single 0-500 scale.
+    domain: air-quality
+    unit: EAQI index
+
+  - term: us_aqi
+    definition: >-
+      United States Air Quality Index (EPA) combining PM2.5, PM10, CO, NO₂,
+      O₃, and SO₂ on a 0-500 scale with colour-coded health categories.
+    domain: air-quality
+    unit: USAQI index
+
+  # --- Marine ---
+
+  - term: wave_height
+    definition: >-
+      Significant wave height representing the average height of the highest
+      third of ocean waves at a given location.
+    domain: marine
+    unit: metres
+
+  - term: wave_direction
+    definition: >-
+      Dominant direction ocean waves are travelling TOWARD, measured clockwise
+      from north.
+    domain: marine
+    unit: degrees
+
+  - term: wave_period
+    definition: >-
+      Mean wave period, the average time in seconds between successive wave
+      crests.
+    domain: marine
+    unit: seconds
+
+  # --- Hydrological ---
+
+  - term: river_discharge
+    definition: >-
+      Volumetric rate of water flow in a river or stream at a given cross-
+      section, used in flood forecasting and hydrological modelling.
+    domain: hydrology
+    unit: m³/s
+
+  # --- Climate ---
+
+  - term: era5
+    definition: >-
+      ECMWF Reanalysis v5 — a comprehensive global climate dataset produced
+      by the European Centre for Medium-Range Weather Forecasts (ECMWF)
+      providing hourly data from 1940 to near-present on a 0.25° grid.
+    domain: climate
+    type: data-source
+
+  - term: cmip6
+    definition: >-
+      Coupled Model Intercomparison Project Phase 6 — a coordinated set of
+      global climate model experiments used for IPCC assessments and providing
+      projections through 2100 under multiple emission scenarios.
+    domain: climate
+    type: data-source
+
+  - term: ensemble_member
+    definition: >-
+      A single model run within a probabilistic ensemble forecast, differing
+      in initial conditions or model parameters to sample forecast uncertainty.
+    domain: meteorology
+
+  # --- API mechanics ---
+
+  - term: timezone
+    definition: >-
+      IANA timezone identifier (e.g. America/New_York, Europe/London) used to
+      align returned timestamps with a local time zone.
+    domain: api
+
+  - term: forecast_days
+    definition: >-
+      Number of days ahead included in the response (1–16 depending on API).
+    domain: api
+    unit: days
+
+  - term: past_days
+    definition: >-
+      Number of previous days appended before the current date in the response,
+      useful for comparison of recent observations with the forecast.
+    domain: api
+    unit: days
+
+  - term: generationtime_ms
+    definition: >-
+      Server-side processing time in milliseconds required to generate the
+      API response, included for performance diagnostics.
+    domain: api
+    unit: milliseconds
+
+  - term: apikey
+    definition: >-
+      Optional API key for commercial subscribers providing access to higher
+      throughput, dedicated server capacity, and premium API endpoints.
+    domain: api

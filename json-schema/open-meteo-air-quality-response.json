@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/open-meteo/main/json-schema/open-meteo-air-quality-response.json",
+  "title": "Open-Meteo Air Quality Response",
+  "description": "Response schema for the Open-Meteo Air Quality API providing hourly pollutant forecasts",
+  "type": "object",
+  "properties": {
+    "latitude": { "type": "number" },
+    "longitude": { "type": "number" },
+    "generationtime_ms": { "type": "number" },
+    "utc_offset_seconds": { "type": "integer" },
+    "timezone": { "type": "string" },
+    "timezone_abbreviation": { "type": "string" },
+    "elevation": { "type": "number" },
+    "hourly_units": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "hourly": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "pm10": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Particulate matter with diameter smaller than 10 micrometres (μg/m³)"
+        },
+        "pm2_5": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Particulate matter with diameter smaller than 2.5 micrometres (μg/m³)"
+        },
+        "carbon_monoxide": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Carbon monoxide concentration (μg/m³)"
+        },
+        "nitrogen_dioxide": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Nitrogen dioxide concentration (μg/m³)"
+        },
+        "sulphur_dioxide": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Sulphur dioxide concentration (μg/m³)"
+        },
+        "ozone": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Ozone concentration (μg/m³)"
+        },
+        "uv_index": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "UV index"
+        },
+        "european_aqi": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "description": "European Air Quality Index"
+        },
+        "us_aqi": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "description": "United States Air Quality Index"
+        }
+      },
+      "additionalProperties": {
+        "type": "array",
+        "items": {}
+      }
+    }
+  },
+  "required": ["latitude", "longitude", "generationtime_ms", "utc_offset_seconds", "timezone", "timezone_abbreviation", "elevation"]
+}
