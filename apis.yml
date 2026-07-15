@@ -208,6 +208,8 @@ apis:
       - type: OpenAPI
         url: openapi/open-meteo-elevation-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/open-meteo-agentic-access.yml
   - type: DomainSecurity
     url: security/open-meteo-domain-security.yml
   - type: Website
