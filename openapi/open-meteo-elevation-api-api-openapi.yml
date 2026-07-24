@@ -1,8 +1,7 @@
-openapi: '3.0.3'
+openapi: 3.0.3
 info:
-  title: Open-Meteo Elevation API
-  description: >-
-    Look up terrain elevation for coordinates using a 90-metre digital elevation model.
+  title: Open-Meteo Air Quality Air Quality APIs Elevation API API
+  description: Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).
   version: '1.0'
   contact:
     name: Open-Meteo
@@ -12,34 +11,35 @@ info:
     name: Attribution 4.0 International (CC BY 4.0)
     url: https://creativecommons.org/licenses/by/4.0/
   termsOfService: https://open-meteo.com/en/features#terms
+tags:
+- name: Elevation API
 paths:
   /v1/elevation:
     servers:
-      - url: https://api.open-meteo.com
-      - url: https://customer-api.open-meteo.com
+    - url: https://api.open-meteo.com
+    - url: https://customer-api.open-meteo.com
     get:
       tags:
-        - Elevation API
+      - Elevation API
       summary: Get terrain elevation for coordinates
-      description: >-
-        Returns terrain elevation using a 90-metre digital elevation model.
+      description: Returns terrain elevation using a 90-metre digital elevation model.
       parameters:
-        - name: latitude
-          in: query
-          required: true
-          description: Comma-separated list of latitude values in WGS84.
-          schema:
-            type: string
-        - name: longitude
-          in: query
-          required: true
-          description: Comma-separated list of longitude values in WGS84.
-          schema:
-            type: string
-        - name: apikey
-          in: query
-          schema:
-            type: string
+      - name: latitude
+        in: query
+        required: true
+        description: Comma-separated list of latitude values in WGS84.
+        schema:
+          type: string
+      - name: longitude
+        in: query
+        required: true
+        description: Comma-separated list of longitude values in WGS84.
+        schema:
+          type: string
+      - name: apikey
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: OK

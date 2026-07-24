@@ -1,8 +1,7 @@
-openapi: '3.0.3'
+openapi: 3.0.3
 info:
-  title: Open-Meteo Flood Forecast API
-  description: >-
-    Daily river discharge forecasts using the Copernicus GloFAS hydrological model for rivers worldwide.
+  title: Open-Meteo Air Quality Air Quality APIs Flood APIs API
+  description: Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).
   version: '1.0'
   contact:
     name: Open-Meteo
@@ -12,118 +11,117 @@ info:
     name: Attribution 4.0 International (CC BY 4.0)
     url: https://creativecommons.org/licenses/by/4.0/
   termsOfService: https://open-meteo.com/en/features#terms
+tags:
+- name: Flood APIs
 paths:
   /v1/flood:
     servers:
-      - url: https://flood-api.open-meteo.com
-      - url: https://customer-flood-api.open-meteo.com
+    - url: https://flood-api.open-meteo.com
+    - url: https://customer-flood-api.open-meteo.com
     get:
       tags:
-        - Flood APIs
+      - Flood APIs
       summary: Daily river discharge forecast
-      description: >-
-        Daily river discharge forecasts from the Copernicus Emergency Management Service
-        GloFAS hydrological model.
+      description: Daily river discharge forecasts from the Copernicus Emergency Management Service GloFAS hydrological model.
       parameters:
-        - name: latitude
-          in: query
-          required: true
-          schema:
+      - name: latitude
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: longitude
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: daily
+        in: query
+        description: A list of river discharge variables.
+        explode: false
+        schema:
+          type: array
+          items:
             type: string
-        - name: longitude
-          in: query
-          required: true
-          schema:
+            enum:
+            - river_discharge
+            - river_discharge_mean
+            - river_discharge_median
+            - river_discharge_max
+            - river_discharge_min
+            - river_discharge_p25
+            - river_discharge_p75
+      - name: timeformat
+        in: query
+        schema:
+          type: string
+          default: iso8601
+          enum:
+          - iso8601
+          - unixtime
+      - name: timezone
+        in: query
+        schema:
+          type: string
+      - name: past_days
+        in: query
+        schema:
+          type: integer
+          default: 0
+          minimum: 0
+          maximum: 92
+      - name: forecast_days
+        in: query
+        description: Number of forecast days. Up to 366 days.
+        schema:
+          type: integer
+          default: 92
+          minimum: 0
+          maximum: 366
+      - name: start_date
+        in: query
+        description: Start date in ISO 8601 format.
+        schema:
+          type: string
+          format: date
+      - name: end_date
+        in: query
+        description: End date in ISO 8601 format.
+        schema:
+          type: string
+          format: date
+      - name: ensemble
+        in: query
+        description: Return ensemble members instead of only the ensemble mean.
+        schema:
+          type: boolean
+      - name: cell_selection
+        in: query
+        schema:
+          type: string
+          enum:
+          - land
+          - sea
+          - nearest
+      - name: models
+        in: query
+        description: Manually select one or more weather models.
+        explode: false
+        schema:
+          type: array
+          items:
             type: string
-        - name: daily
-          in: query
-          description: >-
-            A list of river discharge variables.
-          explode: false
-          schema:
-            type: array
-            items:
-              type: string
-              enum:
-                - river_discharge
-                - river_discharge_mean
-                - river_discharge_median
-                - river_discharge_max
-                - river_discharge_min
-                - river_discharge_p25
-                - river_discharge_p75
-        - name: timeformat
-          in: query
-          schema:
-            type: string
-            default: iso8601
-            enum: [iso8601, unixtime]
-        - name: timezone
-          in: query
-          schema:
-            type: string
-        - name: past_days
-          in: query
-          schema:
-            type: integer
-            default: 0
-            minimum: 0
-            maximum: 92
-        - name: forecast_days
-          in: query
-          description: >-
-            Number of forecast days. Up to 366 days.
-          schema:
-            type: integer
-            default: 92
-            minimum: 0
-            maximum: 366
-        - name: start_date
-          in: query
-          description: >-
-            Start date in ISO 8601 format.
-          schema:
-            type: string
-            format: date
-        - name: end_date
-          in: query
-          description: >-
-            End date in ISO 8601 format.
-          schema:
-            type: string
-            format: date
-        - name: ensemble
-          in: query
-          description: >-
-            Return ensemble members instead of only the ensemble mean.
-          schema:
-            type: boolean
-        - name: cell_selection
-          in: query
-          schema:
-            type: string
-            enum: [land, sea, nearest]
-        - name: models
-          in: query
-          description: Manually select one or more weather models.
-          explode: false
-          schema:
-            type: array
-            items:
-              type: string
-              enum:
-                - seamless_v4
-                - forecast_v4
-                - consolidated_v4
-                - seamless_v3
-                - forecast_v3
-                - consolidated_v3
-        - name: apikey
-          in: query
-          description: >-
-            Only required for commercial subscriptions.
-          schema:
-            type: string
+            enum:
+            - seamless_v4
+            - forecast_v4
+            - consolidated_v4
+            - seamless_v3
+            - forecast_v3
+            - consolidated_v3
+      - name: apikey
+        in: query
+        description: Only required for commercial subscriptions.
+        schema:
+          type: string
       responses:
         '200':
           description: OK
