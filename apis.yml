@@ -17,7 +17,19 @@ description: >-
   infrastructure is open-source under the AGPLv3 license and can be
   self-hosted, while the underlying weather data is released under CC BY 4.0.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: open
+  trial: false
+  try_now: true
+  public: true
+  label: Freemium · Open access
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/open-meteo.png
 url: https://raw.githubusercontent.com/api-evangelist/open-meteo/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -32,181 +44,276 @@ tags:
   - Open Source
   - Free
 apis:
-  - aid: open-meteo:weather-forecast-api
-    name: Weather Forecast API
-    description: >-
-      Returns up to 16-day hourly and daily weather forecasts for any global
-      location using coordinates, blending multiple national weather models
-      automatically or allowing manual model selection, with no API key required
-      for non-commercial use.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs
-    baseURL: https://api.open-meteo.com
-    tags:
-      - Weather
-      - Forecast
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs
-      - type: OpenAPI
-        url: openapi/open-meteo-forecast-openapi.yml
-  - aid: open-meteo:historical-weather-api
-    name: Historical Weather API
-    description: >-
-      Provides ERA5 reanalysis weather data from 1940 to the present, enabling
-      long-term climate analysis and research across any global coordinate with
-      hourly resolution and consistent data quality across decades.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/historical-weather-api
-    baseURL: https://archive-api.open-meteo.com
-    tags:
-      - Historical
-      - ERA5
-      - Climate
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/historical-weather-api
-      - type: OpenAPI
-        url: openapi/open-meteo-historical-weather-openapi.yml
-  - aid: open-meteo:ensemble-api
-    name: Ensemble API
-    description: >-
-      Delivers probabilistic weather forecasts using ensemble model runs with
-      up to 51 members, supporting risk assessment and uncertainty quantification
-      in weather-sensitive applications. Requires a paid commercial subscription.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/ensemble-api
-    baseURL: https://ensemble-api.open-meteo.com
-    tags:
-      - Ensemble
-      - Probabilistic
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/ensemble-api
-      - type: OpenAPI
-        url: openapi/open-meteo-ensemble-openapi.yml
-  - aid: open-meteo:climate-change-api
-    name: Climate Change API
-    description: >-
-      Serves CMIP6 climate model projections out to 2050, providing downscaled
-      scenarios for temperature, precipitation, and other variables to support
-      climate adaptation research and long-term planning.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/climate-api
-    baseURL: https://climate-api.open-meteo.com
-    tags:
-      - Climate
-      - CMIP6
-      - Projections
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/climate-api
-      - type: OpenAPI
-        url: openapi/open-meteo-climate-openapi.yml
-  - aid: open-meteo:marine-weather-api
-    name: Marine Weather API
-    description: >-
-      Returns ocean wave height, swell direction and period, wind wave
-      parameters, and sea surface conditions for any oceanic coordinate to
-      support maritime navigation and coastal planning applications.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/marine-weather-api
-    baseURL: https://marine-api.open-meteo.com
-    tags:
-      - Marine
-      - Ocean
-      - Waves
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/marine-weather-api
-      - type: OpenAPI
-        url: openapi/open-meteo-marine-openapi.yml
-  - aid: open-meteo:air-quality-api
-    name: Air Quality API
-    description: >-
-      Provides 5-day hourly forecasts for particulate matter, ozone, nitrogen
-      dioxide, carbon monoxide, pollen, and European and US Air Quality Index
-      values sourced from the Copernicus Atmosphere Monitoring Service (CAMS).
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/air-quality-api
-    baseURL: https://air-quality-api.open-meteo.com
-    tags:
-      - Air Quality
-      - Pollution
-      - Pollen
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/air-quality-api
-      - type: OpenAPI
-        url: openapi/open-meteo-air-quality-openapi.yml
-  - aid: open-meteo:flood-api
-    name: Flood API
-    description: >-
-      Delivers river discharge forecasts and ensemble flood risk projections for
-      any river basin globally, sourced from the GloFAS model operated by the
-      European Centre for Medium-Range Weather Forecasts (ECMWF).
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/flood-api
-    baseURL: https://flood-api.open-meteo.com
-    tags:
-      - Flood
-      - River
-      - Hydrology
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/flood-api
-      - type: OpenAPI
-        url: openapi/open-meteo-flood-openapi.yml
-  - aid: open-meteo:seasonal-forecast-api
-    name: Seasonal Forecast API
-    description: >-
-      Provides seasonal outlooks up to 9 months ahead using the ECMWF SEAS5
-      model, offering monthly aggregates of temperature and precipitation
-      anomalies for long-range planning and agricultural applications.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/seasonal-forecast-api
-    baseURL: https://seasonal-api.open-meteo.com
-    tags:
-      - Seasonal
-      - Long-Range
-      - ECMWF
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/seasonal-forecast-api
-      - type: OpenAPI
-        url: openapi/open-meteo-seasonal-openapi.yml
-  - aid: open-meteo:geocoding-api
-    name: Geocoding API
-    description: >-
-      Converts place names and city searches into geographic coordinates and
-      returns metadata such as country, timezone, population, and elevation to
-      facilitate location lookup within weather application workflows.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/geocoding-api
-    baseURL: https://geocoding-api.open-meteo.com
-    tags:
-      - Geocoding
-      - Location
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/geocoding-api
-  - aid: open-meteo:elevation-api
-    name: Elevation API
-    description: >-
-      Returns terrain elevation in meters for one or more geographic coordinates
-      using a 90-meter digital elevation model, useful for altitude-correcting
-      weather data and geographic enrichment in location-aware applications.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://open-meteo.com/en/docs/elevation-api
-    baseURL: https://api.open-meteo.com
-    tags:
-      - Elevation
-      - Terrain
-    properties:
-      - type: Documentation
-        url: https://open-meteo.com/en/docs/elevation-api
-      - type: OpenAPI
-        url: openapi/open-meteo-elevation-openapi.yml
+- aid: open-meteo:geocoding-api
+  name: Geocoding API
+  description: >-
+    Converts place names and city searches into geographic coordinates and returns metadata such as country,
+    timezone, population, and elevation to facilitate location lookup within weather application workflows.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://open-meteo.com/en/docs/geocoding-api
+  baseURL: https://geocoding-api.open-meteo.com
+  tags:
+  - Geocoding
+  - Location
+  properties:
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/geocoding-api
+- aid: open-meteo:open-meteo-air-quality-apis-api
+  name: Open-Meteo Air Quality APIs API
+  description: The Air Quality APIs API from Open-Meteo — 1 operation(s) for air quality apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Air Quality APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-air-quality-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-climate-change-apis-api
+  name: Open-Meteo Climate Change APIs API
+  description: The Climate Change APIs API from Open-Meteo — 1 operation(s) for climate change apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Climate Change APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-climate-change-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-elevation-api-api
+  name: Open-Meteo Elevation API API
+  description: The Elevation API API from Open-Meteo — 1 operation(s) for elevation api.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Elevation API
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-elevation-api-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-ensemble-forecast-apis-api
+  name: Open-Meteo Ensemble Forecast APIs API
+  description: >-
+    The Ensemble Forecast APIs API from Open-Meteo — 1 operation(s) for ensemble forecast apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Ensemble Forecast APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-ensemble-forecast-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-flood-apis-api
+  name: Open-Meteo Flood APIs API
+  description: The Flood APIs API from Open-Meteo — 1 operation(s) for flood apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Flood APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-flood-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-historical-weather-apis-api
+  name: Open-Meteo Historical Weather APIs API
+  description: >-
+    The Historical Weather APIs API from Open-Meteo — 1 operation(s) for historical weather apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Historical Weather APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-historical-weather-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-marine-weather-apis-api
+  name: Open-Meteo Marine Weather APIs API
+  description: The Marine Weather APIs API from Open-Meteo — 1 operation(s) for marine weather apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Marine Weather APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-marine-weather-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-seasonal-forecast-apis-api
+  name: Open-Meteo Seasonal Forecast APIs API
+  description: >-
+    The Seasonal Forecast APIs API from Open-Meteo — 1 operation(s) for seasonal forecast apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Seasonal Forecast APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-seasonal-forecast-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
+- aid: open-meteo:open-meteo-weather-forecast-apis-api
+  name: Open-Meteo Weather Forecast APIs API
+  description: >-
+    The Weather Forecast APIs API from Open-Meteo — 1 operation(s) for weather forecast apis.
+  humanURL: https://open-meteo.com/en/docs
+  baseURL: https://api.open-meteo.com
+  tags:
+  - Weather Forecast APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/open-meteo-weather-forecast-apis-api-openapi.yml
+  - type: Documentation
+    url: https://open-meteo.com/en/docs
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/historical-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/ensemble-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/climate-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/marine-weather-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/air-quality-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/flood-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/seasonal-forecast-api
+  - type: Documentation
+    url: https://open-meteo.com/en/docs/elevation-api
 common:
   - type: AgenticAccess
     url: agentic-access/open-meteo-agentic-access.yml
