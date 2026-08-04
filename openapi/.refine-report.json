@@ -1,0 +1,30 @@
+{
+  "provider": "open-meteo",
+  "sources": [
+    "open-meteo-air-quality-apis-api-openapi.yml",
+    "open-meteo-climate-change-apis-api-openapi.yml",
+    "open-meteo-elevation-api-api-openapi.yml",
+    "open-meteo-ensemble-forecast-apis-api-openapi.yml",
+    "open-meteo-flood-apis-api-openapi.yml",
+    "open-meteo-historical-weather-apis-api-openapi.yml",
+    "open-meteo-marine-weather-apis-api-openapi.yml",
+    "open-meteo-seasonal-forecast-apis-api-openapi.yml",
+    "open-meteo-weather-forecast-apis-api-openapi.yml"
+  ],
+  "outputs": [
+    "open-meteo-air-quality-apis-api-openapi.yml",
+    "open-meteo-climate-change-apis-api-openapi.yml",
+    "open-meteo-elevation-api-api-openapi.yml",
+    "open-meteo-ensemble-forecast-apis-api-openapi.yml",
+    "open-meteo-flood-apis-api-openapi.yml",
+    "open-meteo-historical-weather-apis-api-openapi.yml",
+    "open-meteo-marine-weather-apis-api-openapi.yml",
+    "open-meteo-seasonal-forecast-apis-api-openapi.yml",
+    "open-meteo-weather-forecast-apis-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
