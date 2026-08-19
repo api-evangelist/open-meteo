@@ -1,0 +1,436 @@
+{
+  "item": [
+    {
+      "id": "5bec57f9-0405-46c1-9b5a-cb255c4ef92a",
+      "name": "Historical Weather APIs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cd6d9ef0-2645-428e-99f2-735729782d78",
+          "name": "Open-Meteo Historical Weather API",
+          "request": {
+            "name": "Open-Meteo Historical Weather API",
+            "description": {
+              "content": "Historical weather data from ERA5 and ERA5-Land reanalysis going back to 1940.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "archive"
+              ],
+              "host": [
+                "{{v1-archive-Url}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "latitude",
+                  "value": "<string>",
+                  "description": "(Required) Geographical WGS84 coordinates. Multiple coordinates can be comma separated."
+                },
+                {
+                  "disabled": false,
+                  "key": "longitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "hourly",
+                  "value": "<string>,<string>",
+                  "description": "A list of weather variables which should be returned."
+                },
+                {
+                  "disabled": false,
+                  "key": "daily",
+                  "value": "<string>,<string>",
+                  "description": "A list of daily weather variable aggregations."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "(Required) Start date in ISO 8601 format. Required."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "(Required) End date in ISO 8601 format. Required."
+                },
+                {
+                  "disabled": false,
+                  "key": "elevation",
+                  "value": "<float>"
+                },
+                {
+                  "disabled": false,
+                  "key": "temperature_unit",
+                  "value": "celsius"
+                },
+                {
+                  "disabled": false,
+                  "key": "wind_speed_unit",
+                  "value": "kmh"
+                },
+                {
+                  "disabled": false,
+                  "key": "precipitation_unit",
+                  "value": "mm"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeformat",
+                  "value": "iso8601",
+                  "description": "If format unixtime is selected, all time values are returned in UNIX epoch time."
+                },
+                {
+                  "disabled": false,
+                  "key": "timezone",
+                  "value": "<string>",
+                  "description": "Any IANA time zone name is supported. Use auto to resolve the local time zone."
+                },
+                {
+                  "disabled": false,
+                  "key": "past_days",
+                  "value": "0",
+                  "description": "Return past days of data."
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_days",
+                  "value": "0",
+                  "description": "Number of forecast days."
+                },
+                {
+                  "disabled": false,
+                  "key": "past_hours",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_hours",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "tilt",
+                  "value": "0",
+                  "description": "Slope tilt in degrees for global_tilted_irradiance calculation."
+                },
+                {
+                  "disabled": false,
+                  "key": "azimuth",
+                  "value": "0",
+                  "description": "Azimuth for global_tilted_irradiance. North=0, East=90, South=180, West=270."
+                },
+                {
+                  "disabled": false,
+                  "key": "cell_selection",
+                  "value": "<string>",
+                  "description": "Grid cell selection preference: land, sea, or nearest."
+                },
+                {
+                  "disabled": false,
+                  "key": "apikey",
+                  "value": "<string>",
+                  "description": "Only required for commercial subscriptions."
+                },
+                {
+                  "disabled": false,
+                  "key": "models",
+                  "value": "<string>,<string>",
+                  "description": "Manually select one or more weather models."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ab390265-3686-42c5-b67e-61c1c3bd5ca5",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "archive"
+                  ],
+                  "host": [
+                    "{{v1-archive-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "elevation",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "precipitation_unit",
+                      "value": "mm"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "past_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "forecast_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "tilt",
+                      "value": "0"
+                    },
+                    {
+                      "key": "azimuth",
+                      "value": "0"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"latitude\": 4229.166688106166,\n  \"longitude\": 583.5168721363315,\n  \"elevation\": 3582.205915608714,\n  \"generationtime_ms\": 4827.032539888158,\n  \"utc_offset_seconds\": 5493,\n  \"timezone\": \"string\",\n  \"timezone_abbreviation\": \"string\",\n  \"hourly\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"temperature_2m\": [\n      3321.9529625739697,\n      5451.812858727903\n    ],\n    \"relative_humidity_2m\": [\n      8358.111915451287,\n      664.8060548247759\n    ],\n    \"dew_point_2m\": [\n      7887.17964197413,\n      2387.407878801601\n    ],\n    \"apparent_temperature\": [\n      9797.548467340479,\n      1052.9243251573605\n    ],\n    \"precipitation\": [\n      5466.287850906682,\n      8113.948693887738\n    ],\n    \"rain\": [\n      7857.312293127483,\n      1394.5829927795382\n    ],\n    \"snowfall\": [\n      2543.9595384068225,\n      9152.738442922468\n    ],\n    \"snow_depth\": [\n      3726.7012436123937,\n      5868.863482390454\n    ],\n    \"weather_code\": [\n      1681,\n      2372\n    ],\n    \"pressure_msl\": [\n      3628.4563585536957,\n      8100.67036091006\n    ],\n    \"surface_pressure\": [\n      4386.248797520719,\n      2642.513951607469\n    ],\n    \"cloud_cover\": [\n      4194.561310969875,\n      5152.274385498879\n    ],\n    \"cloud_cover_low\": [\n      5160.0831968577595,\n      3513.52931439207\n    ],\n    \"cloud_cover_mid\": [\n      8862.182962865554,\n      2815.5529178440497\n    ],\n    \"cloud_cover_high\": [\n      9247.767723962073,\n      5263.9461670499095\n    ],\n    \"et0_fao_evapotranspiration\": [\n      7592.561157934505,\n      1862.1828474340573\n    ],\n    \"vapour_pressure_deficit\": [\n      3244.468846547637,\n      9563.389436625292\n    ],\n    \"wind_speed_10m\": [\n      8732.294300682022,\n      9223.886247174156\n    ],\n    \"wind_speed_100m\": [\n      5293.657223448449,\n      6801.621991462356\n    ],\n    \"wind_direction_10m\": [\n      9594.860004552662,\n      6572.687915817538\n    ],\n    \"wind_direction_100m\": [\n      2116.843322815716,\n      7767.099686476189\n    ],\n    \"wind_gusts_10m\": [\n      5369.151105295161,\n      1985.914978310558\n    ],\n    \"soil_temperature_0_to_7cm\": [\n      1320.8052987432561,\n      5624.955726312158\n    ],\n    \"soil_temperature_7_to_28cm\": [\n      7603.203201585439,\n      8284.32244523529\n    ],\n    \"soil_temperature_28_to_100cm\": [\n      5352.109938127609,\n      9202.333017644527\n    ],\n    \"soil_temperature_100_to_255cm\": [\n      6248.881656243952,\n      7562.28588657293\n    ],\n    \"soil_moisture_0_to_7cm\": [\n      1021.2319408379922,\n      7033.2988788539715\n    ],\n    \"soil_moisture_7_to_28cm\": [\n      6136.553200326432,\n      2847.1605305180815\n    ],\n    \"soil_moisture_28_to_100cm\": [\n      6897.448293238759,\n      5601.8151856444665\n    ],\n    \"soil_moisture_100_to_255cm\": [\n      8757.294389277075,\n      1768.0249060674057\n    ],\n    \"soil_moisture_0_to_100cm\": [\n      623.8129885106936,\n      5081.206831416407\n    ],\n    \"soil_temperature_0_to_100cm\": [\n      3648.0538030887988,\n      3894.7446052202995\n    ],\n    \"soil_moisture_index_0_to_7cm\": [\n      7273.917417599552,\n      7373.1488644391575\n    ],\n    \"soil_moisture_index_7_to_28cm\": [\n      3299.5853796262954,\n      2727.5722358887833\n    ],\n    \"soil_moisture_index_28_to_100cm\": [\n      5727.861360101555,\n      7721.868008895508\n    ],\n    \"soil_moisture_index_0_to_100cm\": [\n      3393.487179483242,\n      9827.965560251587\n    ],\n    \"boundary_layer_height\": [\n      7273.28301186478,\n      6390.452161614084\n    ],\n    \"wet_bulb_temperature_2m\": [\n      5794.6578735337325,\n      3580.148968201493\n    ],\n    \"total_column_integrated_water_vapour\": [\n      1.169471343820394,\n      5574.07817574472\n    ],\n    \"is_day\": [\n      6242,\n      8837\n    ],\n    \"sunshine_duration\": [\n      6090.378922418155,\n      1183.0002381451488\n    ],\n    \"growing_degree_days_base_0_limit_50\": [\n      463.937264493236,\n      3029.105685946293\n    ],\n    \"leaf_wetness_probability\": [\n      5029.63960946212,\n      1608.8251402975072\n    ],\n    \"wave_height\": [\n      2553.2840284899585,\n      7953.921598172583\n    ],\n    \"wave_direction\": [\n      3432.7523000532765,\n      5511.295674054487\n    ],\n    \"wave_period\": [\n      5540.106989496122,\n      3083.922239974598\n    ],\n    \"sea_surface_temperature\": [\n      1208.4129957801426,\n      8267.509879765219\n    ],\n    \"shortwave_radiation\": [\n      4433.278176650225,\n      2441.4153276742354\n    ],\n    \"direct_radiation\": [\n      5016.20094062923,\n      6821.34709799142\n    ],\n    \"diffuse_radiation\": [\n      262.177893212846,\n      5259.3164915627785\n    ],\n    \"direct_normal_irradiance\": [\n      9350.813919666507,\n      7172.135057670777\n    ],\n    \"global_tilted_irradiance\": [\n      8954.708749089454,\n      9062.497179549458\n    ],\n    \"terrestrial_radiation\": [\n      3843.0546429675005,\n      3210.46823406156\n    ],\n    \"shortwave_radiation_instant\": [\n      1216.695389303165,\n      562.794071753907\n    ],\n    \"direct_radiation_instant\": [\n      7922.158133572514,\n      2214.727135069785\n    ],\n    \"diffuse_radiation_instant\": [\n      5947.388636711491,\n      7106.216613395311\n    ],\n    \"direct_normal_irradiance_instant\": [\n      1086.414652957296,\n      17.02096302337086\n    ],\n    \"global_tilted_irradiance_instant\": [\n      6118.427182358431,\n      705.3621077065309\n    ],\n    \"terrestrial_radiation_instant\": [\n      917.5316837179304,\n      4764.1411461214075\n    ]\n  },\n  \"hourly_units\": {\n    \"time\": \"string\",\n    \"temperature_2m\": \"string\",\n    \"relative_humidity_2m\": \"string\",\n    \"dew_point_2m\": \"string\",\n    \"apparent_temperature\": \"string\",\n    \"precipitation\": \"string\",\n    \"rain\": \"string\",\n    \"snowfall\": \"string\",\n    \"snow_depth\": \"string\",\n    \"weather_code\": \"string\",\n    \"pressure_msl\": \"string\",\n    \"surface_pressure\": \"string\",\n    \"cloud_cover\": \"string\",\n    \"cloud_cover_low\": \"string\",\n    \"cloud_cover_mid\": \"string\",\n    \"cloud_cover_high\": \"string\",\n    \"et0_fao_evapotranspiration\": \"string\",\n    \"vapour_pressure_deficit\": \"string\",\n    \"wind_speed_10m\": \"string\",\n    \"wind_speed_100m\": \"string\",\n    \"wind_direction_10m\": \"string\",\n    \"wind_direction_100m\": \"string\",\n    \"wind_gusts_10m\": \"string\",\n    \"soil_temperature_0_to_7cm\": \"string\",\n    \"soil_temperature_7_to_28cm\": \"string\",\n    \"soil_temperature_28_to_100cm\": \"string\",\n    \"soil_temperature_100_to_255cm\": \"string\",\n    \"soil_moisture_0_to_7cm\": \"string\",\n    \"soil_moisture_7_to_28cm\": \"string\",\n    \"soil_moisture_28_to_100cm\": \"string\",\n    \"soil_moisture_100_to_255cm\": \"string\",\n    \"soil_moisture_0_to_100cm\": \"string\",\n    \"soil_temperature_0_to_100cm\": \"string\",\n    \"soil_moisture_index_0_to_7cm\": \"string\",\n    \"soil_moisture_index_7_to_28cm\": \"string\",\n    \"soil_moisture_index_28_to_100cm\": \"string\",\n    \"soil_moisture_index_0_to_100cm\": \"string\",\n    \"boundary_layer_height\": \"string\",\n    \"wet_bulb_temperature_2m\": \"string\",\n    \"total_column_integrated_water_vapour\": \"string\",\n    \"is_day\": \"string\",\n    \"sunshine_duration\": \"string\",\n    \"growing_degree_days_base_0_limit_50\": \"string\",\n    \"leaf_wetness_probability\": \"string\",\n    \"wave_height\": \"string\",\n    \"wave_direction\": \"string\",\n    \"wave_period\": \"string\",\n    \"sea_surface_temperature\": \"string\",\n    \"shortwave_radiation\": \"string\",\n    \"direct_radiation\": \"string\",\n    \"diffuse_radiation\": \"string\",\n    \"direct_normal_irradiance\": \"string\",\n    \"global_tilted_irradiance\": \"string\",\n    \"terrestrial_radiation\": \"string\",\n    \"shortwave_radiation_instant\": \"string\",\n    \"direct_radiation_instant\": \"string\",\n    \"diffuse_radiation_instant\": \"string\",\n    \"direct_normal_irradiance_instant\": \"string\",\n    \"global_tilted_irradiance_instant\": \"string\",\n    \"terrestrial_radiation_instant\": \"string\"\n  },\n  \"daily\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"weather_code\": [\n      5092,\n      9635\n    ],\n    \"temperature_2m_mean\": [\n      4106.269759124467,\n      7921.882725987011\n    ],\n    \"temperature_2m_max\": [\n      2581.034372501283,\n      854.792921962051\n    ],\n    \"temperature_2m_min\": [\n      5291.423219712729,\n      2134.348834734471\n    ],\n    \"apparent_temperature_mean\": [\n      1542.0881960920174,\n      4936.97370312327\n    ],\n    \"apparent_temperature_max\": [\n      3352.7258913215464,\n      5543.014562866259\n    ],\n    \"apparent_temperature_min\": [\n      4094.7218693528475,\n      7887.116861455693\n    ],\n    \"sunrise\": [\n      \"string\",\n      \"string\"\n    ],\n    \"sunset\": [\n      \"string\",\n      \"string\"\n    ],\n    \"daylight_duration\": [\n      5217.102546606558,\n      9650.757545908902\n    ],\n    \"sunshine_duration\": [\n      1885.8012215805354,\n      6333.945550985134\n    ],\n    \"precipitation_sum\": [\n      3072.8618368064863,\n      6679.127539212763\n    ],\n    \"rain_sum\": [\n      121.70529452966372,\n      1461.9852571835345\n    ],\n    \"snowfall_sum\": [\n      9572.318844171521,\n      6756.380462376788\n    ],\n    \"precipitation_hours\": [\n      560.4965362294167,\n      9064.296173937277\n    ],\n    \"wind_speed_10m_max\": [\n      9945.134028392788,\n      9303.480910746686\n    ],\n    \"wind_gusts_10m_max\": [\n      4345.666433522535,\n      6018.500241985281\n    ],\n    \"wind_direction_10m_dominant\": [\n      5197.2226448348665,\n      4424.680355765113\n    ],\n    \"shortwave_radiation_sum\": [\n      3245.0783061172206,\n      4511.134240757825\n    ],\n    \"et0_fao_evapotranspiration\": [\n      9144.725105480276,\n      5745.0186693035575\n    ],\n    \"cloud_cover_mean\": [\n      5966.41411067894,\n      1124.947702249991\n    ],\n    \"dew_point_2m_mean\": [\n      5588.269290839893,\n      8178.446055031495\n    ],\n    \"dew_point_2m_max\": [\n      6965.889646518002,\n      9425.93761867596\n    ],\n    \"dew_point_2m_min\": [\n      8203.27027177114,\n      7748.794263996009\n    ],\n    \"relative_humidity_2m_mean\": [\n      1784.473341285381,\n      2101.726913068764\n    ],\n    \"relative_humidity_2m_max\": [\n      6392.564915975345,\n      9687.860381301598\n    ],\n    \"relative_humidity_2m_min\": [\n      207.61336469434565,\n      9670.991616849435\n    ],\n    \"pressure_msl_mean\": [\n      2936.4442765517783,\n      5925.3663080415745\n    ],\n    \"wind_speed_10m_mean\": [\n      4714.771795018253,\n      3217.0066779837516\n    ],\n    \"wet_bulb_temperature_2m_mean\": [\n      7095.9677772536625,\n      4733.781458171265\n    ],\n    \"vapour_pressure_deficit_max\": [\n      9405.771880464637,\n      3831.5898272529334\n    ],\n    \"soil_moisture_0_to_7cm_mean\": [\n      6974.0276925071485,\n      9295.101138315407\n    ],\n    \"soil_moisture_7_to_28cm_mean\": [\n      9871.96811756449,\n      3479.9613717550983\n    ],\n    \"soil_moisture_28_to_100cm_mean\": [\n      9671.903843406959,\n      3771.813538465396\n    ],\n    \"soil_moisture_0_to_100cm_mean\": [\n      9836.371314420861,\n      5226.705609042184\n    ],\n    \"soil_temperature_0_to_7cm_mean\": [\n      4925.885509193011,\n      261.4952172855156\n    ],\n    \"soil_temperature_7_to_28cm_mean\": [\n      1589.2575579245727,\n      7628.807535689576\n    ],\n    \"soil_temperature_28_to_100cm_mean\": [\n      2697.6087423569097,\n      276.3922285949072\n    ]\n  },\n  \"daily_units\": {\n    \"time\": \"string\",\n    \"weather_code\": \"string\",\n    \"temperature_2m_mean\": \"string\",\n    \"temperature_2m_max\": \"string\",\n    \"temperature_2m_min\": \"string\",\n    \"apparent_temperature_mean\": \"string\",\n    \"apparent_temperature_max\": \"string\",\n    \"apparent_temperature_min\": \"string\",\n    \"sunrise\": \"string\",\n    \"sunset\": \"string\",\n    \"daylight_duration\": \"string\",\n    \"sunshine_duration\": \"string\",\n    \"precipitation_sum\": \"string\",\n    \"rain_sum\": \"string\",\n    \"snowfall_sum\": \"string\",\n    \"precipitation_hours\": \"string\",\n    \"wind_speed_10m_max\": \"string\",\n    \"wind_gusts_10m_max\": \"string\",\n    \"wind_direction_10m_dominant\": \"string\",\n    \"shortwave_radiation_sum\": \"string\",\n    \"et0_fao_evapotranspiration\": \"string\",\n    \"cloud_cover_mean\": \"string\",\n    \"dew_point_2m_mean\": \"string\",\n    \"dew_point_2m_max\": \"string\",\n    \"dew_point_2m_min\": \"string\",\n    \"relative_humidity_2m_mean\": \"string\",\n    \"relative_humidity_2m_max\": \"string\",\n    \"relative_humidity_2m_min\": \"string\",\n    \"pressure_msl_mean\": \"string\",\n    \"wind_speed_10m_mean\": \"string\",\n    \"wet_bulb_temperature_2m_mean\": \"string\",\n    \"vapour_pressure_deficit_max\": \"string\",\n    \"soil_moisture_0_to_7cm_mean\": \"string\",\n    \"soil_moisture_7_to_28cm_mean\": \"string\",\n    \"soil_moisture_28_to_100cm_mean\": \"string\",\n    \"soil_moisture_0_to_100cm_mean\": \"string\",\n    \"soil_temperature_0_to_7cm_mean\": \"string\",\n    \"soil_temperature_7_to_28cm_mean\": \"string\",\n    \"soil_temperature_28_to_100cm_mean\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5fa66855-c6eb-42a9-8610-07d336531dd6",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "archive"
+                  ],
+                  "host": [
+                    "{{v1-archive-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "elevation",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "precipitation_unit",
+                      "value": "mm"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "past_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "forecast_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "tilt",
+                      "value": "0"
+                    },
+                    {
+                      "key": "azimuth",
+                      "value": "0"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": false,\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://archive-api.open-meteo.com",
+      "key": "v1-archive-Url"
+    }
+  ],
+  "info": {
+    "_postman_id": "dc384e7b-5753-43ab-b4ee-175d29dbaae5",
+    "name": "Open-Meteo Air Quality Air Quality APIs Historical Weather APIs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).\n\nContact Support:\n Name: Open-Meteo\n Email: info@open-meteo.com",
+      "type": "text/plain"
+    }
+  }
+}

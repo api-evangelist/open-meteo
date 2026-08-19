@@ -1,0 +1,450 @@
+{
+  "item": [
+    {
+      "id": "f0cace0c-9563-4bc1-a760-580075b64470",
+      "name": "Ensemble Forecast APIs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c7a9a592-c766-4644-9eea-66f147c9b4fc",
+          "name": "Open-Meteo Ensemble Weather Forecast API",
+          "request": {
+            "name": "Open-Meteo Ensemble Weather Forecast API",
+            "description": {
+              "content": "Ensemble weather forecasts from multiple models providing probabilistic forecast data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "ensemble"
+              ],
+              "host": [
+                "{{v1-ensemble-Url}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "latitude",
+                  "value": "<string>",
+                  "description": "(Required) Geographical WGS84 coordinates. Multiple coordinates can be comma separated."
+                },
+                {
+                  "disabled": false,
+                  "key": "longitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "hourly",
+                  "value": "<string>,<string>",
+                  "description": "A list of weather variables which should be returned."
+                },
+                {
+                  "disabled": false,
+                  "key": "daily",
+                  "value": "<string>,<string>",
+                  "description": "A list of daily weather variable aggregations."
+                },
+                {
+                  "disabled": false,
+                  "key": "elevation",
+                  "value": "<float>"
+                },
+                {
+                  "disabled": false,
+                  "key": "temperature_unit",
+                  "value": "celsius"
+                },
+                {
+                  "disabled": false,
+                  "key": "wind_speed_unit",
+                  "value": "kmh"
+                },
+                {
+                  "disabled": false,
+                  "key": "precipitation_unit",
+                  "value": "mm"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeformat",
+                  "value": "iso8601",
+                  "description": "If format unixtime is selected, all time values are returned in UNIX epoch time."
+                },
+                {
+                  "disabled": false,
+                  "key": "timezone",
+                  "value": "<string>",
+                  "description": "Any IANA time zone name is supported. Use auto to resolve the local time zone."
+                },
+                {
+                  "disabled": false,
+                  "key": "past_days",
+                  "value": "0",
+                  "description": "Return past days of data."
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_days",
+                  "value": "7",
+                  "description": "Number of forecast days."
+                },
+                {
+                  "disabled": false,
+                  "key": "past_hours",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_hours",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "Start date of the time interval in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "End date of the time interval in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "tilt",
+                  "value": "0",
+                  "description": "Slope tilt in degrees for global_tilted_irradiance calculation."
+                },
+                {
+                  "disabled": false,
+                  "key": "azimuth",
+                  "value": "0",
+                  "description": "Azimuth for global_tilted_irradiance. North=0, East=90, South=180, West=270."
+                },
+                {
+                  "disabled": false,
+                  "key": "cell_selection",
+                  "value": "<string>",
+                  "description": "Grid cell selection preference: land, sea, or nearest."
+                },
+                {
+                  "disabled": false,
+                  "key": "apikey",
+                  "value": "<string>",
+                  "description": "Only required for commercial subscriptions."
+                },
+                {
+                  "disabled": false,
+                  "key": "models",
+                  "value": "<string>,<string>",
+                  "description": "Manually select one or more weather models."
+                },
+                {
+                  "disabled": false,
+                  "key": "temporal_resolution",
+                  "value": "<string>",
+                  "description": "Aggregate data into larger time intervals. Supported: native, hourly, hourly_3, hourly_6."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "84fe23fd-da66-4174-973c-8f8fe0290852",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "ensemble"
+                  ],
+                  "host": [
+                    "{{v1-ensemble-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "elevation",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "precipitation_unit",
+                      "value": "mm"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "7"
+                    },
+                    {
+                      "key": "past_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "forecast_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "tilt",
+                      "value": "0"
+                    },
+                    {
+                      "key": "azimuth",
+                      "value": "0"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "temporal_resolution",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"latitude\": 9795.137575506791,\n  \"longitude\": 3410.4353080849523,\n  \"elevation\": 719.6508076348684,\n  \"generationtime_ms\": 8047.679888008766,\n  \"utc_offset_seconds\": 8414,\n  \"timezone\": \"string\",\n  \"timezone_abbreviation\": \"string\",\n  \"hourly\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_0\": [\n      4191.145736683828,\n      199.6497143129894\n    ],\n    \"key_1\": [\n      2011.4210369306218,\n      7941.846520928296\n    ]\n  },\n  \"hourly_units\": {\n    \"time\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  },\n  \"daily\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"daily_units\": {\n    \"time\": \"string\",\n    \"key_0\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d290a297-9f74-4d6c-a299-ab2447bb87f8",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "ensemble"
+                  ],
+                  "host": [
+                    "{{v1-ensemble-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "elevation",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "precipitation_unit",
+                      "value": "mm"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "7"
+                    },
+                    {
+                      "key": "past_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "forecast_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "tilt",
+                      "value": "0"
+                    },
+                    {
+                      "key": "azimuth",
+                      "value": "0"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "temporal_resolution",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": false,\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://ensemble-api.open-meteo.com",
+      "key": "v1-ensemble-Url"
+    }
+  ],
+  "info": {
+    "_postman_id": "bc0b4831-507f-4814-8572-9fddf3675883",
+    "name": "Open-Meteo Air Quality Air Quality APIs Ensemble Forecast APIs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).\n\nContact Support:\n Name: Open-Meteo\n Email: info@open-meteo.com",
+      "type": "text/plain"
+    }
+  }
+}

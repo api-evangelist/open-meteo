@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open-Meteo Air Quality Air Quality APIs Elevation API API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Elevation API",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get terrain elevation for coordinates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/elevation",
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of latitude values in WGS84."
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of longitude values in WGS84."
+              },
+              {
+                "name": "apikey",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns terrain elevation using a 90-metre digital elevation model."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

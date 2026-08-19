@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open-Meteo Air Quality Air Quality APIs Climate Change APIs API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Climate Change APIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Daily climate data from CMIP6 models",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/climate",
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO 8601 format. Minimum is 1950-01-01."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO 8601 format. Maximum is 2050-12-31."
+              },
+              {
+                "name": "daily",
+                "value": "",
+                "type": "query",
+                "description": "A list of daily climate variables."
+              },
+              {
+                "name": "temperature_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "wind_speed_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "precipitation_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timeformat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "disable_bias_correction",
+                "value": "",
+                "type": "query",
+                "description": "Disable statistical downscaling and bias correction onto ERA5 climate data."
+              },
+              {
+                "name": "cell_selection",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "models",
+                "value": "",
+                "type": "query",
+                "description": "Manually select one or more weather models."
+              },
+              {
+                "name": "apikey",
+                "value": "",
+                "type": "query",
+                "description": "Only required for commercial subscriptions."
+              }
+            ]
+          },
+          "docs": "Historical and future climate data from downscaled CMIP6 models bias-corrected to ERA5."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

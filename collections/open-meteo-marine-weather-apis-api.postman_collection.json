@@ -1,0 +1,393 @@
+{
+  "item": [
+    {
+      "id": "5e55ebb7-0b96-4162-8b98-a6ecb0e539de",
+      "name": "Marine Weather APIs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3035366b-e33c-4bda-8908-ef92b2102f3c",
+          "name": "Hourly marine weather forecast",
+          "request": {
+            "name": "Hourly marine weather forecast",
+            "description": {
+              "content": "Marine weather forecasts with wave conditions, ocean currents, and sea surface temperature.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "marine"
+              ],
+              "host": [
+                "{{v1-marine-Url}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "latitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "longitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "hourly",
+                  "value": "<string>,<string>",
+                  "description": "A list of marine weather variables."
+                },
+                {
+                  "disabled": false,
+                  "key": "daily",
+                  "value": "<string>,<string>",
+                  "description": "A list of daily marine weather variables."
+                },
+                {
+                  "disabled": false,
+                  "key": "current",
+                  "value": "<string>,<string>",
+                  "description": "A list of variables for the current marine conditions."
+                },
+                {
+                  "disabled": false,
+                  "key": "minutely_15",
+                  "value": "<string>,<string>",
+                  "description": "A list of marine variables at 15-minute intervals."
+                },
+                {
+                  "disabled": false,
+                  "key": "temperature_unit",
+                  "value": "celsius"
+                },
+                {
+                  "disabled": false,
+                  "key": "wind_speed_unit",
+                  "value": "kmh"
+                },
+                {
+                  "disabled": false,
+                  "key": "length_unit",
+                  "value": "metric",
+                  "description": "Wave height and sea level unit."
+                },
+                {
+                  "disabled": false,
+                  "key": "timeformat",
+                  "value": "iso8601"
+                },
+                {
+                  "disabled": false,
+                  "key": "timezone",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "past_days",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_days",
+                  "value": "7"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "Start date in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "End date in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "cell_selection",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "models",
+                  "value": "<string>,<string>",
+                  "description": "Manually select one or more weather models."
+                },
+                {
+                  "disabled": false,
+                  "key": "apikey",
+                  "value": "<string>",
+                  "description": "Only required for commercial subscriptions."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d52cf727-a1fe-49a6-8ffd-d4ec384e44e9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "marine"
+                  ],
+                  "host": [
+                    "{{v1-marine-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "current",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "minutely_15",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "length_unit",
+                      "value": "metric"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "7"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"latitude\": 8501.26158647946,\n  \"longitude\": 1643.2600391075646,\n  \"elevation\": 9640.85294607072,\n  \"generationtime_ms\": 1825.1491917127348,\n  \"utc_offset_seconds\": 4546,\n  \"timezone\": \"string\",\n  \"timezone_abbreviation\": \"string\",\n  \"hourly\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"wave_height\": [\n      2936.4236878424954,\n      3085.5666074766095\n    ],\n    \"wave_direction\": [\n      5218.065325933394,\n      4506.057235636586\n    ],\n    \"wave_period\": [\n      568.585745979675,\n      5111.5698266325335\n    ],\n    \"wave_peak_period\": [\n      4310.5584098275685,\n      9992.871734489714\n    ],\n    \"wind_wave_height\": [\n      1314.0401114665444,\n      304.8433858821342\n    ],\n    \"wind_wave_direction\": [\n      2018.0629168490261,\n      6926.45825172305\n    ],\n    \"wind_wave_period\": [\n      993.223623950561,\n      8831.924165459586\n    ],\n    \"wind_wave_peak_period\": [\n      9555.198035248854,\n      2300.433144870412\n    ],\n    \"swell_wave_height\": [\n      340.9432382917077,\n      3360.08497993577\n    ],\n    \"swell_wave_direction\": [\n      6301.584749276863,\n      4524.357827212979\n    ],\n    \"swell_wave_period\": [\n      6938.336602518846,\n      5124.223157300569\n    ],\n    \"swell_wave_peak_period\": [\n      752.756919954376,\n      7119.277035390699\n    ],\n    \"secondary_swell_wave_height\": [\n      1776.025787268023,\n      16.849105215347436\n    ],\n    \"secondary_swell_wave_period\": [\n      2734.917999684495,\n      9548.96412598231\n    ],\n    \"secondary_swell_wave_direction\": [\n      5140.028048085214,\n      5710.469656929248\n    ],\n    \"tertiary_swell_wave_height\": [\n      6203.976750051922,\n      1191.486759498319\n    ],\n    \"tertiary_swell_wave_period\": [\n      7250.437912174154,\n      4382.782125368471\n    ],\n    \"tertiary_swell_wave_direction\": [\n      2962.5832936360885,\n      9239.021230332308\n    ],\n    \"sea_level_height_msl\": [\n      8745.115679579181,\n      9183.57339654707\n    ],\n    \"sea_surface_temperature\": [\n      1510.6151729344108,\n      6799.881681401354\n    ],\n    \"ocean_current_velocity\": [\n      6689.131804949489,\n      9509.10527459438\n    ],\n    \"ocean_current_direction\": [\n      6192.560230711109,\n      6947.26889147977\n    ]\n  },\n  \"hourly_units\": {\n    \"time\": \"string\",\n    \"wave_height\": \"string\",\n    \"wave_direction\": \"string\",\n    \"wave_period\": \"string\",\n    \"wave_peak_period\": \"string\",\n    \"wind_wave_height\": \"string\",\n    \"wind_wave_direction\": \"string\",\n    \"wind_wave_period\": \"string\",\n    \"wind_wave_peak_period\": \"string\",\n    \"swell_wave_height\": \"string\",\n    \"swell_wave_direction\": \"string\",\n    \"swell_wave_period\": \"string\",\n    \"swell_wave_peak_period\": \"string\",\n    \"secondary_swell_wave_height\": \"string\",\n    \"secondary_swell_wave_period\": \"string\",\n    \"secondary_swell_wave_direction\": \"string\",\n    \"tertiary_swell_wave_height\": \"string\",\n    \"tertiary_swell_wave_period\": \"string\",\n    \"tertiary_swell_wave_direction\": \"string\",\n    \"sea_level_height_msl\": \"string\",\n    \"sea_surface_temperature\": \"string\",\n    \"ocean_current_velocity\": \"string\",\n    \"ocean_current_direction\": \"string\"\n  },\n  \"daily\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"wave_height_max\": [\n      4515.121972358217,\n      7539.74358629294\n    ],\n    \"wave_direction_dominant\": [\n      7239.650535678847,\n      8940.252996008741\n    ],\n    \"wave_period_max\": [\n      3518.701233048446,\n      1151.5095385619345\n    ],\n    \"wind_wave_height_max\": [\n      5517.959870464516,\n      6082.670267632669\n    ],\n    \"wind_wave_direction_dominant\": [\n      2299.9707532200696,\n      5570.57927947984\n    ],\n    \"wind_wave_period_max\": [\n      1856.955775266117,\n      1246.3018519328994\n    ],\n    \"wind_wave_peak_period_max\": [\n      7805.160484498286,\n      8295.190533753868\n    ],\n    \"swell_wave_height_max\": [\n      7417.510122927667,\n      5487.5677898294625\n    ],\n    \"swell_wave_direction_dominant\": [\n      2556.2981045394417,\n      6256.982215199928\n    ],\n    \"swell_wave_period_max\": [\n      7910.990414834501,\n      5888.4772378448215\n    ],\n    \"swell_wave_peak_period_max\": [\n      4080.7694593954902,\n      5163.348928378477\n    ]\n  },\n  \"daily_units\": {\n    \"time\": \"string\",\n    \"wave_height_max\": \"string\",\n    \"wave_direction_dominant\": \"string\",\n    \"wave_period_max\": \"string\",\n    \"wind_wave_height_max\": \"string\",\n    \"wind_wave_direction_dominant\": \"string\",\n    \"wind_wave_period_max\": \"string\",\n    \"wind_wave_peak_period_max\": \"string\",\n    \"swell_wave_height_max\": \"string\",\n    \"swell_wave_direction_dominant\": \"string\",\n    \"swell_wave_period_max\": \"string\",\n    \"swell_wave_peak_period_max\": \"string\"\n  },\n  \"current\": {\n    \"time\": \"string\",\n    \"interval\": 6619,\n    \"wave_height\": 8086.875186133938,\n    \"wave_direction\": 7864.186502570489,\n    \"wave_period\": 5243.821913418339,\n    \"wind_wave_height\": 3594.579000996082,\n    \"wind_wave_direction\": 3680.82368364225,\n    \"wind_wave_period\": 2489.9425669261823,\n    \"wind_wave_peak_period\": 155.30058207517627,\n    \"swell_wave_height\": 3710.38768714128,\n    \"swell_wave_direction\": 4203.4510498326945,\n    \"swell_wave_period\": 9726.404166954611,\n    \"swell_wave_peak_period\": 383.97370782654485,\n    \"sea_surface_temperature\": 4776.175809635002,\n    \"ocean_current_velocity\": 5155.61988342124,\n    \"ocean_current_direction\": 7713.213982891879\n  },\n  \"current_units\": {\n    \"time\": \"string\",\n    \"wave_height\": \"string\",\n    \"wave_direction\": \"string\",\n    \"wave_period\": \"string\",\n    \"wind_wave_height\": \"string\",\n    \"wind_wave_direction\": \"string\",\n    \"wind_wave_period\": \"string\",\n    \"wind_wave_peak_period\": \"string\",\n    \"swell_wave_height\": \"string\",\n    \"swell_wave_direction\": \"string\",\n    \"swell_wave_period\": \"string\",\n    \"swell_wave_peak_period\": \"string\",\n    \"sea_surface_temperature\": \"string\",\n    \"ocean_current_velocity\": \"string\",\n    \"ocean_current_direction\": \"string\"\n  },\n  \"minutely_15\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"ocean_current_velocity\": [\n      2191.2158545925486,\n      9380.64992897624\n    ],\n    \"ocean_current_direction\": [\n      4390.691264181873,\n      3773.991028526793\n    ],\n    \"sea_level_height_msl\": [\n      346.91359855880677,\n      856.5860470353292\n    ]\n  },\n  \"minutely_15_units\": {\n    \"time\": \"string\",\n    \"ocean_current_velocity\": \"string\",\n    \"ocean_current_direction\": \"string\",\n    \"sea_level_height_msl\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2aa96f0c-e372-44f1-9577-a82f51f0d6ed",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "marine"
+                  ],
+                  "host": [
+                    "{{v1-marine-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "current",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "minutely_15",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "length_unit",
+                      "value": "metric"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "7"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": true,\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://marine-api.open-meteo.com",
+      "key": "v1-marine-Url"
+    }
+  ],
+  "info": {
+    "_postman_id": "73e0cf9c-255c-4b4e-8699-92827652b439",
+    "name": "Open-Meteo Air Quality Air Quality APIs Marine Weather APIs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).\n\nContact Support:\n Name: Open-Meteo\n Email: info@open-meteo.com",
+      "type": "text/plain"
+    }
+  }
+}

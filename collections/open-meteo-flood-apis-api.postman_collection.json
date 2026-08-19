@@ -1,0 +1,326 @@
+{
+  "item": [
+    {
+      "id": "be9c94f8-4ec6-47a4-8c36-38189bb1f159",
+      "name": "Flood APIs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "875ba6bd-e703-494d-a8ea-0463cc248165",
+          "name": "Daily river discharge forecast",
+          "request": {
+            "name": "Daily river discharge forecast",
+            "description": {
+              "content": "Daily river discharge forecasts from the Copernicus Emergency Management Service GloFAS hydrological model.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "flood"
+              ],
+              "host": [
+                "{{v1-flood-Url}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "latitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "longitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "daily",
+                  "value": "<string>,<string>",
+                  "description": "A list of river discharge variables."
+                },
+                {
+                  "disabled": false,
+                  "key": "timeformat",
+                  "value": "iso8601"
+                },
+                {
+                  "disabled": false,
+                  "key": "timezone",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "past_days",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_days",
+                  "value": "92",
+                  "description": "Number of forecast days. Up to 366 days."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "Start date in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "End date in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "ensemble",
+                  "value": "<boolean>",
+                  "description": "Return ensemble members instead of only the ensemble mean."
+                },
+                {
+                  "disabled": false,
+                  "key": "cell_selection",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "models",
+                  "value": "<string>,<string>",
+                  "description": "Manually select one or more weather models."
+                },
+                {
+                  "disabled": false,
+                  "key": "apikey",
+                  "value": "<string>",
+                  "description": "Only required for commercial subscriptions."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d4e735fc-759a-403c-8a56-b59a6eb79efb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "flood"
+                  ],
+                  "host": [
+                    "{{v1-flood-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "92"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "ensemble",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"latitude\": 2100.515837403496,\n  \"longitude\": 6728.703162111717,\n  \"elevation\": 9468.911006490289,\n  \"generationtime_ms\": 8943.711179692193,\n  \"utc_offset_seconds\": 4650,\n  \"timezone\": \"string\",\n  \"timezone_abbreviation\": \"string\",\n  \"daily\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"river_discharge\": [\n      2742.8193224902175,\n      444.7254337815043\n    ],\n    \"river_discharge_mean\": [\n      5037.490276952017,\n      7168.031724944251\n    ],\n    \"river_discharge_median\": [\n      106.05247510450111,\n      230.48244091195437\n    ],\n    \"river_discharge_max\": [\n      7625.491438135869,\n      889.9542234368696\n    ],\n    \"river_discharge_min\": [\n      2605.7656059278265,\n      9683.229574366153\n    ],\n    \"river_discharge_p25\": [\n      4693.9913986335805,\n      5886.691215020145\n    ],\n    \"river_discharge_p75\": [\n      7671.227148410126,\n      3077.6529483496274\n    ]\n  },\n  \"daily_units\": {\n    \"time\": \"string\",\n    \"river_discharge\": \"string\",\n    \"river_discharge_mean\": \"string\",\n    \"river_discharge_median\": \"string\",\n    \"river_discharge_max\": \"string\",\n    \"river_discharge_min\": \"string\",\n    \"river_discharge_p25\": \"string\",\n    \"river_discharge_p75\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e9b61f9b-edde-4d60-9a63-58ed93e984e5",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "flood"
+                  ],
+                  "host": [
+                    "{{v1-flood-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "92"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "ensemble",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": true,\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://flood-api.open-meteo.com",
+      "key": "v1-flood-Url"
+    }
+  ],
+  "info": {
+    "_postman_id": "10e94b1c-a53b-45f7-9679-7769746cd98a",
+    "name": "Open-Meteo Air Quality Air Quality APIs Flood APIs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).\n\nContact Support:\n Name: Open-Meteo\n Email: info@open-meteo.com",
+      "type": "text/plain"
+    }
+  }
+}

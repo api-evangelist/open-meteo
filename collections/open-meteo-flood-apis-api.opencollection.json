@@ -1,0 +1,103 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open-Meteo Air Quality Air Quality APIs Flood APIs API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Flood APIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Daily river discharge forecast",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/flood",
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "daily",
+                "value": "",
+                "type": "query",
+                "description": "A list of river discharge variables."
+              },
+              {
+                "name": "timeformat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "past_days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "forecast_days",
+                "value": "",
+                "type": "query",
+                "description": "Number of forecast days. Up to 366 days."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO 8601 format."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO 8601 format."
+              },
+              {
+                "name": "ensemble",
+                "value": "",
+                "type": "query",
+                "description": "Return ensemble members instead of only the ensemble mean."
+              },
+              {
+                "name": "cell_selection",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "models",
+                "value": "",
+                "type": "query",
+                "description": "Manually select one or more weather models."
+              },
+              {
+                "name": "apikey",
+                "value": "",
+                "type": "query",
+                "description": "Only required for commercial subscriptions."
+              }
+            ]
+          },
+          "docs": "Daily river discharge forecasts from the Copernicus Emergency Management Service GloFAS hydrological model."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

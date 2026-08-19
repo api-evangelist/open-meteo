@@ -1,0 +1,130 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open-Meteo Air Quality Air Quality APIs Seasonal Forecast APIs API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Seasonal Forecast APIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Seasonal weather forecast up to 9 months",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/seasonal",
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hourly",
+                "value": "",
+                "type": "query",
+                "description": "A list of weather variables (6-hourly resolution)."
+              },
+              {
+                "name": "daily",
+                "value": "",
+                "type": "query",
+                "description": "A list of daily weather variables."
+              },
+              {
+                "name": "weekly",
+                "value": "",
+                "type": "query",
+                "description": "A list of weekly weather variables."
+              },
+              {
+                "name": "monthly",
+                "value": "",
+                "type": "query",
+                "description": "A list of monthly weather variables."
+              },
+              {
+                "name": "temperature_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "wind_speed_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "precipitation_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timeformat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "past_days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "forecast_days",
+                "value": "",
+                "type": "query",
+                "description": "Number of forecast days. Up to 217 days (7 months)."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO 8601 format."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO 8601 format."
+              },
+              {
+                "name": "cell_selection",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "models",
+                "value": "",
+                "type": "query",
+                "description": "Manually select one or more weather models."
+              },
+              {
+                "name": "apikey",
+                "value": "",
+                "type": "query",
+                "description": "Only required for commercial subscriptions."
+              }
+            ]
+          },
+          "docs": "Long-range seasonal forecasts from multiple ensemble models with 6-hourly and daily data."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

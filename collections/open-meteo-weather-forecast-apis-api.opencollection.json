@@ -1,0 +1,162 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open-Meteo Air Quality Air Quality APIs Weather Forecast APIs API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Weather Forecast APIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Open-Meteo Weather Forecast API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/forecast",
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query",
+                "description": "Geographical WGS84 coordinates. Multiple coordinates can be comma separated."
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hourly",
+                "value": "",
+                "type": "query",
+                "description": "A list of weather variables which should be returned."
+              },
+              {
+                "name": "daily",
+                "value": "",
+                "type": "query",
+                "description": "A list of daily weather variable aggregations."
+              },
+              {
+                "name": "current",
+                "value": "",
+                "type": "query",
+                "description": "A list of variables to return for the current conditions."
+              },
+              {
+                "name": "minutely_15",
+                "value": "",
+                "type": "query",
+                "description": "A list of weather variables at 15-minute intervals."
+              },
+              {
+                "name": "elevation",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "temperature_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "wind_speed_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "precipitation_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timeformat",
+                "value": "",
+                "type": "query",
+                "description": "If format unixtime is selected, all time values are returned in UNIX epoch time."
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query",
+                "description": "Any IANA time zone name is supported. Use auto to resolve the local time zone."
+              },
+              {
+                "name": "past_days",
+                "value": "",
+                "type": "query",
+                "description": "Return past days of data."
+              },
+              {
+                "name": "forecast_days",
+                "value": "",
+                "type": "query",
+                "description": "Number of forecast days."
+              },
+              {
+                "name": "past_hours",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "forecast_hours",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start date of the time interval in ISO 8601 format."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End date of the time interval in ISO 8601 format."
+              },
+              {
+                "name": "tilt",
+                "value": "",
+                "type": "query",
+                "description": "Slope tilt in degrees for global_tilted_irradiance calculation."
+              },
+              {
+                "name": "azimuth",
+                "value": "",
+                "type": "query",
+                "description": "Azimuth for global_tilted_irradiance. North=0, East=90, South=180, West=270."
+              },
+              {
+                "name": "cell_selection",
+                "value": "",
+                "type": "query",
+                "description": "Grid cell selection preference: land, sea, or nearest."
+              },
+              {
+                "name": "apikey",
+                "value": "",
+                "type": "query",
+                "description": "Only required for commercial subscriptions."
+              },
+              {
+                "name": "models",
+                "value": "",
+                "type": "query",
+                "description": "Manually select one or more weather models."
+              }
+            ]
+          },
+          "docs": "Open-Meteo offers free weather forecast APIs for open-source developers and non-commercial use."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

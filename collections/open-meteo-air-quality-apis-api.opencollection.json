@@ -1,0 +1,97 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open-Meteo Air Quality Air Quality APIs API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Air Quality APIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Hourly air quality forecast",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/air-quality",
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hourly",
+                "value": "",
+                "type": "query",
+                "description": "A list of air quality variables which should be returned."
+              },
+              {
+                "name": "current",
+                "value": "",
+                "type": "query",
+                "description": "A list of variables to return for the current conditions."
+              },
+              {
+                "name": "timeformat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "past_days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "forecast_days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO 8601 format."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO 8601 format."
+              },
+              {
+                "name": "domains",
+                "value": "",
+                "type": "query",
+                "description": "CAMS domain: auto, cams_europe, or cams_global."
+              },
+              {
+                "name": "apikey",
+                "value": "",
+                "type": "query",
+                "description": "Only required for commercial subscriptions."
+              }
+            ]
+          },
+          "docs": "Provides hourly air quality forecasts including PM2.5, PM10, ozone, nitrogen dioxide, pollen concentrations, and AQI indices from CAMS."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

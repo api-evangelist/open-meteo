@@ -1,0 +1,312 @@
+{
+  "item": [
+    {
+      "id": "f4a45717-a3d3-47ce-a430-ebea4a70903a",
+      "name": "Air Quality APIs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d50b9405-534a-4e6b-83ab-1f0b26c0d9aa",
+          "name": "Hourly air quality forecast",
+          "request": {
+            "name": "Hourly air quality forecast",
+            "description": {
+              "content": "Provides hourly air quality forecasts including PM2.5, PM10, ozone, nitrogen dioxide, pollen concentrations, and AQI indices from CAMS.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "air-quality"
+              ],
+              "host": [
+                "{{v1-air-quality-Url}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "latitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "longitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "hourly",
+                  "value": "<string>,<string>",
+                  "description": "A list of air quality variables which should be returned."
+                },
+                {
+                  "disabled": false,
+                  "key": "current",
+                  "value": "<string>,<string>",
+                  "description": "A list of variables to return for the current conditions."
+                },
+                {
+                  "disabled": false,
+                  "key": "timeformat",
+                  "value": "iso8601"
+                },
+                {
+                  "disabled": false,
+                  "key": "timezone",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "past_days",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_days",
+                  "value": "5"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "Start date in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "End date in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "domains",
+                  "value": "<string>",
+                  "description": "CAMS domain: auto, cams_europe, or cams_global."
+                },
+                {
+                  "disabled": false,
+                  "key": "apikey",
+                  "value": "<string>",
+                  "description": "Only required for commercial subscriptions."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "113c04eb-bb23-43dd-9007-750ddcbf8560",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "air-quality"
+                  ],
+                  "host": [
+                    "{{v1-air-quality-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "current",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "5"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "domains",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"latitude\": 5540.876565178163,\n  \"longitude\": 7221.570502677439,\n  \"elevation\": 598.6285329230667,\n  \"generationtime_ms\": 6456.390702019966,\n  \"utc_offset_seconds\": 7191,\n  \"timezone\": \"string\",\n  \"timezone_abbreviation\": \"string\",\n  \"hourly\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"pm10\": [\n      8037.634583147723,\n      5159.05237398644\n    ],\n    \"pm2_5\": [\n      9662.9177020985,\n      6584.15130580218\n    ],\n    \"carbon_monoxide\": [\n      3974.236992771545,\n      5678.872919358582\n    ],\n    \"carbon_dioxide\": [\n      1321.660425169734,\n      6090.437374713269\n    ],\n    \"nitrogen_dioxide\": [\n      5079.821804496361,\n      2700.6636250966176\n    ],\n    \"sulphur_dioxide\": [\n      5572.469931180602,\n      263.54998238187324\n    ],\n    \"ozone\": [\n      128.752551283865,\n      1218.7846768884858\n    ],\n    \"aerosol_optical_depth\": [\n      9775.547259144392,\n      5010.207260472589\n    ],\n    \"dust\": [\n      6875.736698491612,\n      5930.773154107565\n    ],\n    \"uv_index\": [\n      753.6512379633831,\n      7026.299603896038\n    ],\n    \"uv_index_clear_sky\": [\n      7563.636698623784,\n      230.5678003347844\n    ],\n    \"ammonia\": [\n      9287.223422753395,\n      8021.991604785255\n    ],\n    \"methane\": [\n      7432.255692021436,\n      9037.135630884082\n    ],\n    \"alder_pollen\": [\n      4076.7060077679707,\n      8634.953817015292\n    ],\n    \"birch_pollen\": [\n      197.4760029836742,\n      8579.48319093392\n    ],\n    \"grass_pollen\": [\n      4808.118604988353,\n      2795.630542266475\n    ],\n    \"mugwort_pollen\": [\n      8110.783837176715,\n      9170.293320070772\n    ],\n    \"olive_pollen\": [\n      6479.78739265503,\n      5216.118709957475\n    ],\n    \"ragweed_pollen\": [\n      8933.055187066524,\n      4505.277856871762\n    ],\n    \"formaldehyde\": [\n      6375.588089696046,\n      1943.9247057079667\n    ],\n    \"glyoxal\": [\n      1325.6054370830427,\n      6867.577678936518\n    ],\n    \"non_methane_volatile_organic_compounds\": [\n      6619.326893761345,\n      7263.155275046524\n    ],\n    \"pm10_wildfires\": [\n      6823.389294700314,\n      5642.456847151862\n    ],\n    \"peroxyacyl_nitrates\": [\n      1314.474757203007,\n      2447.946421352822\n    ],\n    \"secondary_inorganic_aerosol\": [\n      7595.43971973224,\n      3779.643742733286\n    ],\n    \"residential_elementary_carbon\": [\n      2086.163311344513,\n      370.1205819619358\n    ],\n    \"total_elementary_carbon\": [\n      9149.822445263379,\n      1879.1786220793228\n    ],\n    \"pm2_5_total_organic_matter\": [\n      9316.598873037996,\n      6232.744236197115\n    ],\n    \"sea_salt_aerosol\": [\n      4261.734495567707,\n      1054.2519751188895\n    ],\n    \"nitrogen_monoxide\": [\n      8944.320011904643,\n      5681.723389132718\n    ],\n    \"european_aqi\": [\n      2436,\n      5921\n    ],\n    \"european_aqi_pm2_5\": [\n      786,\n      1853\n    ],\n    \"european_aqi_pm10\": [\n      94,\n      1230\n    ],\n    \"european_aqi_nitrogen_dioxide\": [\n      4120,\n      8626\n    ],\n    \"european_aqi_ozone\": [\n      2305,\n      5761\n    ],\n    \"european_aqi_sulphur_dioxide\": [\n      48,\n      1247\n    ],\n    \"us_aqi\": [\n      5889,\n      670\n    ],\n    \"us_aqi_pm2_5\": [\n      5803,\n      319\n    ],\n    \"us_aqi_pm10\": [\n      5140,\n      7149\n    ],\n    \"us_aqi_nitrogen_dioxide\": [\n      6419,\n      3115\n    ],\n    \"us_aqi_carbon_monoxide\": [\n      2489,\n      3552\n    ],\n    \"us_aqi_ozone\": [\n      788,\n      7610\n    ],\n    \"us_aqi_sulphur_dioxide\": [\n      2841,\n      6098\n    ],\n    \"is_day\": [\n      9930,\n      2712\n    ]\n  },\n  \"hourly_units\": {\n    \"time\": \"string\",\n    \"pm10\": \"string\",\n    \"pm2_5\": \"string\",\n    \"carbon_monoxide\": \"string\",\n    \"carbon_dioxide\": \"string\",\n    \"nitrogen_dioxide\": \"string\",\n    \"sulphur_dioxide\": \"string\",\n    \"ozone\": \"string\",\n    \"aerosol_optical_depth\": \"string\",\n    \"dust\": \"string\",\n    \"uv_index\": \"string\",\n    \"uv_index_clear_sky\": \"string\",\n    \"ammonia\": \"string\",\n    \"methane\": \"string\",\n    \"alder_pollen\": \"string\",\n    \"birch_pollen\": \"string\",\n    \"grass_pollen\": \"string\",\n    \"mugwort_pollen\": \"string\",\n    \"olive_pollen\": \"string\",\n    \"ragweed_pollen\": \"string\",\n    \"formaldehyde\": \"string\",\n    \"glyoxal\": \"string\",\n    \"non_methane_volatile_organic_compounds\": \"string\",\n    \"pm10_wildfires\": \"string\",\n    \"peroxyacyl_nitrates\": \"string\",\n    \"secondary_inorganic_aerosol\": \"string\",\n    \"residential_elementary_carbon\": \"string\",\n    \"total_elementary_carbon\": \"string\",\n    \"pm2_5_total_organic_matter\": \"string\",\n    \"sea_salt_aerosol\": \"string\",\n    \"nitrogen_monoxide\": \"string\",\n    \"european_aqi\": \"string\",\n    \"european_aqi_pm2_5\": \"string\",\n    \"european_aqi_pm10\": \"string\",\n    \"european_aqi_nitrogen_dioxide\": \"string\",\n    \"european_aqi_ozone\": \"string\",\n    \"european_aqi_sulphur_dioxide\": \"string\",\n    \"us_aqi\": \"string\",\n    \"us_aqi_pm2_5\": \"string\",\n    \"us_aqi_pm10\": \"string\",\n    \"us_aqi_nitrogen_dioxide\": \"string\",\n    \"us_aqi_carbon_monoxide\": \"string\",\n    \"us_aqi_ozone\": \"string\",\n    \"us_aqi_sulphur_dioxide\": \"string\",\n    \"is_day\": \"string\"\n  },\n  \"current\": {\n    \"time\": \"string\",\n    \"interval\": 2581,\n    \"european_aqi\": 3011,\n    \"us_aqi\": 3118,\n    \"pm10\": 266.8571232187933,\n    \"pm2_5\": 8034.953098766837,\n    \"carbon_monoxide\": 4585.644240057923,\n    \"nitrogen_dioxide\": 7774.675015936201,\n    \"sulphur_dioxide\": 6593.4088038650725,\n    \"ozone\": 841.3285104447821,\n    \"aerosol_optical_depth\": 1097.6069483668016,\n    \"dust\": 9614.503071985924,\n    \"uv_index\": 579.3554546364254,\n    \"uv_index_clear_sky\": 2035.530026662955,\n    \"ammonia\": 3318.842005599868,\n    \"alder_pollen\": 17.243942600853046,\n    \"birch_pollen\": 8064.51808034619,\n    \"grass_pollen\": 5.481673363021411,\n    \"mugwort_pollen\": 2118.4734459068554,\n    \"olive_pollen\": 6311.683871911995,\n    \"ragweed_pollen\": 7226.1949072486705\n  },\n  \"current_units\": {\n    \"time\": \"string\",\n    \"european_aqi\": \"string\",\n    \"us_aqi\": \"string\",\n    \"pm10\": \"string\",\n    \"pm2_5\": \"string\",\n    \"carbon_monoxide\": \"string\",\n    \"nitrogen_dioxide\": \"string\",\n    \"sulphur_dioxide\": \"string\",\n    \"ozone\": \"string\",\n    \"aerosol_optical_depth\": \"string\",\n    \"dust\": \"string\",\n    \"uv_index\": \"string\",\n    \"uv_index_clear_sky\": \"string\",\n    \"ammonia\": \"string\",\n    \"alder_pollen\": \"string\",\n    \"birch_pollen\": \"string\",\n    \"grass_pollen\": \"string\",\n    \"mugwort_pollen\": \"string\",\n    \"olive_pollen\": \"string\",\n    \"ragweed_pollen\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ec60d8d0-9eb4-4e4a-8aa8-ec9d6a43b4d8",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "air-quality"
+                  ],
+                  "host": [
+                    "{{v1-air-quality-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "current",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "5"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "domains",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": true,\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://air-quality-api.open-meteo.com",
+      "key": "v1-air-quality-Url"
+    }
+  ],
+  "info": {
+    "_postman_id": "7a10b9c3-4fc7-4254-b056-ed1a9219193e",
+    "name": "Open-Meteo Air Quality Air Quality APIs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).\n\nContact Support:\n Name: Open-Meteo\n Email: info@open-meteo.com",
+      "type": "text/plain"
+    }
+  }
+}

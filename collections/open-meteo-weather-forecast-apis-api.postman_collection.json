@@ -1,0 +1,464 @@
+{
+  "item": [
+    {
+      "id": "91088180-efd2-4b3e-af2d-20edc2cdde8d",
+      "name": "Weather Forecast APIs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "13cb0463-a237-4a1e-8508-e63f1745992b",
+          "name": "Open-Meteo Weather Forecast API",
+          "request": {
+            "name": "Open-Meteo Weather Forecast API",
+            "description": {
+              "content": "Open-Meteo offers free weather forecast APIs for open-source developers and non-commercial use.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "forecast"
+              ],
+              "host": [
+                "{{v1-forecast-Url}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "latitude",
+                  "value": "<string>",
+                  "description": "(Required) Geographical WGS84 coordinates. Multiple coordinates can be comma separated."
+                },
+                {
+                  "disabled": false,
+                  "key": "longitude",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "hourly",
+                  "value": "<string>,<string>",
+                  "description": "A list of weather variables which should be returned."
+                },
+                {
+                  "disabled": false,
+                  "key": "daily",
+                  "value": "<string>,<string>",
+                  "description": "A list of daily weather variable aggregations."
+                },
+                {
+                  "disabled": false,
+                  "key": "current",
+                  "value": "<string>,<string>",
+                  "description": "A list of variables to return for the current conditions."
+                },
+                {
+                  "disabled": false,
+                  "key": "minutely_15",
+                  "value": "<string>,<string>",
+                  "description": "A list of weather variables at 15-minute intervals."
+                },
+                {
+                  "disabled": false,
+                  "key": "elevation",
+                  "value": "<float>"
+                },
+                {
+                  "disabled": false,
+                  "key": "temperature_unit",
+                  "value": "celsius"
+                },
+                {
+                  "disabled": false,
+                  "key": "wind_speed_unit",
+                  "value": "kmh"
+                },
+                {
+                  "disabled": false,
+                  "key": "precipitation_unit",
+                  "value": "mm"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeformat",
+                  "value": "iso8601",
+                  "description": "If format unixtime is selected, all time values are returned in UNIX epoch time."
+                },
+                {
+                  "disabled": false,
+                  "key": "timezone",
+                  "value": "<string>",
+                  "description": "Any IANA time zone name is supported. Use auto to resolve the local time zone."
+                },
+                {
+                  "disabled": false,
+                  "key": "past_days",
+                  "value": "0",
+                  "description": "Return past days of data."
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_days",
+                  "value": "7",
+                  "description": "Number of forecast days."
+                },
+                {
+                  "disabled": false,
+                  "key": "past_hours",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "forecast_hours",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "Start date of the time interval in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "End date of the time interval in ISO 8601 format."
+                },
+                {
+                  "disabled": false,
+                  "key": "tilt",
+                  "value": "0",
+                  "description": "Slope tilt in degrees for global_tilted_irradiance calculation."
+                },
+                {
+                  "disabled": false,
+                  "key": "azimuth",
+                  "value": "0",
+                  "description": "Azimuth for global_tilted_irradiance. North=0, East=90, South=180, West=270."
+                },
+                {
+                  "disabled": false,
+                  "key": "cell_selection",
+                  "value": "<string>",
+                  "description": "Grid cell selection preference: land, sea, or nearest."
+                },
+                {
+                  "disabled": false,
+                  "key": "apikey",
+                  "value": "<string>",
+                  "description": "Only required for commercial subscriptions."
+                },
+                {
+                  "disabled": false,
+                  "key": "models",
+                  "value": "<string>,<string>",
+                  "description": "Manually select one or more weather models."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "da369447-f8f9-4f9a-bc38-37bd4fc657c2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "forecast"
+                  ],
+                  "host": [
+                    "{{v1-forecast-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "current",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "minutely_15",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "elevation",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "precipitation_unit",
+                      "value": "mm"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "7"
+                    },
+                    {
+                      "key": "past_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "forecast_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "tilt",
+                      "value": "0"
+                    },
+                    {
+                      "key": "azimuth",
+                      "value": "0"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"latitude\": 2929.8030863406343,\n  \"longitude\": 2687.2876656206136,\n  \"elevation\": 4119.609425388409,\n  \"generationtime_ms\": 6842.868991122066,\n  \"utc_offset_seconds\": 1255,\n  \"timezone\": \"string\",\n  \"timezone_abbreviation\": \"string\",\n  \"hourly\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"temperature_2m\": [\n      6717.797155751916,\n      6642.9631807774\n    ],\n    \"temperature_2m_min\": [\n      6478.715740886696,\n      8954.953010227424\n    ],\n    \"temperature_2m_max\": [\n      4707.159663395163,\n      6854.013861000298\n    ],\n    \"relative_humidity_2m\": [\n      8314.724700206547,\n      9858.944636370916\n    ],\n    \"dew_point_2m\": [\n      5035.254551873334,\n      3522.2436580615845\n    ],\n    \"apparent_temperature\": [\n      5321.45107127182,\n      1550.2292079901647\n    ],\n    \"precipitation_probability\": [\n      566.8760871490919,\n      6153.900655235718\n    ],\n    \"precipitation\": [\n      252.27789902988906,\n      8027.307682461064\n    ],\n    \"rain\": [\n      7430.015494766924,\n      7687.94849297618\n    ],\n    \"showers\": [\n      7707.831925554428,\n      6016.205787398826\n    ],\n    \"snowfall\": [\n      2170.4106678940493,\n      7174.218446669201\n    ],\n    \"snow_depth\": [\n      401.5920294126307,\n      1948.8096796771538\n    ],\n    \"snowfall_water_equivalent\": [\n      5831.0817600131095,\n      5901.46268048155\n    ],\n    \"snow_depth_water_equivalent\": [\n      6348.792134612689,\n      8480.280617030483\n    ],\n    \"weather_code\": [\n      2635,\n      4144\n    ],\n    \"pressure_msl\": [\n      964.0856011730126,\n      3629.5584302682128\n    ],\n    \"surface_pressure\": [\n      9260.731427869,\n      4741.471901968029\n    ],\n    \"cloud_cover\": [\n      1482.4484530432803,\n      8165.829789799208\n    ],\n    \"cloud_cover_low\": [\n      5521.08001488248,\n      8503.531302138968\n    ],\n    \"cloud_cover_mid\": [\n      6453.3888063352715,\n      3452.660368279591\n    ],\n    \"cloud_cover_high\": [\n      8655.790645374462,\n      5883.6697355619\n    ],\n    \"visibility\": [\n      5401.486961224206,\n      6140.839880317109\n    ],\n    \"evapotranspiration\": [\n      8012.962686704853,\n      5051.069118178154\n    ],\n    \"et0_fao_evapotranspiration\": [\n      7576.810143874174,\n      527.4828080789207\n    ],\n    \"vapour_pressure_deficit\": [\n      7509.429123852656,\n      2154.936430425599\n    ],\n    \"runoff\": [\n      5162.975649875874,\n      1805.9607027190195\n    ],\n    \"precipitation_type\": [\n      8645,\n      4519\n    ],\n    \"rain_probability\": [\n      3787.0177585671518,\n      8609.71514071042\n    ],\n    \"snowfall_probability\": [\n      476.14045881071434,\n      5128.88831137494\n    ],\n    \"freezing_rain_probability\": [\n      5098.671200040529,\n      5531.116085591648\n    ],\n    \"ice_pellets_probability\": [\n      7548.744943053886,\n      3292.6354141016955\n    ],\n    \"thunderstorm_probability\": [\n      1159.8293517853265,\n      9988.601506149987\n    ],\n    \"wind_speed_10m\": [\n      4186.085198805338,\n      4168.00299025625\n    ],\n    \"wind_speed_20m\": [\n      2995.7380183057257,\n      6235.31920474806\n    ],\n    \"wind_speed_30m\": [\n      3937.3758653974132,\n      3567.0366289327603\n    ],\n    \"wind_speed_40m\": [\n      8824.512921919997,\n      933.8602517174999\n    ],\n    \"wind_speed_50m\": [\n      443.2965206559869,\n      5111.70934817833\n    ],\n    \"wind_speed_70m\": [\n      3790.2433720604977,\n      2866.2223841202763\n    ],\n    \"wind_speed_80m\": [\n      9960.672950236863,\n      4810.218983145675\n    ],\n    \"wind_speed_100m\": [\n      6568.626286817206,\n      5268.512607609427\n    ],\n    \"wind_speed_120m\": [\n      7425.547556707022,\n      138.5379390574648\n    ],\n    \"wind_speed_140m\": [\n      4302.767234853331,\n      8669.057960472455\n    ],\n    \"wind_speed_150m\": [\n      5265.800918127077,\n      9024.843726771587\n    ],\n    \"wind_speed_160m\": [\n      8744.702651888247,\n      3385.622638061706\n    ],\n    \"wind_speed_180m\": [\n      1444.3005767794948,\n      6182.818199339141\n    ],\n    \"wind_speed_200m\": [\n      7877.716080556019,\n      2804.773265014363\n    ],\n    \"wind_direction_10m\": [\n      4081.431221702678,\n      9279.674677645657\n    ],\n    \"wind_direction_20m\": [\n      8690.812719841128,\n      1991.581875264905\n    ],\n    \"wind_direction_30m\": [\n      4688.607813775159,\n      3311.972533821043\n    ],\n    \"wind_direction_40m\": [\n      5366.541406359038,\n      7713.537558566874\n    ],\n    \"wind_direction_50m\": [\n      4673.250924300387,\n      4566.8439181885915\n    ],\n    \"wind_direction_70m\": [\n      5380.986124841241,\n      4834.500110939569\n    ],\n    \"wind_direction_80m\": [\n      3607.3217319905525,\n      7288.317269969595\n    ],\n    \"wind_direction_100m\": [\n      9770.789021310404,\n      8514.916605463519\n    ],\n    \"wind_direction_120m\": [\n      3232.612035630028,\n      5416.049590121564\n    ],\n    \"wind_direction_140m\": [\n      5789.906939738688,\n      4388.497194190491\n    ],\n    \"wind_direction_150m\": [\n      1439.7914568842807,\n      6541.136277677675\n    ],\n    \"wind_direction_160m\": [\n      1233.6889430144472,\n      7010.601231081362\n    ],\n    \"wind_direction_180m\": [\n      4718.668696647958,\n      9291.683239899214\n    ],\n    \"wind_direction_200m\": [\n      1768.1831561908311,\n      6928.394504283026\n    ],\n    \"wind_gusts_10m\": [\n      342.7302841803148,\n      2686.422009115923\n    ],\n    \"temperature_20m\": [\n      5318.935802269881,\n      621.5581712569551\n    ],\n    \"temperature_40m\": [\n      7501.2663649717715,\n      8757.763977623083\n    ],\n    \"temperature_50m\": [\n      8036.496608514469,\n      3669.580503901538\n    ],\n    \"temperature_80m\": [\n      4191.730756843922,\n      3973.8617532802023\n    ],\n    \"temperature_100m\": [\n      9610.058645623334,\n      9515.282099548487\n    ],\n    \"temperature_120m\": [\n      7857.439542373562,\n      4040.2628659732586\n    ],\n    \"temperature_150m\": [\n      7911.722142213976,\n      2345.4170433707623\n    ],\n    \"temperature_180m\": [\n      1395.9009748142548,\n      1871.8227282846956\n    ],\n    \"temperature_200m\": [\n      7798.259075157752,\n      1599.2663257007855\n    ],\n    \"soil_temperature_0cm\": [\n      7652.1463068556095,\n      8647.477906111188\n    ],\n    \"soil_temperature_6cm\": [\n      2721.4403587187553,\n      5188.792912534284\n    ],\n    \"soil_temperature_18cm\": [\n      4911.3911294998225,\n      7047.505644531773\n    ],\n    \"soil_temperature_54cm\": [\n      8103.428493535823,\n      388.05108825719856\n    ],\n    \"soil_temperature_162cm\": [\n      4953.798385352997,\n      3105.7550297180424\n    ],\n    \"soil_temperature_486cm\": [\n      2206.6262447894737,\n      8865.570720036121\n    ],\n    \"soil_temperature_1458cm\": [\n      5376.605604582372,\n      508.49166475223194\n    ],\n    \"soil_temperature_0_to_7cm\": [\n      56.55983992495117,\n      4519.3436826893785\n    ],\n    \"soil_temperature_7_to_28cm\": [\n      1632.7509247142268,\n      6538.19745270977\n    ],\n    \"soil_temperature_28_to_100cm\": [\n      8792.639272577777,\n      8130.112669888927\n    ],\n    \"soil_temperature_100_to_255cm\": [\n      5793.700327378087,\n      6451.977060038663\n    ],\n    \"soil_temperature_0_to_10cm\": [\n      7588.237333197851,\n      1694.9643710232565\n    ],\n    \"soil_temperature_10_to_40cm\": [\n      6760.538537572413,\n      6873.133251339745\n    ],\n    \"soil_temperature_40_to_100cm\": [\n      6014.94744093774,\n      9153.830466114188\n    ],\n    \"soil_temperature_100_to_200cm\": [\n      2956.092261003591,\n      1269.2555056526855\n    ],\n    \"soil_temperature_10_to_35cm\": [\n      5626.909192221729,\n      2092.0588381417037\n    ],\n    \"soil_temperature_35_to_100cm\": [\n      4188.956119230246,\n      9709.692457513851\n    ],\n    \"soil_temperature_100_to_300cm\": [\n      5119.903463175335,\n      3240.934491067331\n    ],\n    \"soil_moisture_0_to_1cm\": [\n      2671.2333103414967,\n      3966.981082724431\n    ],\n    \"soil_moisture_1_to_3cm\": [\n      2134.406896948261,\n      3905.2909511835733\n    ],\n    \"soil_moisture_3_to_9cm\": [\n      6129.877595193595,\n      4555.457754431143\n    ],\n    \"soil_moisture_9_to_27cm\": [\n      1069.6472658010025,\n      5906.835438222657\n    ],\n    \"soil_moisture_27_to_81cm\": [\n      9438.505204914136,\n      9862.095388542097\n    ],\n    \"soil_moisture_81_to_243cm\": [\n      1878.7792871086672,\n      3005.879905178597\n    ],\n    \"soil_moisture_243_to_729cm\": [\n      9473.24405130086,\n      9688.995271261934\n    ],\n    \"soil_moisture_729_to_2187cm\": [\n      5578.5376363923415,\n      3134.8547406584958\n    ],\n    \"soil_moisture_0_to_7cm\": [\n      1057.1553485152162,\n      4455.971033075373\n    ],\n    \"soil_moisture_7_to_28cm\": [\n      7299.894908857103,\n      3885.740482262987\n    ],\n    \"soil_moisture_28_to_100cm\": [\n      7802.7611861218875,\n      6325.104937158258\n    ],\n    \"soil_moisture_100_to_255cm\": [\n      3830.305109080224,\n      2283.0444187478392\n    ],\n    \"soil_moisture_0_to_10cm\": [\n      4908.552466892744,\n      4663.612696775004\n    ],\n    \"soil_moisture_10_to_40cm\": [\n      4057.6452004363073,\n      2465.5486619083467\n    ],\n    \"soil_moisture_40_to_100cm\": [\n      8917.040142656613,\n      246.96375275984784\n    ],\n    \"soil_moisture_100_to_200cm\": [\n      8824.71824511547,\n      3569.360595091331\n    ],\n    \"soil_moisture_10_to_35cm\": [\n      8964.439787212803,\n      2489.2339922355177\n    ],\n    \"soil_moisture_35_to_100cm\": [\n      1494.9220490915504,\n      307.62299263300764\n    ],\n    \"soil_moisture_100_to_300cm\": [\n      2642.5978447268603,\n      9375.879960676772\n    ],\n    \"uv_index\": [\n      9374.029652404757,\n      2845.3183551176267\n    ],\n    \"uv_index_clear_sky\": [\n      9076.218315709863,\n      4873.523412631034\n    ],\n    \"is_day\": [\n      9712,\n      7198\n    ],\n    \"sunshine_duration\": [\n      953.4607110617244,\n      9212.363328393534\n    ],\n    \"wet_bulb_temperature_2m\": [\n      8479.277301209235,\n      7724.808320457851\n    ],\n    \"total_column_integrated_water_vapour\": [\n      3000.7404335513766,\n      698.3392131249554\n    ],\n    \"cape\": [\n      5958.668611579748,\n      7947.338485505935\n    ],\n    \"lifted_index\": [\n      4592.225854860911,\n      3373.944246400431\n    ],\n    \"convective_inhibition\": [\n      3789.5958307249343,\n      5495.74273871692\n    ],\n    \"freezing_level_height\": [\n      3440.9762503580146,\n      3662.551433475939\n    ],\n    \"boundary_layer_height\": [\n      9028.834882471243,\n      4804.186085491488\n    ],\n    \"surface_temperature\": [\n      8160.658497608101,\n      3793.1975532123997\n    ],\n    \"mass_density_8m\": [\n      3431.3652835458197,\n      1458.4356507613327\n    ],\n    \"snowfall_height\": [\n      5697.018829087792,\n      6384.34189116756\n    ],\n    \"convective_cloud_base\": [\n      1045.9372327144024,\n      5699.945532988579\n    ],\n    \"convective_cloud_top\": [\n      4012.369468282162,\n      5441.496737536948\n    ],\n    \"updraft\": [\n      2527.822911822347,\n      7889.054799843361\n    ],\n    \"lightning_potential\": [\n      1748.4699637253098,\n      8401.099214153219\n    ],\n    \"lightning_density\": [\n      8823.122190562624,\n      5136.170823898123\n    ],\n    \"snow_height\": [\n      6491.40364379756,\n      7906.193196999152\n    ],\n    \"roughness_length\": [\n      4449.75135372533,\n      8277.904607853317\n    ],\n    \"albedo\": [\n      4289.073470553955,\n      8523.79527322643\n    ],\n    \"k_index\": [\n      5812.991013242171,\n      263.55690252395925\n    ],\n    \"sea_level_height_msl\": [\n      8291.151182861056,\n      2794.645480729282\n    ],\n    \"sea_ice_thickness\": [\n      5482.389264815672,\n      4522.859230380552\n    ],\n    \"sea_surface_temperature\": [\n      9216.94312731646,\n      652.7493578597143\n    ],\n    \"ocean_current_velocity\": [\n      7141.3460227828555,\n      2550.8423373581522\n    ],\n    \"ocean_current_direction\": [\n      9926.001926772762,\n      1664.488837482\n    ],\n    \"shortwave_radiation\": [\n      8474.255415106272,\n      9817.800360227127\n    ],\n    \"direct_radiation\": [\n      1149.378202317557,\n      6304.598755278562\n    ],\n    \"diffuse_radiation\": [\n      6279.996226333651,\n      2186.7830189467286\n    ],\n    \"direct_normal_irradiance\": [\n      6218.029758128856,\n      7000.38831808046\n    ],\n    \"global_tilted_irradiance\": [\n      7214.93780742022,\n      8047.249290975237\n    ],\n    \"terrestrial_radiation\": [\n      3609.004893358092,\n      8452.729655657426\n    ],\n    \"shortwave_radiation_instant\": [\n      7392.763518002531,\n      364.9660812151456\n    ],\n    \"direct_radiation_instant\": [\n      3554.460180401612,\n      5366.265728915126\n    ],\n    \"diffuse_radiation_instant\": [\n      8659.431030468388,\n      7236.230301169162\n    ],\n    \"direct_normal_irradiance_instant\": [\n      2272.7958784991197,\n      5430.840657266203\n    ],\n    \"global_tilted_irradiance_instant\": [\n      3805.0914968778816,\n      6200.124540946982\n    ],\n    \"terrestrial_radiation_instant\": [\n      2522.417805882503,\n      2444.6171152992115\n    ],\n    \"temperature_1000hPa\": [\n      3584.2560584046323,\n      6735.1133374591545\n    ],\n    \"temperature_950hPa\": [\n      6899.085623474888,\n      8535.380286170745\n    ],\n    \"temperature_925hPa\": [\n      68.27655617940964,\n      9790.540045406751\n    ],\n    \"temperature_900hPa\": [\n      1753.02336028357,\n      5501.22092903874\n    ],\n    \"temperature_850hPa\": [\n      6309.134626465942,\n      6487.565966792138\n    ],\n    \"temperature_800hPa\": [\n      3859.1218372843273,\n      6777.721175993818\n    ],\n    \"temperature_750hPa\": [\n      7322.2754364835255,\n      6119.465079567441\n    ],\n    \"temperature_700hPa\": [\n      8856.391210488706,\n      6346.474277079798\n    ],\n    \"temperature_650hPa\": [\n      3989.515467335388,\n      181.4890921353396\n    ],\n    \"temperature_600hPa\": [\n      3055.361852408882,\n      3913.245094137475\n    ],\n    \"temperature_550hPa\": [\n      6837.770336739161,\n      2417.7290483212932\n    ],\n    \"temperature_500hPa\": [\n      8973.154319270776,\n      4890.762723128044\n    ],\n    \"temperature_450hPa\": [\n      2090.191338691212,\n      2868.670498283091\n    ],\n    \"temperature_400hPa\": [\n      7286.607551482907,\n      5326.183402935633\n    ],\n    \"temperature_350hPa\": [\n      2928.4351340166836,\n      5742.264123888721\n    ],\n    \"temperature_300hPa\": [\n      663.3517572035486,\n      8055.184287650662\n    ],\n    \"temperature_275hPa\": [\n      3318.7836065911947,\n      1071.993627060661\n    ],\n    \"temperature_250hPa\": [\n      1868.878377307046,\n      4906.536476638886\n    ],\n    \"temperature_225hPa\": [\n      3309.920402711759,\n      9526.726528631765\n    ],\n    \"temperature_200hPa\": [\n      7673.096309987425,\n      2880.44846341458\n    ],\n    \"temperature_175hPa\": [\n      5746.66006202041,\n      9695.34716540065\n    ],\n    \"temperature_150hPa\": [\n      769.0358143319864,\n      104.32979024662114\n    ],\n    \"temperature_125hPa\": [\n      8835.460351550884,\n      7248.171543836557\n    ],\n    \"temperature_100hPa\": [\n      9999.434645365738,\n      2684.5395657323465\n    ],\n    \"temperature_50hPa\": [\n      4126.5570136909655,\n      935.365663614689\n    ],\n    \"temperature_10hPa\": [\n      6838.202888441798,\n      7749.729411254501\n    ],\n    \"dew_point_1000hPa\": [\n      9203.908690017137,\n      3607.1140053766994\n    ],\n    \"dew_point_950hPa\": [\n      5147.211772125855,\n      7201.7693922782555\n    ],\n    \"dew_point_925hPa\": [\n      4603.133438895144,\n      8467.35612655306\n    ],\n    \"dew_point_900hPa\": [\n      1142.805269225431,\n      1479.3983965749092\n    ],\n    \"dew_point_850hPa\": [\n      7605.878588382658,\n      1659.890950050722\n    ],\n    \"dew_point_800hPa\": [\n      4923.381459405776,\n      692.8195195152864\n    ],\n    \"dew_point_750hPa\": [\n      4724.395435803759,\n      4865.855722688044\n    ],\n    \"dew_point_700hPa\": [\n      2930.159905575057,\n      8961.726865650615\n    ],\n    \"dew_point_650hPa\": [\n      43.066602567313204,\n      9678.310828194039\n    ],\n    \"dew_point_600hPa\": [\n      7995.282807125203,\n      8822.153992765447\n    ],\n    \"dew_point_550hPa\": [\n      2328.010660859481,\n      3712.715142784495\n    ],\n    \"dew_point_500hPa\": [\n      6253.982775431861,\n      1129.502781418833\n    ],\n    \"dew_point_450hPa\": [\n      6585.222053743954,\n      368.3684374217433\n    ],\n    \"dew_point_400hPa\": [\n      4090.820876397051,\n      8642.947515438798\n    ],\n    \"dew_point_350hPa\": [\n      8372.315577434822,\n      2804.2879512982754\n    ],\n    \"dew_point_300hPa\": [\n      1986.8078051736916,\n      3353.3687696122583\n    ],\n    \"dew_point_275hPa\": [\n      1185.977211000807,\n      9056.199224623339\n    ],\n    \"dew_point_250hPa\": [\n      3711.8225948123327,\n      7168.780320724181\n    ],\n    \"dew_point_225hPa\": [\n      824.7134533067212,\n      4937.235314824117\n    ],\n    \"dew_point_200hPa\": [\n      2806.1796012291807,\n      5975.326372625499\n    ],\n    \"dew_point_175hPa\": [\n      4841.756488627255,\n      4652.030065462814\n    ],\n    \"dew_point_150hPa\": [\n      1953.7497095178958,\n      6646.160771041385\n    ],\n    \"dew_point_125hPa\": [\n      6022.847827279294,\n      9685.265257877172\n    ],\n    \"dew_point_100hPa\": [\n      1861.195978136756,\n      4852.585478094198\n    ],\n    \"dew_point_50hPa\": [\n      6195.0981055509155,\n      1509.552839781717\n    ],\n    \"dew_point_10hPa\": [\n      3673.0018004146327,\n      5572.092808996327\n    ],\n    \"relative_humidity_1000hPa\": [\n      3592.3956021496697,\n      7459.77360833362\n    ],\n    \"relative_humidity_950hPa\": [\n      9002.749053048885,\n      1615.2745926255795\n    ],\n    \"relative_humidity_925hPa\": [\n      3447.7091822473362,\n      2076.316845152655\n    ],\n    \"relative_humidity_900hPa\": [\n      9417.448356144805,\n      2256.0588944120354\n    ],\n    \"relative_humidity_850hPa\": [\n      7191.258901343332,\n      9421.041999999388\n    ],\n    \"relative_humidity_800hPa\": [\n      6140.681973704034,\n      9386.98487357146\n    ],\n    \"relative_humidity_750hPa\": [\n      5356.19009012649,\n      9630.812991475108\n    ],\n    \"relative_humidity_700hPa\": [\n      8559.039196904656,\n      7522.05006089994\n    ],\n    \"relative_humidity_650hPa\": [\n      7520.023992182116,\n      3864.0867132354815\n    ],\n    \"relative_humidity_600hPa\": [\n      1087.0771815598446,\n      8931.811713816645\n    ],\n    \"relative_humidity_550hPa\": [\n      7334.83158504102,\n      5225.62794603307\n    ],\n    \"relative_humidity_500hPa\": [\n      2516.7983258706204,\n      8513.222971935898\n    ],\n    \"relative_humidity_450hPa\": [\n      2123.4355407402118,\n      1203.2280432034336\n    ],\n    \"relative_humidity_400hPa\": [\n      5160.336455487108,\n      4629.284465883502\n    ],\n    \"relative_humidity_350hPa\": [\n      9258.699199897208,\n      6057.0321802004055\n    ],\n    \"relative_humidity_300hPa\": [\n      6451.883296757412,\n      831.3359799986553\n    ],\n    \"relative_humidity_275hPa\": [\n      6530.863098110873,\n      6355.169322098034\n    ],\n    \"relative_humidity_250hPa\": [\n      6095.339009759529,\n      2971.0564463461897\n    ],\n    \"relative_humidity_225hPa\": [\n      9917.50632455619,\n      3248.1529743505866\n    ],\n    \"relative_humidity_200hPa\": [\n      8721.708955412796,\n      978.2142653381331\n    ],\n    \"relative_humidity_175hPa\": [\n      6210.021868655769,\n      8316.853622649496\n    ],\n    \"relative_humidity_150hPa\": [\n      5601.288603992064,\n      3151.4428667204065\n    ],\n    \"relative_humidity_125hPa\": [\n      1174.854765170228,\n      7925.549603526353\n    ],\n    \"relative_humidity_100hPa\": [\n      1320.922952574144,\n      3807.157133034188\n    ],\n    \"relative_humidity_50hPa\": [\n      7219.603869656501,\n      6723.737457665133\n    ],\n    \"relative_humidity_10hPa\": [\n      4078.415066630575,\n      8686.991931696268\n    ],\n    \"cloud_cover_1000hPa\": [\n      5094.655386561555,\n      8775.50151710398\n    ],\n    \"cloud_cover_950hPa\": [\n      296.8331285652459,\n      6815.967500352418\n    ],\n    \"cloud_cover_925hPa\": [\n      5679.340614038205,\n      4721.400695021778\n    ],\n    \"cloud_cover_900hPa\": [\n      2301.094844709899,\n      6849.266713499632\n    ],\n    \"cloud_cover_850hPa\": [\n      686.9989635496665,\n      5976.906545155177\n    ],\n    \"cloud_cover_800hPa\": [\n      2284.0293162572543,\n      4474.289845209502\n    ],\n    \"cloud_cover_750hPa\": [\n      9371.93687255013,\n      7986.915023869164\n    ],\n    \"cloud_cover_700hPa\": [\n      418.4314279491408,\n      4155.650261749598\n    ],\n    \"cloud_cover_650hPa\": [\n      2442.0015890500567,\n      5418.80945130912\n    ],\n    \"cloud_cover_600hPa\": [\n      1053.138394439468,\n      7895.783510153984\n    ],\n    \"cloud_cover_550hPa\": [\n      1327.3221255796786,\n      6021.143131822042\n    ],\n    \"cloud_cover_500hPa\": [\n      8313.52683705033,\n      9639.330964968898\n    ],\n    \"cloud_cover_450hPa\": [\n      3170.285550987534,\n      4752.358722205449\n    ],\n    \"cloud_cover_400hPa\": [\n      389.57442705097156,\n      9166.698938886486\n    ],\n    \"cloud_cover_350hPa\": [\n      6868.977438353655,\n      5827.476082520077\n    ],\n    \"cloud_cover_300hPa\": [\n      1548.6188207380658,\n      8020.2890916304195\n    ],\n    \"cloud_cover_275hPa\": [\n      4095.3291903945264,\n      9064.796406130692\n    ],\n    \"cloud_cover_250hPa\": [\n      3733.1248984162944,\n      5524.78910067352\n    ],\n    \"cloud_cover_225hPa\": [\n      5443.494310850004,\n      3765.35084181011\n    ],\n    \"cloud_cover_200hPa\": [\n      4934.549881650197,\n      3749.0958454149104\n    ],\n    \"cloud_cover_175hPa\": [\n      8572.01985762037,\n      2754.9407253839254\n    ],\n    \"cloud_cover_150hPa\": [\n      4672.010447623017,\n      6450.343408114313\n    ],\n    \"cloud_cover_125hPa\": [\n      1103.4405578391115,\n      6012.8118231572425\n    ],\n    \"cloud_cover_100hPa\": [\n      4386.981726169372,\n      1353.5482329050851\n    ],\n    \"cloud_cover_50hPa\": [\n      9936.184578012178,\n      4082.641077159752\n    ],\n    \"cloud_cover_10hPa\": [\n      6988.529780984945,\n      5542.635679294159\n    ],\n    \"wind_speed_1000hPa\": [\n      1961.2739033348237,\n      9772.869190341686\n    ],\n    \"wind_speed_950hPa\": [\n      3157.9909235598734,\n      7559.798483440471\n    ],\n    \"wind_speed_925hPa\": [\n      6466.053706482428,\n      4902.589558942265\n    ],\n    \"wind_speed_900hPa\": [\n      7232.9852938212425,\n      1520.584687635943\n    ],\n    \"wind_speed_850hPa\": [\n      1877.5277587538076,\n      3716.3184460793655\n    ],\n    \"wind_speed_800hPa\": [\n      4082.0061516013416,\n      9887.376958356585\n    ],\n    \"wind_speed_750hPa\": [\n      3487.2568582196263,\n      1359.2362125938018\n    ],\n    \"wind_speed_700hPa\": [\n      612.5274587598018,\n      1501.7399135059438\n    ],\n    \"wind_speed_650hPa\": [\n      951.4962678397443,\n      6569.108283167663\n    ],\n    \"wind_speed_600hPa\": [\n      6262.76809516566,\n      3316.6042569423425\n    ],\n    \"wind_speed_550hPa\": [\n      9070.644303195613,\n      9670.116327940936\n    ],\n    \"wind_speed_500hPa\": [\n      9733.87921588758,\n      8983.847129343472\n    ],\n    \"wind_speed_450hPa\": [\n      6743.698846822842,\n      3417.344033922688\n    ],\n    \"wind_speed_400hPa\": [\n      886.3449142952106,\n      8039.223418133852\n    ],\n    \"wind_speed_350hPa\": [\n      4037.8254143138524,\n      2952.666506416737\n    ],\n    \"wind_speed_300hPa\": [\n      1626.7524460849036,\n      5262.056934587626\n    ],\n    \"wind_speed_275hPa\": [\n      1377.7982471447813,\n      9928.013324548776\n    ],\n    \"wind_speed_250hPa\": [\n      5592.524791815698,\n      5349.624784609686\n    ],\n    \"wind_speed_225hPa\": [\n      3395.352755420523,\n      8133.805580877031\n    ],\n    \"wind_speed_200hPa\": [\n      9071.471358783858,\n      9790.91876071659\n    ],\n    \"wind_speed_175hPa\": [\n      1698.6479661435728,\n      4587.954628610118\n    ],\n    \"wind_speed_150hPa\": [\n      598.6354188874543,\n      5013.6854723421\n    ],\n    \"wind_speed_125hPa\": [\n      1054.0832797146847,\n      3769.6237152769286\n    ],\n    \"wind_speed_100hPa\": [\n      8021.85767129834,\n      5751.158484384996\n    ],\n    \"wind_speed_50hPa\": [\n      662.106570109241,\n      9851.226291759152\n    ],\n    \"wind_speed_10hPa\": [\n      8076.834396729056,\n      4871.761455959623\n    ],\n    \"wind_direction_1000hPa\": [\n      8248.020736089042,\n      238.8792998410061\n    ],\n    \"wind_direction_950hPa\": [\n      6079.699485783491,\n      5597.650629524575\n    ],\n    \"wind_direction_925hPa\": [\n      5034.476182402935,\n      2652.255682643415\n    ],\n    \"wind_direction_900hPa\": [\n      8269.043896362913,\n      2511.3837554806296\n    ],\n    \"wind_direction_850hPa\": [\n      8239.017210285998,\n      910.6209570423418\n    ],\n    \"wind_direction_800hPa\": [\n      3273.4694183939027,\n      6931.351639966465\n    ],\n    \"wind_direction_750hPa\": [\n      7868.247489969899,\n      9500.455980090512\n    ],\n    \"wind_direction_700hPa\": [\n      9623.028412345717,\n      3157.418620276441\n    ],\n    \"wind_direction_650hPa\": [\n      9610.662038733193,\n      2101.481647262359\n    ],\n    \"wind_direction_600hPa\": [\n      4704.766622173439,\n      5095.101720525263\n    ],\n    \"wind_direction_550hPa\": [\n      7721.399770729325,\n      8471.906161260546\n    ],\n    \"wind_direction_500hPa\": [\n      1714.4422105297442,\n      368.6595872703835\n    ],\n    \"wind_direction_450hPa\": [\n      4867.088206515437,\n      817.1533904107941\n    ],\n    \"wind_direction_400hPa\": [\n      3299.9326216323843,\n      8326.287877783974\n    ],\n    \"wind_direction_350hPa\": [\n      5046.965382972862,\n      3215.1317174936935\n    ],\n    \"wind_direction_300hPa\": [\n      8723.659401751847,\n      9182.978573276858\n    ],\n    \"wind_direction_275hPa\": [\n      6885.734501818758,\n      3619.585035934659\n    ],\n    \"wind_direction_250hPa\": [\n      1453.7324366047233,\n      141.3818026532021\n    ],\n    \"wind_direction_225hPa\": [\n      8498.478482574374,\n      2475.191685380531\n    ],\n    \"wind_direction_200hPa\": [\n      1181.0431725859382,\n      3481.5594842586374\n    ],\n    \"wind_direction_175hPa\": [\n      4932.839115745897,\n      9999.062886210178\n    ],\n    \"wind_direction_150hPa\": [\n      2217.480487137007,\n      615.1278785434778\n    ],\n    \"wind_direction_125hPa\": [\n      9105.310165170693,\n      5505.562253428109\n    ],\n    \"wind_direction_100hPa\": [\n      206.49019750824004,\n      404.18809811099356\n    ],\n    \"wind_direction_50hPa\": [\n      6656.417883196946,\n      6335.307835187936\n    ],\n    \"wind_direction_10hPa\": [\n      6741.486285356112,\n      1715.3606254916033\n    ],\n    \"vertical_velocity_1000hPa\": [\n      2275.42338621047,\n      5269.0758667073815\n    ],\n    \"vertical_velocity_950hPa\": [\n      2655.1783140264006,\n      8898.579938954901\n    ],\n    \"vertical_velocity_925hPa\": [\n      2756.8264850662094,\n      3982.702619530947\n    ],\n    \"vertical_velocity_900hPa\": [\n      6300.085992433391,\n      3484.095463899928\n    ],\n    \"vertical_velocity_850hPa\": [\n      3555.3407430485927,\n      8299.990216726877\n    ],\n    \"vertical_velocity_800hPa\": [\n      1345.0472409389224,\n      2293.350384535099\n    ],\n    \"vertical_velocity_750hPa\": [\n      3741.8524736106997,\n      7869.302054150582\n    ],\n    \"vertical_velocity_700hPa\": [\n      8738.604884383296,\n      9566.076665534774\n    ],\n    \"vertical_velocity_650hPa\": [\n      964.490329585338,\n      6528.62320185172\n    ],\n    \"vertical_velocity_600hPa\": [\n      9111.61301515426,\n      1696.6488028520432\n    ],\n    \"vertical_velocity_550hPa\": [\n      9337.701418362278,\n      8302.484034045592\n    ],\n    \"vertical_velocity_500hPa\": [\n      3374.284499160075,\n      5781.101386760998\n    ],\n    \"vertical_velocity_450hPa\": [\n      1736.1345867627708,\n      9766.923245819667\n    ],\n    \"vertical_velocity_400hPa\": [\n      8887.450289775215,\n      7387.025833330745\n    ],\n    \"vertical_velocity_350hPa\": [\n      6081.197554954379,\n      3483.0351748921908\n    ],\n    \"vertical_velocity_300hPa\": [\n      9227.740848496589,\n      837.5982189023867\n    ],\n    \"vertical_velocity_275hPa\": [\n      6304.325237031315,\n      6163.85434806684\n    ],\n    \"vertical_velocity_250hPa\": [\n      9590.328602515097,\n      819.6691861535498\n    ],\n    \"vertical_velocity_225hPa\": [\n      4594.765735209177,\n      3425.170076162588\n    ],\n    \"vertical_velocity_200hPa\": [\n      9417.200375368124,\n      4487.06383423874\n    ],\n    \"vertical_velocity_175hPa\": [\n      7077.503008457195,\n      3482.0790400383726\n    ],\n    \"vertical_velocity_150hPa\": [\n      6328.949972708254,\n      8026.35626603003\n    ],\n    \"vertical_velocity_125hPa\": [\n      665.3169313668095,\n      6216.2182483265815\n    ],\n    \"vertical_velocity_100hPa\": [\n      8689.542706609775,\n      9717.017574393425\n    ],\n    \"vertical_velocity_50hPa\": [\n      7304.2908686112305,\n      8171.651733764775\n    ],\n    \"vertical_velocity_10hPa\": [\n      850.7555056706361,\n      777.5824762855233\n    ],\n    \"geopotential_height_1000hPa\": [\n      1999.6716254746561,\n      6259.562664416583\n    ],\n    \"geopotential_height_950hPa\": [\n      7064.173177463863,\n      3943.269513462724\n    ],\n    \"geopotential_height_925hPa\": [\n      1668.5950701742868,\n      4109.542522407052\n    ],\n    \"geopotential_height_900hPa\": [\n      9106.285516963113,\n      558.3852065861616\n    ],\n    \"geopotential_height_850hPa\": [\n      7354.117892873094,\n      9966.261883960791\n    ],\n    \"geopotential_height_800hPa\": [\n      4285.641262835275,\n      1739.955497874508\n    ],\n    \"geopotential_height_750hPa\": [\n      9425.5633181851,\n      233.96098051536418\n    ],\n    \"geopotential_height_700hPa\": [\n      9567.044152011254,\n      2724.1762848533913\n    ],\n    \"geopotential_height_650hPa\": [\n      5008.73829967681,\n      2540.8796965008005\n    ],\n    \"geopotential_height_600hPa\": [\n      2201.52314675638,\n      44.64984521588278\n    ],\n    \"geopotential_height_550hPa\": [\n      1517.044515311965,\n      3669.1198352005717\n    ],\n    \"geopotential_height_500hPa\": [\n      2804.9507459175015,\n      2614.803852003472\n    ],\n    \"geopotential_height_450hPa\": [\n      5407.896991110557,\n      4631.033529991754\n    ],\n    \"geopotential_height_400hPa\": [\n      2289.3465422689974,\n      2810.962362291047\n    ],\n    \"geopotential_height_350hPa\": [\n      3445.0648147457596,\n      182.75415277511863\n    ],\n    \"geopotential_height_300hPa\": [\n      24.17889214409552,\n      4206.452944604812\n    ],\n    \"geopotential_height_275hPa\": [\n      1184.6633817518536,\n      8090.236423422881\n    ],\n    \"geopotential_height_250hPa\": [\n      8555.1527497571,\n      9198.960002560632\n    ],\n    \"geopotential_height_225hPa\": [\n      3523.5368017229516,\n      6014.890051631302\n    ],\n    \"geopotential_height_200hPa\": [\n      1553.918921813665,\n      4846.5723815951615\n    ],\n    \"geopotential_height_175hPa\": [\n      2882.072673615632,\n      7953.460598218663\n    ],\n    \"geopotential_height_150hPa\": [\n      2172.3822279338765,\n      7513.098441086934\n    ],\n    \"geopotential_height_125hPa\": [\n      5227.9190387685185,\n      1992.7975903183026\n    ],\n    \"geopotential_height_100hPa\": [\n      7145.755221240756,\n      895.7602238746465\n    ],\n    \"geopotential_height_50hPa\": [\n      4145.842757381418,\n      1524.3283685497745\n    ],\n    \"geopotential_height_10hPa\": [\n      7025.7499155120495,\n      5972.9125268902635\n    ]\n  },\n  \"hourly_units\": {\n    \"time\": \"string\",\n    \"temperature_2m\": \"string\",\n    \"temperature_2m_min\": \"string\",\n    \"temperature_2m_max\": \"string\",\n    \"relative_humidity_2m\": \"string\",\n    \"dew_point_2m\": \"string\",\n    \"apparent_temperature\": \"string\",\n    \"precipitation_probability\": \"string\",\n    \"precipitation\": \"string\",\n    \"rain\": \"string\",\n    \"showers\": \"string\",\n    \"snowfall\": \"string\",\n    \"snow_depth\": \"string\",\n    \"snowfall_water_equivalent\": \"string\",\n    \"snow_depth_water_equivalent\": \"string\",\n    \"weather_code\": \"string\",\n    \"pressure_msl\": \"string\",\n    \"surface_pressure\": \"string\",\n    \"cloud_cover\": \"string\",\n    \"cloud_cover_low\": \"string\",\n    \"cloud_cover_mid\": \"string\",\n    \"cloud_cover_high\": \"string\",\n    \"visibility\": \"string\",\n    \"evapotranspiration\": \"string\",\n    \"et0_fao_evapotranspiration\": \"string\",\n    \"vapour_pressure_deficit\": \"string\",\n    \"runoff\": \"string\",\n    \"precipitation_type\": \"string\",\n    \"rain_probability\": \"string\",\n    \"snowfall_probability\": \"string\",\n    \"freezing_rain_probability\": \"string\",\n    \"ice_pellets_probability\": \"string\",\n    \"thunderstorm_probability\": \"string\",\n    \"wind_speed_10m\": \"string\",\n    \"wind_speed_20m\": \"string\",\n    \"wind_speed_30m\": \"string\",\n    \"wind_speed_40m\": \"string\",\n    \"wind_speed_50m\": \"string\",\n    \"wind_speed_70m\": \"string\",\n    \"wind_speed_80m\": \"string\",\n    \"wind_speed_100m\": \"string\",\n    \"wind_speed_120m\": \"string\",\n    \"wind_speed_140m\": \"string\",\n    \"wind_speed_150m\": \"string\",\n    \"wind_speed_160m\": \"string\",\n    \"wind_speed_180m\": \"string\",\n    \"wind_speed_200m\": \"string\",\n    \"wind_direction_10m\": \"string\",\n    \"wind_direction_20m\": \"string\",\n    \"wind_direction_30m\": \"string\",\n    \"wind_direction_40m\": \"string\",\n    \"wind_direction_50m\": \"string\",\n    \"wind_direction_70m\": \"string\",\n    \"wind_direction_80m\": \"string\",\n    \"wind_direction_100m\": \"string\",\n    \"wind_direction_120m\": \"string\",\n    \"wind_direction_140m\": \"string\",\n    \"wind_direction_150m\": \"string\",\n    \"wind_direction_160m\": \"string\",\n    \"wind_direction_180m\": \"string\",\n    \"wind_direction_200m\": \"string\",\n    \"wind_gusts_10m\": \"string\",\n    \"temperature_20m\": \"string\",\n    \"temperature_40m\": \"string\",\n    \"temperature_50m\": \"string\",\n    \"temperature_80m\": \"string\",\n    \"temperature_100m\": \"string\",\n    \"temperature_120m\": \"string\",\n    \"temperature_150m\": \"string\",\n    \"temperature_180m\": \"string\",\n    \"temperature_200m\": \"string\",\n    \"soil_temperature_0cm\": \"string\",\n    \"soil_temperature_6cm\": \"string\",\n    \"soil_temperature_18cm\": \"string\",\n    \"soil_temperature_54cm\": \"string\",\n    \"soil_temperature_162cm\": \"string\",\n    \"soil_temperature_486cm\": \"string\",\n    \"soil_temperature_1458cm\": \"string\",\n    \"soil_temperature_0_to_7cm\": \"string\",\n    \"soil_temperature_7_to_28cm\": \"string\",\n    \"soil_temperature_28_to_100cm\": \"string\",\n    \"soil_temperature_100_to_255cm\": \"string\",\n    \"soil_temperature_0_to_10cm\": \"string\",\n    \"soil_temperature_10_to_40cm\": \"string\",\n    \"soil_temperature_40_to_100cm\": \"string\",\n    \"soil_temperature_100_to_200cm\": \"string\",\n    \"soil_temperature_10_to_35cm\": \"string\",\n    \"soil_temperature_35_to_100cm\": \"string\",\n    \"soil_temperature_100_to_300cm\": \"string\",\n    \"soil_moisture_0_to_1cm\": \"string\",\n    \"soil_moisture_1_to_3cm\": \"string\",\n    \"soil_moisture_3_to_9cm\": \"string\",\n    \"soil_moisture_9_to_27cm\": \"string\",\n    \"soil_moisture_27_to_81cm\": \"string\",\n    \"soil_moisture_81_to_243cm\": \"string\",\n    \"soil_moisture_243_to_729cm\": \"string\",\n    \"soil_moisture_729_to_2187cm\": \"string\",\n    \"soil_moisture_0_to_7cm\": \"string\",\n    \"soil_moisture_7_to_28cm\": \"string\",\n    \"soil_moisture_28_to_100cm\": \"string\",\n    \"soil_moisture_100_to_255cm\": \"string\",\n    \"soil_moisture_0_to_10cm\": \"string\",\n    \"soil_moisture_10_to_40cm\": \"string\",\n    \"soil_moisture_40_to_100cm\": \"string\",\n    \"soil_moisture_100_to_200cm\": \"string\",\n    \"soil_moisture_10_to_35cm\": \"string\",\n    \"soil_moisture_35_to_100cm\": \"string\",\n    \"soil_moisture_100_to_300cm\": \"string\",\n    \"uv_index\": \"string\",\n    \"uv_index_clear_sky\": \"string\",\n    \"is_day\": \"string\",\n    \"sunshine_duration\": \"string\",\n    \"wet_bulb_temperature_2m\": \"string\",\n    \"total_column_integrated_water_vapour\": \"string\",\n    \"cape\": \"string\",\n    \"lifted_index\": \"string\",\n    \"convective_inhibition\": \"string\",\n    \"freezing_level_height\": \"string\",\n    \"boundary_layer_height\": \"string\",\n    \"surface_temperature\": \"string\",\n    \"mass_density_8m\": \"string\",\n    \"snowfall_height\": \"string\",\n    \"convective_cloud_base\": \"string\",\n    \"convective_cloud_top\": \"string\",\n    \"updraft\": \"string\",\n    \"lightning_potential\": \"string\",\n    \"lightning_density\": \"string\",\n    \"snow_height\": \"string\",\n    \"roughness_length\": \"string\",\n    \"albedo\": \"string\",\n    \"k_index\": \"string\",\n    \"sea_level_height_msl\": \"string\",\n    \"sea_ice_thickness\": \"string\",\n    \"sea_surface_temperature\": \"string\",\n    \"ocean_current_velocity\": \"string\",\n    \"ocean_current_direction\": \"string\",\n    \"shortwave_radiation\": \"string\",\n    \"direct_radiation\": \"string\",\n    \"diffuse_radiation\": \"string\",\n    \"direct_normal_irradiance\": \"string\",\n    \"global_tilted_irradiance\": \"string\",\n    \"terrestrial_radiation\": \"string\",\n    \"shortwave_radiation_instant\": \"string\",\n    \"direct_radiation_instant\": \"string\",\n    \"diffuse_radiation_instant\": \"string\",\n    \"direct_normal_irradiance_instant\": \"string\",\n    \"global_tilted_irradiance_instant\": \"string\",\n    \"terrestrial_radiation_instant\": \"string\",\n    \"temperature_1000hPa\": \"string\",\n    \"temperature_950hPa\": \"string\",\n    \"temperature_925hPa\": \"string\",\n    \"temperature_900hPa\": \"string\",\n    \"temperature_850hPa\": \"string\",\n    \"temperature_800hPa\": \"string\",\n    \"temperature_750hPa\": \"string\",\n    \"temperature_700hPa\": \"string\",\n    \"temperature_650hPa\": \"string\",\n    \"temperature_600hPa\": \"string\",\n    \"temperature_550hPa\": \"string\",\n    \"temperature_500hPa\": \"string\",\n    \"temperature_450hPa\": \"string\",\n    \"temperature_400hPa\": \"string\",\n    \"temperature_350hPa\": \"string\",\n    \"temperature_300hPa\": \"string\",\n    \"temperature_275hPa\": \"string\",\n    \"temperature_250hPa\": \"string\",\n    \"temperature_225hPa\": \"string\",\n    \"temperature_200hPa\": \"string\",\n    \"temperature_175hPa\": \"string\",\n    \"temperature_150hPa\": \"string\",\n    \"temperature_125hPa\": \"string\",\n    \"temperature_100hPa\": \"string\",\n    \"temperature_50hPa\": \"string\",\n    \"temperature_10hPa\": \"string\",\n    \"dew_point_1000hPa\": \"string\",\n    \"dew_point_950hPa\": \"string\",\n    \"dew_point_925hPa\": \"string\",\n    \"dew_point_900hPa\": \"string\",\n    \"dew_point_850hPa\": \"string\",\n    \"dew_point_800hPa\": \"string\",\n    \"dew_point_750hPa\": \"string\",\n    \"dew_point_700hPa\": \"string\",\n    \"dew_point_650hPa\": \"string\",\n    \"dew_point_600hPa\": \"string\",\n    \"dew_point_550hPa\": \"string\",\n    \"dew_point_500hPa\": \"string\",\n    \"dew_point_450hPa\": \"string\",\n    \"dew_point_400hPa\": \"string\",\n    \"dew_point_350hPa\": \"string\",\n    \"dew_point_300hPa\": \"string\",\n    \"dew_point_275hPa\": \"string\",\n    \"dew_point_250hPa\": \"string\",\n    \"dew_point_225hPa\": \"string\",\n    \"dew_point_200hPa\": \"string\",\n    \"dew_point_175hPa\": \"string\",\n    \"dew_point_150hPa\": \"string\",\n    \"dew_point_125hPa\": \"string\",\n    \"dew_point_100hPa\": \"string\",\n    \"dew_point_50hPa\": \"string\",\n    \"dew_point_10hPa\": \"string\",\n    \"relative_humidity_1000hPa\": \"string\",\n    \"relative_humidity_950hPa\": \"string\",\n    \"relative_humidity_925hPa\": \"string\",\n    \"relative_humidity_900hPa\": \"string\",\n    \"relative_humidity_850hPa\": \"string\",\n    \"relative_humidity_800hPa\": \"string\",\n    \"relative_humidity_750hPa\": \"string\",\n    \"relative_humidity_700hPa\": \"string\",\n    \"relative_humidity_650hPa\": \"string\",\n    \"relative_humidity_600hPa\": \"string\",\n    \"relative_humidity_550hPa\": \"string\",\n    \"relative_humidity_500hPa\": \"string\",\n    \"relative_humidity_450hPa\": \"string\",\n    \"relative_humidity_400hPa\": \"string\",\n    \"relative_humidity_350hPa\": \"string\",\n    \"relative_humidity_300hPa\": \"string\",\n    \"relative_humidity_275hPa\": \"string\",\n    \"relative_humidity_250hPa\": \"string\",\n    \"relative_humidity_225hPa\": \"string\",\n    \"relative_humidity_200hPa\": \"string\",\n    \"relative_humidity_175hPa\": \"string\",\n    \"relative_humidity_150hPa\": \"string\",\n    \"relative_humidity_125hPa\": \"string\",\n    \"relative_humidity_100hPa\": \"string\",\n    \"relative_humidity_50hPa\": \"string\",\n    \"relative_humidity_10hPa\": \"string\",\n    \"cloud_cover_1000hPa\": \"string\",\n    \"cloud_cover_950hPa\": \"string\",\n    \"cloud_cover_925hPa\": \"string\",\n    \"cloud_cover_900hPa\": \"string\",\n    \"cloud_cover_850hPa\": \"string\",\n    \"cloud_cover_800hPa\": \"string\",\n    \"cloud_cover_750hPa\": \"string\",\n    \"cloud_cover_700hPa\": \"string\",\n    \"cloud_cover_650hPa\": \"string\",\n    \"cloud_cover_600hPa\": \"string\",\n    \"cloud_cover_550hPa\": \"string\",\n    \"cloud_cover_500hPa\": \"string\",\n    \"cloud_cover_450hPa\": \"string\",\n    \"cloud_cover_400hPa\": \"string\",\n    \"cloud_cover_350hPa\": \"string\",\n    \"cloud_cover_300hPa\": \"string\",\n    \"cloud_cover_275hPa\": \"string\",\n    \"cloud_cover_250hPa\": \"string\",\n    \"cloud_cover_225hPa\": \"string\",\n    \"cloud_cover_200hPa\": \"string\",\n    \"cloud_cover_175hPa\": \"string\",\n    \"cloud_cover_150hPa\": \"string\",\n    \"cloud_cover_125hPa\": \"string\",\n    \"cloud_cover_100hPa\": \"string\",\n    \"cloud_cover_50hPa\": \"string\",\n    \"cloud_cover_10hPa\": \"string\",\n    \"wind_speed_1000hPa\": \"string\",\n    \"wind_speed_950hPa\": \"string\",\n    \"wind_speed_925hPa\": \"string\",\n    \"wind_speed_900hPa\": \"string\",\n    \"wind_speed_850hPa\": \"string\",\n    \"wind_speed_800hPa\": \"string\",\n    \"wind_speed_750hPa\": \"string\",\n    \"wind_speed_700hPa\": \"string\",\n    \"wind_speed_650hPa\": \"string\",\n    \"wind_speed_600hPa\": \"string\",\n    \"wind_speed_550hPa\": \"string\",\n    \"wind_speed_500hPa\": \"string\",\n    \"wind_speed_450hPa\": \"string\",\n    \"wind_speed_400hPa\": \"string\",\n    \"wind_speed_350hPa\": \"string\",\n    \"wind_speed_300hPa\": \"string\",\n    \"wind_speed_275hPa\": \"string\",\n    \"wind_speed_250hPa\": \"string\",\n    \"wind_speed_225hPa\": \"string\",\n    \"wind_speed_200hPa\": \"string\",\n    \"wind_speed_175hPa\": \"string\",\n    \"wind_speed_150hPa\": \"string\",\n    \"wind_speed_125hPa\": \"string\",\n    \"wind_speed_100hPa\": \"string\",\n    \"wind_speed_50hPa\": \"string\",\n    \"wind_speed_10hPa\": \"string\",\n    \"wind_direction_1000hPa\": \"string\",\n    \"wind_direction_950hPa\": \"string\",\n    \"wind_direction_925hPa\": \"string\",\n    \"wind_direction_900hPa\": \"string\",\n    \"wind_direction_850hPa\": \"string\",\n    \"wind_direction_800hPa\": \"string\",\n    \"wind_direction_750hPa\": \"string\",\n    \"wind_direction_700hPa\": \"string\",\n    \"wind_direction_650hPa\": \"string\",\n    \"wind_direction_600hPa\": \"string\",\n    \"wind_direction_550hPa\": \"string\",\n    \"wind_direction_500hPa\": \"string\",\n    \"wind_direction_450hPa\": \"string\",\n    \"wind_direction_400hPa\": \"string\",\n    \"wind_direction_350hPa\": \"string\",\n    \"wind_direction_300hPa\": \"string\",\n    \"wind_direction_275hPa\": \"string\",\n    \"wind_direction_250hPa\": \"string\",\n    \"wind_direction_225hPa\": \"string\",\n    \"wind_direction_200hPa\": \"string\",\n    \"wind_direction_175hPa\": \"string\",\n    \"wind_direction_150hPa\": \"string\",\n    \"wind_direction_125hPa\": \"string\",\n    \"wind_direction_100hPa\": \"string\",\n    \"wind_direction_50hPa\": \"string\",\n    \"wind_direction_10hPa\": \"string\",\n    \"vertical_velocity_1000hPa\": \"string\",\n    \"vertical_velocity_950hPa\": \"string\",\n    \"vertical_velocity_925hPa\": \"string\",\n    \"vertical_velocity_900hPa\": \"string\",\n    \"vertical_velocity_850hPa\": \"string\",\n    \"vertical_velocity_800hPa\": \"string\",\n    \"vertical_velocity_750hPa\": \"string\",\n    \"vertical_velocity_700hPa\": \"string\",\n    \"vertical_velocity_650hPa\": \"string\",\n    \"vertical_velocity_600hPa\": \"string\",\n    \"vertical_velocity_550hPa\": \"string\",\n    \"vertical_velocity_500hPa\": \"string\",\n    \"vertical_velocity_450hPa\": \"string\",\n    \"vertical_velocity_400hPa\": \"string\",\n    \"vertical_velocity_350hPa\": \"string\",\n    \"vertical_velocity_300hPa\": \"string\",\n    \"vertical_velocity_275hPa\": \"string\",\n    \"vertical_velocity_250hPa\": \"string\",\n    \"vertical_velocity_225hPa\": \"string\",\n    \"vertical_velocity_200hPa\": \"string\",\n    \"vertical_velocity_175hPa\": \"string\",\n    \"vertical_velocity_150hPa\": \"string\",\n    \"vertical_velocity_125hPa\": \"string\",\n    \"vertical_velocity_100hPa\": \"string\",\n    \"vertical_velocity_50hPa\": \"string\",\n    \"vertical_velocity_10hPa\": \"string\",\n    \"geopotential_height_1000hPa\": \"string\",\n    \"geopotential_height_950hPa\": \"string\",\n    \"geopotential_height_925hPa\": \"string\",\n    \"geopotential_height_900hPa\": \"string\",\n    \"geopotential_height_850hPa\": \"string\",\n    \"geopotential_height_800hPa\": \"string\",\n    \"geopotential_height_750hPa\": \"string\",\n    \"geopotential_height_700hPa\": \"string\",\n    \"geopotential_height_650hPa\": \"string\",\n    \"geopotential_height_600hPa\": \"string\",\n    \"geopotential_height_550hPa\": \"string\",\n    \"geopotential_height_500hPa\": \"string\",\n    \"geopotential_height_450hPa\": \"string\",\n    \"geopotential_height_400hPa\": \"string\",\n    \"geopotential_height_350hPa\": \"string\",\n    \"geopotential_height_300hPa\": \"string\",\n    \"geopotential_height_275hPa\": \"string\",\n    \"geopotential_height_250hPa\": \"string\",\n    \"geopotential_height_225hPa\": \"string\",\n    \"geopotential_height_200hPa\": \"string\",\n    \"geopotential_height_175hPa\": \"string\",\n    \"geopotential_height_150hPa\": \"string\",\n    \"geopotential_height_125hPa\": \"string\",\n    \"geopotential_height_100hPa\": \"string\",\n    \"geopotential_height_50hPa\": \"string\",\n    \"geopotential_height_10hPa\": \"string\"\n  },\n  \"daily\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"weather_code\": [\n      120,\n      9576\n    ],\n    \"temperature_2m_max\": [\n      9051.478325663453,\n      3361.34154992797\n    ],\n    \"temperature_2m_min\": [\n      8923.55543817614,\n      8942.242948454748\n    ],\n    \"apparent_temperature_max\": [\n      9979.051099783133,\n      5212.109079313265\n    ],\n    \"apparent_temperature_min\": [\n      2874.5581028369584,\n      1669.7018183011137\n    ],\n    \"sunrise\": [\n      \"string\",\n      \"string\"\n    ],\n    \"sunset\": [\n      \"string\",\n      \"string\"\n    ],\n    \"daylight_duration\": [\n      2037.0007538441703,\n      8505.09812560383\n    ],\n    \"sunshine_duration\": [\n      8389.705930630244,\n      5233.006769563675\n    ],\n    \"uv_index_max\": [\n      9954.404563896913,\n      1436.1679415231465\n    ],\n    \"uv_index_clear_sky_max\": [\n      8454.664571897822,\n      5827.92496427141\n    ],\n    \"rain_sum\": [\n      52.59536370539553,\n      9937.227660535309\n    ],\n    \"showers_sum\": [\n      9474.328473080466,\n      2896.887710738113\n    ],\n    \"snowfall_sum\": [\n      1676.2741328112152,\n      1931.4106789935247\n    ],\n    \"precipitation_sum\": [\n      3207.261084999412,\n      9984.273571500307\n    ],\n    \"precipitation_hours\": [\n      2493.4734030537797,\n      7635.780934239651\n    ],\n    \"precipitation_probability_max\": [\n      355.97088812611145,\n      4463.968288926313\n    ],\n    \"wind_speed_10m_max\": [\n      4082.5013737294735,\n      6430.008761909749\n    ],\n    \"wind_gusts_10m_max\": [\n      6532.650958391628,\n      7691.100230342572\n    ],\n    \"wind_direction_10m_dominant\": [\n      5719.9737861448875,\n      1253.7265402973462\n    ],\n    \"shortwave_radiation_sum\": [\n      5225.267650337821,\n      3620.37788704499\n    ],\n    \"et0_fao_evapotranspiration\": [\n      8607.37548246035,\n      7772.246268587473\n    ]\n  },\n  \"daily_units\": {\n    \"time\": \"string\",\n    \"weather_code\": \"string\",\n    \"temperature_2m_max\": \"string\",\n    \"temperature_2m_min\": \"string\",\n    \"apparent_temperature_max\": \"string\",\n    \"apparent_temperature_min\": \"string\",\n    \"sunrise\": \"string\",\n    \"sunset\": \"string\",\n    \"daylight_duration\": \"string\",\n    \"sunshine_duration\": \"string\",\n    \"uv_index_max\": \"string\",\n    \"uv_index_clear_sky_max\": \"string\",\n    \"rain_sum\": \"string\",\n    \"showers_sum\": \"string\",\n    \"snowfall_sum\": \"string\",\n    \"precipitation_sum\": \"string\",\n    \"precipitation_hours\": \"string\",\n    \"precipitation_probability_max\": \"string\",\n    \"wind_speed_10m_max\": \"string\",\n    \"wind_gusts_10m_max\": \"string\",\n    \"wind_direction_10m_dominant\": \"string\",\n    \"shortwave_radiation_sum\": \"string\",\n    \"et0_fao_evapotranspiration\": \"string\"\n  },\n  \"current\": {\n    \"time\": \"string\",\n    \"interval\": 8337,\n    \"temperature_2m\": 3243.1329954491084,\n    \"relative_humidity_2m\": 1781.9393763025537,\n    \"apparent_temperature\": 9653.909014086668,\n    \"is_day\": 5248,\n    \"precipitation\": 7634.529397483103,\n    \"rain\": 9204.573906418218,\n    \"showers\": 9655.80911310603,\n    \"snowfall\": 1439.592342635818,\n    \"weather_code\": 9461,\n    \"cloud_cover\": 8875.262953591855,\n    \"pressure_msl\": 7691.5045860651535,\n    \"surface_pressure\": 4338.298092525825,\n    \"wind_speed_10m\": 5668.415037492942,\n    \"wind_direction_10m\": 7628.439759472193,\n    \"wind_gusts_10m\": 7006.143060649113\n  },\n  \"current_units\": {\n    \"time\": \"string\",\n    \"temperature_2m\": \"string\",\n    \"relative_humidity_2m\": \"string\",\n    \"apparent_temperature\": \"string\",\n    \"is_day\": \"string\",\n    \"precipitation\": \"string\",\n    \"rain\": \"string\",\n    \"showers\": \"string\",\n    \"snowfall\": \"string\",\n    \"weather_code\": \"string\",\n    \"cloud_cover\": \"string\",\n    \"pressure_msl\": \"string\",\n    \"surface_pressure\": \"string\",\n    \"wind_speed_10m\": \"string\",\n    \"wind_direction_10m\": \"string\",\n    \"wind_gusts_10m\": \"string\"\n  },\n  \"minutely_15\": {\n    \"time\": [\n      \"string\",\n      \"string\"\n    ],\n    \"temperature_2m\": [\n      5033.639813541935,\n      5035.884588719857\n    ],\n    \"relative_humidity_2m\": [\n      9764.08505598405,\n      9551.84918980957\n    ],\n    \"dew_point_2m\": [\n      1730.679772406004,\n      50.30456614294132\n    ],\n    \"apparent_temperature\": [\n      8672.330809940191,\n      9042.06236966922\n    ],\n    \"precipitation\": [\n      5517.752504800761,\n      3198.379594100531\n    ],\n    \"rain\": [\n      1524.2548496089414,\n      6795.347775885978\n    ],\n    \"snowfall\": [\n      4493.50376719327,\n      675.2300948304957\n    ],\n    \"snowfall_height\": [\n      3229.296395108856,\n      2144.22850952674\n    ],\n    \"freezing_level_height\": [\n      6280.734652189964,\n      8263.748994349555\n    ],\n    \"sunshine_duration\": [\n      3257.683139971541,\n      9109.70805256062\n    ],\n    \"weather_code\": [\n      8897,\n      1879\n    ],\n    \"wind_speed_10m\": [\n      2172.979453266147,\n      3243.394534617706\n    ],\n    \"wind_speed_20m\": [\n      9534.361826976685,\n      9905.49862301445\n    ],\n    \"wind_speed_50m\": [\n      1043.046808601218,\n      1791.924245729609\n    ],\n    \"wind_speed_80m\": [\n      4787.300599383929,\n      6748.571797937036\n    ],\n    \"wind_speed_100m\": [\n      4170.041334572207,\n      1295.7357991535346\n    ],\n    \"wind_direction_10m\": [\n      3928.0505896269733,\n      5772.377155312295\n    ],\n    \"wind_direction_20m\": [\n      9139.187873802988,\n      831.3264237233919\n    ],\n    \"wind_direction_50m\": [\n      1345.7824777026428,\n      60.28407179041739\n    ],\n    \"wind_direction_80m\": [\n      8434.169066954486,\n      8744.228214520273\n    ],\n    \"wind_direction_100m\": [\n      1957.041276749616,\n      480.5087802574404\n    ],\n    \"wind_gusts_10m\": [\n      2637.488646531162,\n      9123.8135664202\n    ],\n    \"visibility\": [\n      7266.6340139954855,\n      725.5157012902225\n    ],\n    \"cape\": [\n      7523.968666866009,\n      6589.676374806896\n    ],\n    \"lightning_potential\": [\n      6795.175310615933,\n      4060.422302455785\n    ],\n    \"is_day\": [\n      7009,\n      4066\n    ]\n  },\n  \"minutely_15_units\": {\n    \"time\": \"string\",\n    \"temperature_2m\": \"string\",\n    \"relative_humidity_2m\": \"string\",\n    \"dew_point_2m\": \"string\",\n    \"apparent_temperature\": \"string\",\n    \"precipitation\": \"string\",\n    \"rain\": \"string\",\n    \"snowfall\": \"string\",\n    \"snowfall_height\": \"string\",\n    \"freezing_level_height\": \"string\",\n    \"sunshine_duration\": \"string\",\n    \"weather_code\": \"string\",\n    \"wind_speed_10m\": \"string\",\n    \"wind_speed_20m\": \"string\",\n    \"wind_speed_50m\": \"string\",\n    \"wind_speed_80m\": \"string\",\n    \"wind_speed_100m\": \"string\",\n    \"wind_direction_10m\": \"string\",\n    \"wind_direction_20m\": \"string\",\n    \"wind_direction_50m\": \"string\",\n    \"wind_direction_80m\": \"string\",\n    \"wind_direction_100m\": \"string\",\n    \"wind_gusts_10m\": \"string\",\n    \"visibility\": \"string\",\n    \"cape\": \"string\",\n    \"lightning_potential\": \"string\",\n    \"is_day\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2d32dc43-cc35-42b6-a55e-17c6c671eb20",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "forecast"
+                  ],
+                  "host": [
+                    "{{v1-forecast-Url}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "latitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hourly",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "daily",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "current",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "minutely_15",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "elevation",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "temperature_unit",
+                      "value": "celsius"
+                    },
+                    {
+                      "key": "wind_speed_unit",
+                      "value": "kmh"
+                    },
+                    {
+                      "key": "precipitation_unit",
+                      "value": "mm"
+                    },
+                    {
+                      "key": "timeformat",
+                      "value": "iso8601"
+                    },
+                    {
+                      "key": "timezone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "past_days",
+                      "value": "0"
+                    },
+                    {
+                      "key": "forecast_days",
+                      "value": "7"
+                    },
+                    {
+                      "key": "past_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "forecast_hours",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "tilt",
+                      "value": "0"
+                    },
+                    {
+                      "key": "azimuth",
+                      "value": "0"
+                    },
+                    {
+                      "key": "cell_selection",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "models",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": false,\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://api.open-meteo.com",
+      "key": "v1-forecast-Url"
+    }
+  ],
+  "info": {
+    "_postman_id": "b72bfc17-8356-4f6a-8e4c-f40e44d3e14d",
+    "name": "Open-Meteo Air Quality Air Quality APIs Weather Forecast APIs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).\n\nContact Support:\n Name: Open-Meteo\n Email: info@open-meteo.com",
+      "type": "text/plain"
+    }
+  }
+}

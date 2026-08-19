@@ -1,0 +1,130 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open-Meteo Air Quality Air Quality APIs Marine Weather APIs API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Marine Weather APIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Hourly marine weather forecast",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/marine",
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hourly",
+                "value": "",
+                "type": "query",
+                "description": "A list of marine weather variables."
+              },
+              {
+                "name": "daily",
+                "value": "",
+                "type": "query",
+                "description": "A list of daily marine weather variables."
+              },
+              {
+                "name": "current",
+                "value": "",
+                "type": "query",
+                "description": "A list of variables for the current marine conditions."
+              },
+              {
+                "name": "minutely_15",
+                "value": "",
+                "type": "query",
+                "description": "A list of marine variables at 15-minute intervals."
+              },
+              {
+                "name": "temperature_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "wind_speed_unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "length_unit",
+                "value": "",
+                "type": "query",
+                "description": "Wave height and sea level unit."
+              },
+              {
+                "name": "timeformat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "past_days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "forecast_days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO 8601 format."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO 8601 format."
+              },
+              {
+                "name": "cell_selection",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "models",
+                "value": "",
+                "type": "query",
+                "description": "Manually select one or more weather models."
+              },
+              {
+                "name": "apikey",
+                "value": "",
+                "type": "query",
+                "description": "Only required for commercial subscriptions."
+              }
+            ]
+          },
+          "docs": "Marine weather forecasts with wave conditions, ocean currents, and sea surface temperature."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
