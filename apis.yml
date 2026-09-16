@@ -1,21 +1,16 @@
 aid: open-meteo
 name: Open-Meteo
-description: >-
-  Open-Meteo is an open-source weather API that provides free global weather
-  forecasts, historical reanalysis data, marine conditions, air quality indexes,
-  and long-range climate projections through a simple REST interface requiring
-  no API key for non-commercial use. The service aggregates data from over 30
-  weather models provided by 15+ national meteorological services including
-  ECMWF, NOAA GFS, DWD ICON, Météo-France, and JMA, delivering resolutions
-  from 1 km to 11 km updated every 1 to 6 hours. Historical data extends back
-  to 1940 via ERA5 reanalysis, giving developers and researchers access to
-  consistent long-term climate records alongside real-time forecasts. Commercial
-  users who need dedicated server capacity, higher throughput, and access to
-  extended APIs such as ensemble forecasts, seasonal outlooks, satellite
-  radiation, and climate change projections can subscribe to paid plans priced
-  at a flat monthly rate with no per-call overage charges. The entire server
-  infrastructure is open-source under the AGPLv3 license and can be
-  self-hosted, while the underlying weather data is released under CC BY 4.0.
+description: Open-Meteo is an open-source weather API that provides free global weather forecasts, historical
+  reanalysis data, marine conditions, air quality indexes, and long-range climate projections through
+  a simple REST interface requiring no API key for non-commercial use. The service aggregates data from
+  over 30 weather models provided by 15+ national meteorological services including ECMWF, NOAA GFS, DWD
+  ICON, Météo-France, and JMA, delivering resolutions from 1 km to 11 km updated every 1 to 6 hours. Historical
+  data extends back to 1940 via ERA5 reanalysis, giving developers and researchers access to consistent
+  long-term climate records alongside real-time forecasts. Commercial users who need dedicated server
+  capacity, higher throughput, and access to extended APIs such as ensemble forecasts, seasonal outlooks,
+  satellite radiation, and climate change projections can subscribe to paid plans priced at a flat monthly
+  rate with no per-call overage charges. The entire server infrastructure is open-source under the AGPLv3
+  license and can be self-hosted, while the underlying weather data is released under CC BY 4.0.
 type: Index
 deliveryModel:
   model: saas
@@ -44,32 +39,32 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/open-meteo.png
 url: https://raw.githubusercontent.com/api-evangelist/open-meteo/refs/heads/main/apis.yml
 created: '2026-06-13'
-modified: '2026-06-13'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 tags:
-  - Weather
-  - Forecast
-  - Historical Weather
-  - Air Quality
-  - Marine
-  - Climate
-  - Open-Source
-  - Free
+- Weather
+- Forecast
+- Historical Weather
+- Air Quality
+- Marine
+- Climate
+- Open-Source
+- Free
 tags_raw:
-  - Weather
-  - Forecasts
-  - Historical Weather
-  - Air Quality
-  - Marine
-  - Climate
-  - Open Source
-  - Free
+- Weather
+- Forecasts
+- Historical Weather
+- Air Quality
+- Marine
+- Climate
+- Open Source
+- Free
 apis:
 - aid: open-meteo:geocoding-api
   name: Geocoding API
-  description: >-
-    Converts place names and city searches into geographic coordinates and returns metadata such as country,
-    timezone, population, and elevation to facilitate location lookup within weather application workflows.
+  description: Converts place names and city searches into geographic coordinates and returns metadata
+    such as country, timezone, population, and elevation to facilitate location lookup within weather
+    application workflows.
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://open-meteo.com/en/docs/geocoding-api
   baseURL: https://geocoding-api.open-meteo.com
@@ -136,7 +131,7 @@ apis:
   - type: Documentation
     url: https://open-meteo.com/en/docs/elevation-api
 - aid: open-meteo:open-meteo-elevation-api-api
-  name: Open-Meteo Elevation API API
+  name: Open-Meteo Elevation API
   description: The Elevation API API from Open-Meteo — 1 operation(s) for elevation api.
   humanURL: https://open-meteo.com/en/docs
   baseURL: https://api.open-meteo.com
@@ -165,8 +160,7 @@ apis:
     url: https://open-meteo.com/en/docs/elevation-api
 - aid: open-meteo:open-meteo-ensemble-forecast-apis-api
   name: Open-Meteo Ensemble Forecast APIs API
-  description: >-
-    The Ensemble Forecast APIs API from Open-Meteo — 1 operation(s) for ensemble forecast apis.
+  description: The Ensemble Forecast APIs API from Open-Meteo — 1 operation(s) for ensemble forecast apis.
   humanURL: https://open-meteo.com/en/docs
   baseURL: https://api.open-meteo.com
   tags:
@@ -222,8 +216,8 @@ apis:
     url: https://open-meteo.com/en/docs/elevation-api
 - aid: open-meteo:open-meteo-historical-weather-apis-api
   name: Open-Meteo Historical Weather APIs API
-  description: >-
-    The Historical Weather APIs API from Open-Meteo — 1 operation(s) for historical weather apis.
+  description: The Historical Weather APIs API from Open-Meteo — 1 operation(s) for historical weather
+    apis.
   humanURL: https://open-meteo.com/en/docs
   baseURL: https://api.open-meteo.com
   tags:
@@ -279,8 +273,7 @@ apis:
     url: https://open-meteo.com/en/docs/elevation-api
 - aid: open-meteo:open-meteo-seasonal-forecast-apis-api
   name: Open-Meteo Seasonal Forecast APIs API
-  description: >-
-    The Seasonal Forecast APIs API from Open-Meteo — 1 operation(s) for seasonal forecast apis.
+  description: The Seasonal Forecast APIs API from Open-Meteo — 1 operation(s) for seasonal forecast apis.
   humanURL: https://open-meteo.com/en/docs
   baseURL: https://api.open-meteo.com
   tags:
@@ -308,8 +301,7 @@ apis:
     url: https://open-meteo.com/en/docs/elevation-api
 - aid: open-meteo:open-meteo-weather-forecast-apis-api
   name: Open-Meteo Weather Forecast APIs API
-  description: >-
-    The Weather Forecast APIs API from Open-Meteo — 1 operation(s) for weather forecast apis.
+  description: The Weather Forecast APIs API from Open-Meteo — 1 operation(s) for weather forecast apis.
   humanURL: https://open-meteo.com/en/docs
   baseURL: https://api.open-meteo.com
   tags:
@@ -336,30 +328,30 @@ apis:
   - type: Documentation
     url: https://open-meteo.com/en/docs/elevation-api
 common:
-  - type: AgenticAccess
-    url: agentic-access/open-meteo-agentic-access.yml
-  - type: DomainSecurity
-    url: security/open-meteo-domain-security.yml
-  - type: Website
-    url: https://open-meteo.com
-  - type: Documentation
-    url: https://open-meteo.com/en/docs
-  - type: GitHubOrg
-    url: https://github.com/open-meteo
-  - type: Blog
-    url: https://openmeteo.substack.com
-  - type: Pricing
-    url: https://open-meteo.com/en/pricing
-  - type: StatusPage
-    url: https://status.open-meteo.com
-  - type: X
-    url: https://x.com/open_meteo
-  - type: Plans
-    url: plans/open-meteo-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/open-meteo-rate-limits.yml
-  - type: FinOps
-    url: finops/open-meteo-finops.yml
+- type: AgenticAccess
+  url: agentic-access/open-meteo-agentic-access.yml
+- type: DomainSecurity
+  url: security/open-meteo-domain-security.yml
+- type: Website
+  url: https://open-meteo.com
+- type: Documentation
+  url: https://open-meteo.com/en/docs
+- type: GitHubOrg
+  url: https://github.com/open-meteo
+- type: Blog
+  url: https://openmeteo.substack.com
+- type: Pricing
+  url: https://open-meteo.com/en/pricing
+- type: StatusPage
+  url: https://status.open-meteo.com
+- type: X
+  url: https://x.com/open_meteo
+- type: Plans
+  url: plans/open-meteo-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/open-meteo-rate-limits.yml
+- type: FinOps
+  url: finops/open-meteo-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
