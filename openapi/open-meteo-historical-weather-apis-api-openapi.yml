@@ -1,7 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Open-Meteo Air Quality Air Quality APIs Historical Weather APIs API
-  description: Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).
+  title: Open-Meteo Historical Weather Historical Weather APIs API
+  description: Historical weather data from ERA5 and ERA5-Land reanalysis going back to 1940.
   version: '1.0'
   contact:
     name: Open-Meteo
@@ -1013,3 +1013,5 @@ paths:
                     type: boolean
                   reason:
                     type: string
+      operationId: getV1Archive
+      x-operation-id-source: derived

@@ -1,7 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Open-Meteo Air Quality Air Quality APIs Marine Weather APIs API
-  description: Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).
+  title: Open-Meteo Marine Weather Forecast Marine Weather APIs API
+  description: Hourly marine weather forecasts including wave height, direction, period, swell, ocean currents, and sea surface temperature.
   version: '1.0'
   contact:
     name: Open-Meteo
@@ -624,3 +624,5 @@ paths:
                     type: boolean
                   reason:
                     type: string
+      operationId: getV1Marine
+      x-operation-id-source: derived

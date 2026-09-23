@@ -1,7 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Open-Meteo Air Quality Air Quality APIs Seasonal Forecast APIs API
-  description: Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).
+  title: Open-Meteo Seasonal Weather Forecast Seasonal Forecast APIs…
+  description: Seasonal weather forecasts based on ECMWF SEAS5 and other ensemble models providing probabilistic long-range forecasts up to 9 months ahead.
   version: '1.0'
   contact:
     name: Open-Meteo
@@ -1423,3 +1423,5 @@ paths:
                     type: boolean
                   reason:
                     type: string
+      operationId: getV1Seasonal
+      x-operation-id-source: derived

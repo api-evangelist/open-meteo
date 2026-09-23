@@ -1,7 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Open-Meteo Air Quality Air Quality APIs Ensemble Forecast APIs API
-  description: Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).
+  title: Open-Meteo Ensemble Weather Forecast Ensemble Forecast APIs…
+  description: Ensemble weather forecasts from multiple models providing probabilistic forecast data.
   version: '1.0'
   contact:
     name: Open-Meteo
@@ -487,3 +487,5 @@ paths:
                     type: boolean
                   reason:
                     type: string
+      operationId: getV1Ensemble
+      x-operation-id-source: derived

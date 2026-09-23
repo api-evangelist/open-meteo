@@ -1,7 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Open-Meteo Air Quality Air Quality APIs Flood APIs API
-  description: Hourly air quality forecasts for PM2.5, PM10, ozone, nitrogen dioxide, pollen, and other pollutants from the Copernicus Atmosphere Monitoring Service (CAMS).
+  title: Open-Meteo Flood Forecast Flood APIs API
+  description: Daily river discharge forecasts using the Copernicus GloFAS hydrological model for rivers worldwide.
   version: '1.0'
   contact:
     name: Open-Meteo
@@ -220,3 +220,5 @@ paths:
                     type: boolean
                   reason:
                     type: string
+      operationId: getV1Flood
+      x-operation-id-source: derived

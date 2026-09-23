@@ -1,15 +1,15 @@
 {
   "provider": "open-meteo",
   "sources": [
-    "open-meteo-air-quality-apis-api-openapi.yml",
-    "open-meteo-climate-change-apis-api-openapi.yml",
-    "open-meteo-elevation-api-api-openapi.yml",
-    "open-meteo-ensemble-forecast-apis-api-openapi.yml",
-    "open-meteo-flood-apis-api-openapi.yml",
-    "open-meteo-historical-weather-apis-api-openapi.yml",
-    "open-meteo-marine-weather-apis-api-openapi.yml",
-    "open-meteo-seasonal-forecast-apis-api-openapi.yml",
-    "open-meteo-weather-forecast-apis-api-openapi.yml"
+    "_original/open-meteo-air-quality-openapi.yml",
+    "_original/open-meteo-climate-openapi.yml",
+    "_original/open-meteo-elevation-openapi.yml",
+    "_original/open-meteo-ensemble-openapi.yml",
+    "_original/open-meteo-flood-openapi.yml",
+    "_original/open-meteo-forecast-openapi.yml",
+    "_original/open-meteo-historical-weather-openapi.yml",
+    "_original/open-meteo-marine-openapi.yml",
+    "_original/open-meteo-seasonal-openapi.yml"
   ],
   "outputs": [
     "open-meteo-air-quality-apis-api-openapi.yml",
@@ -17,14 +17,45 @@
     "open-meteo-elevation-api-api-openapi.yml",
     "open-meteo-ensemble-forecast-apis-api-openapi.yml",
     "open-meteo-flood-apis-api-openapi.yml",
+    "open-meteo-weather-forecast-apis-api-openapi.yml",
     "open-meteo-historical-weather-apis-api-openapi.yml",
     "open-meteo-marine-weather-apis-api-openapi.yml",
-    "open-meteo-seasonal-forecast-apis-api-openapi.yml",
-    "open-meteo-weather-forecast-apis-api-openapi.yml"
+    "open-meteo-seasonal-forecast-apis-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (9 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "open-meteo-air-quality-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-air-quality-openapi.yml: declared missing tag: Air Quality APIs",
+    "open-meteo-climate-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-climate-openapi.yml: declared missing tag: Climate Change APIs",
+    "open-meteo-elevation-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-elevation-openapi.yml: declared missing tag: Elevation API",
+    "open-meteo-ensemble-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-ensemble-openapi.yml: declared missing tag: Ensemble Forecast APIs",
+    "open-meteo-flood-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-flood-openapi.yml: declared missing tag: Flood APIs",
+    "open-meteo-forecast-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-forecast-openapi.yml: declared missing tag: Weather Forecast APIs",
+    "open-meteo-historical-weather-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-historical-weather-openapi.yml: declared missing tag: Historical Weather APIs",
+    "open-meteo-marine-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-marine-openapi.yml: declared missing tag: Marine Weather APIs",
+    "open-meteo-seasonal-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "open-meteo-seasonal-openapi.yml: declared missing tag: Seasonal Forecast APIs",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "open-meteo-air-quality-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-climate-change-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-elevation-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-ensemble-forecast-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-flood-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-historical-weather-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-marine-weather-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-seasonal-forecast-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "open-meteo-weather-forecast-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
