@@ -48,7 +48,7 @@ tags:
 - Air Quality
 - Marine
 - Climate
-- Open-Source
+- Open Source
 - Free
 tags_raw:
 - Weather
@@ -59,6 +59,7 @@ tags_raw:
 - Climate
 - Open Source
 - Free
+- Open-Source
 apis:
 - aid: open-meteo:geocoding-api
   name: Geocoding API
