@@ -1,4 +1,4 @@
-# Open-Meteo (open-meteo)
+# Open-Meteo
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,50 +64,169 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Open-source weather API providing free global weather forecasts, historical data, marine, air quality, and climate projections via a simple REST interface with no API key required for non-commercial use.
+Open-Meteo is an open-source weather API that provides free global weather forecasts, historical reanalysis data, marine conditions, air quality indexes, and long-range climate projections through a simple REST interface requiring no API key for non-commercial use. The service aggregates data from over 30 weather models provided by 15+ national meteorological services including ECMWF, NOAA GFS, DWD ICON, Météo-France, and JMA, delivering resolutions from 1 km to 11 km updated every 1 to 6 hours. Historical data extends back to 1940 via ERA5 reanalysis, giving developers and researchers access to consistent long-term climate records alongside real-time forecasts. Commercial users who need dedicated server capacity, higher throughput, and access to extended APIs such as ensemble forecasts, seasonal outlooks, satellite radiation, and climate change projections can subscribe to paid plans priced at a flat monthly rate with no per-call overage charges. The entire server infrastructure is open-source under the AGPLv3 license and can be self-hosted, while the underlying weather data is released under CC BY 4.0.
 
-**APIs.yml:** [apis.yml](apis.yml)
+**Areas:** Weather · Forecast · Historical Weather · Air Quality · Marine · Climate · Open Source · Free
 
-## APIs (10)
+## Open-Meteo on APIs.io
 
-- **Weather Forecast API** — Up to 16-day hourly/daily forecasts from 30+ models. [Docs](https://open-meteo.com/en/docs)
-- **Historical Weather API** — ERA5 reanalysis data from 1940 to present. [Docs](https://open-meteo.com/en/docs/historical-weather-api)
-- **Ensemble API** — Probabilistic forecasts with up to 51 ensemble members. [Docs](https://open-meteo.com/en/docs/ensemble-api)
-- **Climate Change API** — CMIP6 projections to 2050. [Docs](https://open-meteo.com/en/docs/climate-api)
-- **Marine Weather API** — Ocean wave and sea surface conditions. [Docs](https://open-meteo.com/en/docs/marine-weather-api)
-- **Air Quality API** — 5-day hourly pollution, pollen, and AQI forecasts. [Docs](https://open-meteo.com/en/docs/air-quality-api)
-- **Flood API** — River discharge and flood risk forecasts via GloFAS. [Docs](https://open-meteo.com/en/docs/flood-api)
-- **Seasonal Forecast API** — ECMWF SEAS5 outlooks up to 9 months ahead. [Docs](https://open-meteo.com/en/docs/seasonal-forecast-api)
-- **Geocoding API** — Place name to coordinate lookup. [Docs](https://open-meteo.com/en/docs/geocoding-api)
-- **Elevation API** — Terrain height from coordinates via 90m DEM. [Docs](https://open-meteo.com/en/docs/elevation-api)
+Everything profiled for Open-Meteo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/open-meteo/](https://apis.io/providers/open-meteo/)** — or go straight to one of the APIs or properties below.
 
-## Pricing
+### APIs (10)
 
-| Plan | Price | Calls/Month | Commercial |
-|------|-------|-------------|------------|
-| Free | $0 | 300,000 | No |
-| Standard | $29/mo | 1,000,000 | Yes |
-| Professional | $99/mo | 5,000,000 | Yes |
-| Enterprise | Custom | 50,000,000+ | Yes |
+- [Geocoding API](https://apis.io/apis/open-meteo/geocoding-api/) — Converts place names and city searches into geographic coordinates and returns metadata such as country, timezone, population, and elevation to facilitate…
+- [Open-Meteo Air Quality APIs API](https://apis.io/apis/open-meteo/open-meteo-air-quality-apis-api/) — The Air Quality APIs API from Open-Meteo — 1 operation(s) for air quality apis.
+- [Open-Meteo Climate Change APIs API](https://apis.io/apis/open-meteo/open-meteo-climate-change-apis-api/) — The Climate Change APIs API from Open-Meteo — 1 operation(s) for climate change apis.
+- [Open-Meteo Elevation API](https://apis.io/apis/open-meteo/open-meteo-elevation-api-api/) — The Elevation API API from Open-Meteo — 1 operation(s) for elevation api.
+- [Open-Meteo Ensemble Forecast APIs API](https://apis.io/apis/open-meteo/open-meteo-ensemble-forecast-apis-api/) — The Ensemble Forecast APIs API from Open-Meteo — 1 operation(s) for ensemble forecast apis.
+- [Open-Meteo Flood APIs API](https://apis.io/apis/open-meteo/open-meteo-flood-apis-api/) — The Flood APIs API from Open-Meteo — 1 operation(s) for flood apis.
+- [Open-Meteo Historical Weather APIs API](https://apis.io/apis/open-meteo/open-meteo-historical-weather-apis-api/) — The Historical Weather APIs API from Open-Meteo — 1 operation(s) for historical weather apis.
+- [Open-Meteo Marine Weather APIs API](https://apis.io/apis/open-meteo/open-meteo-marine-weather-apis-api/) — The Marine Weather APIs API from Open-Meteo — 1 operation(s) for marine weather apis.
+- [Open-Meteo Seasonal Forecast APIs API](https://apis.io/apis/open-meteo/open-meteo-seasonal-forecast-apis-api/) — The Seasonal Forecast APIs API from Open-Meteo — 1 operation(s) for seasonal forecast apis.
+- [Open-Meteo Weather Forecast APIs API](https://apis.io/apis/open-meteo/open-meteo-weather-forecast-apis-api/) — The Weather Forecast APIs API from Open-Meteo — 1 operation(s) for weather forecast apis.
 
-No per-call overage charges on any plan. See [plans/open-meteo-plans-pricing.yml](plans/open-meteo-plans-pricing.yml) and [rate-limits/open-meteo-rate-limits.yml](rate-limits/open-meteo-rate-limits.yml) for full details.
+### Published properties
 
-## Resources
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Website:** https://open-meteo.com
-- **Documentation:** https://open-meteo.com/en/docs
-- **Pricing:** https://open-meteo.com/en/pricing
-- **Status:** https://status.open-meteo.com
-- **GitHub Org:** https://github.com/open-meteo
-- **Blog:** https://openmeteo.substack.com
-- **X:** https://x.com/open_meteo
+#### Agentic access (1)
 
-## Tags
-Weather, Forecasts, Historical Weather, Air Quality, Marine, Climate, Open Source, Free
+Which operations an agent can call, which act, and which need a human in the loop.
 
-## Timestamps
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+- [Open Meteo Agentic Access](https://apis.io/agentic-access/open-meteo/open-meteo-agentic-access/)
 
-## Maintainers
-- **Kin Lane** — kin@apievangelist.com
+#### JSON Schema (3)
+
+The data models the API reads and writes.
+
+- [Open-Meteo Air Quality Response](https://apis.io/schemas/open-meteo/open-meteo-air-quality-response/)
+- [Open-Meteo Error Response](https://apis.io/schemas/open-meteo/open-meteo-error-response/)
+- [Open-Meteo Weather Response](https://apis.io/schemas/open-meteo/open-meteo-weather-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Open Meteo Context](https://apis.io/jsonld/open-meteo/open-meteo-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Open-Meteo API Vocabulary](https://apis.io/vocabularies/open-meteo/open-meteo-vocabulary/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Open Meteo Air Quality Example](https://apis.io/examples/open-meteo/open-meteo-air-quality-example/)
+- [Open Meteo Elevation Example](https://apis.io/examples/open-meteo/open-meteo-elevation-example/)
+- [Open Meteo Geocoding Example](https://apis.io/examples/open-meteo/open-meteo-geocoding-example/)
+- [Open Meteo Weather Forecast Example](https://apis.io/examples/open-meteo/open-meteo-weather-forecast-example/)
+
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [Open-Meteo Air Quality Air Quality APIs API](https://apis.io/collections/open-meteo/open-open-meteo-air-quality-apis-api/)
+- [Open-Meteo Air Quality Air Quality APIs Climate Change APIs API](https://apis.io/collections/open-meteo/open-open-meteo-climate-change-apis-api/)
+- [Open-Meteo Air Quality Air Quality APIs Elevation API API](https://apis.io/collections/open-meteo/open-open-meteo-elevation-api-api/)
+- [Open-Meteo Air Quality Air Quality APIs Ensemble Forecast APIs API](https://apis.io/collections/open-meteo/open-open-meteo-ensemble-forecast-apis-api/)
+- [Open-Meteo Air Quality Air Quality APIs Flood APIs API](https://apis.io/collections/open-meteo/open-open-meteo-flood-apis-api/)
+- [Open-Meteo Air Quality Air Quality APIs Historical Weather APIs API](https://apis.io/collections/open-meteo/open-open-meteo-historical-weather-apis-api/)
+- [Open-Meteo Air Quality Air Quality APIs Marine Weather APIs API](https://apis.io/collections/open-meteo/open-open-meteo-marine-weather-apis-api/)
+- [Open-Meteo Air Quality Air Quality APIs Seasonal Forecast APIs API](https://apis.io/collections/open-meteo/open-open-meteo-seasonal-forecast-apis-api/)
+- [Open-Meteo Air Quality Air Quality APIs Weather Forecast APIs API](https://apis.io/collections/open-meteo/open-open-meteo-weather-forecast-apis-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Open-Meteo — jsonschema rules](https://apis.io/rules/open-meteo/open-meteo-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Open Meteo Domain Security](https://apis.io/security/open-meteo/open-meteo-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Open Meteo Plans Pricing](https://apis.io/plans/open-meteo/open-meteo-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Open Meteo Rate Limits](https://apis.io/rate-limits/open-meteo/open-meteo-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Open Meteo Finops](https://apis.io/finops/open-meteo/open-meteo-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://open-meteo.com)
+- [Documentation](https://open-meteo.com/en/docs)
+- [Pricing](https://open-meteo.com/en/pricing)
+- [Blog](https://openmeteo.substack.com)
+- [Status](https://status.open-meteo.com)
+
+## API Evangelist rating
+
+**Kin Score 29.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 48.5 |
+| Contract governance | 9.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/open-meteo/](https://apis.io/providers/open-meteo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Open-Meteo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/open-meteo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
